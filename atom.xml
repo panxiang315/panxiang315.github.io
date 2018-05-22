@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://panxiang315.github.io/"/>
-  <updated>2018-05-22T06:49:09.138Z</updated>
+  <updated>2018-05-22T07:14:52.029Z</updated>
   <id>https://panxiang315.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://panxiang315.github.io/Hexo/How-To-Use-Markdown/"/>
     <id>https://panxiang315.github.io/Hexo/How-To-Use-Markdown/</id>
     <published>2018-05-22T01:16:06.000Z</published>
-    <updated>2018-05-22T06:49:09.138Z</updated>
+    <updated>2018-05-22T07:14:52.029Z</updated>
     
     <content type="html"><![CDATA[<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p><h1 id="推荐软件"><a class="markdownIt-Anchor" href="#推荐软件"></a> 推荐软件</h1><p>网上有很多Markdown编译阅读器，在线和客户端各推荐一个：</p><blockquote><ul><li><a href="https://www.zybuluo.com/mdeditor#" target="_blank" rel="noopener">Cmd Markdown 编辑阅读器</a><br>优点：功能全面，操作简单，与word格式修改相似<br>缺点：需要注册登录，收费</li><li><a href="http://markdownpad.com/" target="_blank" rel="noopener">MarkdownPad</a><br>优点：可离线操作<br>缺点：界面一般</li></ul></blockquote><h1 id="语法介绍"><a class="markdownIt-Anchor" href="#语法介绍"></a> 语法介绍</h1><p>想全面学习可参考Markdown的语法可参考<a href="http://wowubuntu.com/markdown/" target="_blank" rel="noopener">语法指南</a>，本文仅列出常用语法。</p><h2 id="版式"><a class="markdownIt-Anchor" href="#版式"></a> 版式</h2><h3 id="标题"><a class="markdownIt-Anchor" href="#标题"></a> 标题</h3><p>Markdown使用#来标记标题，多级标题则采用多个#，如：<br>一级标题：  #引言<br>二级标题：  ##小标题</p><h3 id="首行缩进"><a class="markdownIt-Anchor" href="#首行缩进"></a> 首行缩进</h3><p>段首缩进这件事，应该是 CSS 或者其他排版工具的事情，Markdown 奉行的是样式和内容分开的哲学。<br>中文段落首行缩进：在前面加&amp; emsp; 缩进几个字就加几个，<br>英文段落首行缩进：在前面加&amp; nbsp; 缩进几个字就加几个，如：<br>  段落开头</p><blockquote><ul><li>注意后面要加上 “;”</li></ul></blockquote><h2 id="字体"><a class="markdownIt-Anchor" href="#字体"></a> 字体</h2><p>加粗：通过前后各加两个*：**粗体文本**，如： <strong>钢铁侠</strong><br>斜体：通过前后各加一个*：*斜体文本*，如：<em>钢铁侠</em><br>删除：通过前后各加两个<sub>：</sub> <sub>删除文本</sub> <sub>，如：</sub><sub>钢铁侠</sub>~<br>引用：在引用他人文字时，可在文字段落前添加一个&gt;，如：</p><blockquote><p>未经审视的人生是不值得过的  – 苏格拉底</p></blockquote><h2 id="图片与链接"><a class="markdownIt-Anchor" href="#图片与链接"></a> 图片与链接</h2><p>图片与链接都是应用，所以格式非常像，图片多了一个&quot;！&quot;<br>图片：![图片描述(可不填)](图片地址)<br>链接：[链接文本](链接地址)<br><img src="/images/MarkDown-IronMan.jpg" alt="钢铁侠"></p><h2 id="表格"><a class="markdownIt-Anchor" href="#表格"></a> 表格</h2><table><thead><tr><th style="text-align:center">a</th><th style="text-align:center">b</th></tr></thead><tbody><tr><td style="text-align:center">c</td><td style="text-align:center">d</td></tr></tbody></table><h2 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h2><p>代码分为行内代码及代码块</p><blockquote><ul><li>行内代码： 前后各加一个`，如`代码` ，可嵌入文字中</li><li>代码块：前后各加三个`，如```代码块```</li></ul></blockquote><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span> args[])</span><br><span class="line">&#123;System.out.<span class="built_in">println</span>(<span class="string">"Hello Markdown"</span>);&#125;</span><br></pre></td></tr></table></figure><h1 id="常见问题"><a class="markdownIt-Anchor" href="#常见问题"></a> 常见问题</h1><p>公式无法正常显示</p>]]></content>
     
