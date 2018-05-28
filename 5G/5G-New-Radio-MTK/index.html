@@ -125,7 +125,7 @@
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P7-SA-Option6.jpg">
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P8-NR-Bandwidth.jpg">
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P9-C-Band.jpg">
-<meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P10-Coverage-of-3.5G-and-700M.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P10-Coverage-of-3.5G-and-700M.jpg">
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P11-NR-Deployment.png">
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P12-LTE-Break-down.png">
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P13-3GPP-PHY.png">
@@ -143,7 +143,7 @@
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P26-NR-CP.png">
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P27-NR-RRC-States.png">
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P28-SIB-in-NR.png">
-<meta property="og:updated_time" content="2018-05-28T06:20:43.431Z">
+<meta property="og:updated_time" content="2018-05-28T07:19:01.871Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5G NR-移动宽带新时代">
 <meta name="twitter:description" content="本文译自MTK的5G白皮书。   source: https://www.mediatek.cn/innovations/whitepapers-list title: 5G NR - A New Era for Enhanced Mobile Broadband 纯属个人学习使用，已加密">
@@ -185,8 +185,8 @@
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <script>
     (function(){
-        if('111'){
-            if (prompt('请输入文章密码') !== '111'){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
                 alert('密码错误！');
                 history.back();
             }
@@ -450,7 +450,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  13,427字
+                  13,599字
                 </span>
               
 
@@ -520,7 +520,7 @@
 <div align="center"><br>  <img src="/images/5G-NR-Visio/P3-Option3.jpg" width="100%" alt="NSA-Option"><br>  图3 NSA Option 3 系列<br></div>   
 
 <p>&emsp;&emsp;在Option 3系列中，UE连接到5G NR和E-UTRA。对于控制平面(CP)，它完全依赖现有的EPS S1-MME接口程序和LTE-RRC协议。对于用户平面(UP)，存在几种变形，这就是三个子选项(3/3a/3x)不同的地方。在Option 3中，用户面数据在4G的PDCP层聚合，但是4G的PDCP不是针对5G设计的，无法支撑5G的数据速率，会出现明显的瓶颈。于是有了3a和3x两个变种。一种选项是3a，它基于单独的LTE和NR PDCP层。这个选项对于UE而言是最简单的，因为它不需要分离承载。选项3a对网络也有好处，它只要求现有的LTE eNodeB（eNB）支持5G控制面互通，不需要用户面增强。另一种选项是3x，它与选项3互为镜像，区别在于它利用的是NR的PDCP层，从而避免了Option 3中PDCP的瓶颈问题。与3a相比，3x对eNB的要求更高，需要支持NR用户面互通。Option 3系列之间的主要差异如表1所示。  </p>
-<div align="center"><br><br>  表1 NSA Option 3 系列之间差异<br></div>   
+<div align="center"><br>   表1 NSA Option 3 系列之间差异<br></div>   
 
 <table>
 <thead>
@@ -534,9 +534,9 @@
 <tbody>
 <tr>
 <td style="text-align:center">LTE和NR使用无线资源</td>
-<td style="text-align:center">可能是同一载波</td>
+<td style="text-align:center">可以是同一载波</td>
 <td style="text-align:center">不能是同一载波，需要至少两个DBR用于LTE和NR的用户面传输</td>
-<td style="text-align:center">可能是同一载波</td>
+<td style="text-align:center">可以是同一载波</td>
 </tr>
 <tr>
 <td style="text-align:center">动态分流Dynamic offload</td>
@@ -580,10 +580,50 @@
 <div align="center"><br>  <img src="/images/5G-NR-Visio/P4-SA-Option2.jpg" width="50%" alt="SA-Option2"><br>  图4 SA Option 2<br></div>  
 
 <p>&emsp;&emsp;NSA选项与SA选项的主要区别如下表所示。  </p>
-<div align="center"><br><br>  表2 NSA与SA主要区别<br></div>   
+<div align="center"><br>   表2 NSA与SA主要区别<br></div>   
 
-
-<div align="center"><br>  <img src="/images/5G-NR-Visio/P5-Option7.jpg" alt="NSA-Option-7"><br>  图5 NSA Option 7系 列<br></div> 
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">NSA</th>
+<th style="text-align:center">SA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">射频结构</td>
+<td style="text-align:center">由双连接引入的复杂度</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">信令处理</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">空闲模式引入的复杂度，包括小区选择/重选和寻呼接收</td>
+</tr>
+<tr>
+<td style="text-align:center">软件设计</td>
+<td style="text-align:center">部分NR功能</td>
+<td style="text-align:center">全部NR功能</td>
+</tr>
+<tr>
+<td style="text-align:center">功率</td>
+<td style="text-align:center">在以相同数据速率传输数据时，由于采用两种芯片/模式架构，NSA的功耗高于SA</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">缓存要求</td>
+<td style="text-align:center">由于eNB与gNB之间延迟，需要额外的缓存来排序</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">处理单元要求</td>
+<td style="text-align:center">双连接需要同时激活2个调制解调器，对于选项3或选项7（MCG分离承载），需提高LTE PDCP重排序能力以适应NR吞吐量</td>
+<td style="text-align:center">-</td>
+</tr>
+</tbody>
+</table>
+<div align="center"><br>  <img src="/images/5G-NR-Visio/P5-Option7.jpg" alt="NSA-Option-7"><br>  图5 NSA Option 7系列<br></div> 
 
 <p>&emsp;&emsp;R15最终版本也将包含Option 7系列，如图5所示。许多运营商认为Option 7是从最初的Option 3演变而来的。先根据Option 3让4G EPC承载5G网络，等5G核心网成熟后，用5G核心网NGC替换原有的4G核心网EPC，然后将NR和LTE迁移到新的核心网上。届时，5G的所有应用场景都成为可能。与Option 3系列类似，Option 7也分为3种：7/7a/7x。由于Option 7未计划在2020年内推出，因此分析选择趋向为时尚早。<br>&emsp;&emsp;在5G NR部署驱动下，Option 4也在考虑之中，它对LTE投资较低。但Option 4需要全覆盖的5G网络，因此倾向于部署在低于1GHz的频段上，如美国运营商T-Mobile计划用600MHz部署5G网络。对于Option 4，5G为全覆盖网络，作为主小区，不需要像Option 3一样考虑eNodeB PDCP层管理承载分离的场景,因此只有2种子选项，如图6所示。  </p>
 <div align="center"><br>  <img src="/images/5G-NR-Visio/P6-Option4.jpg" alt="NSA-Option-4"><br>  图6 NSA Option 4 系列<br></div><br>&emsp;&emsp;最后讲一讲Option 5和Option 6：<br>&emsp;&emsp;Option 5与Option 7类似，将LTE eNB连接到5G核心网，但不同的是，没有NR形成双连接。这个选项为运营商提供了一条核心网演进路线，该选项可以在不依赖5G NR的情况下利用5G核心网络的优势（如网络切片）。Option 5引入了额外的复杂度和成本，但附加价值仍不明确，可能会应用在某些垂直行业。5G部署初期，运营商更关注的是NR NSA部署（如Option 3），预计优先在无线接入部分开始5G投资。之后5G核心网完成后，迁移无线接入部分形成独立组网（即Option 2）。因此Option 5应该不会在5G的初期部署阶段出现。<br>&emsp;&emsp;Option 6中，5G gNB独立部署，连接到4G核心网EPC。这个选项在3GPP的早期就被抛弃了。<br><br><div align="center"><br>  <img src="/images/5G-NR-Visio/P7-SA-Option6.jpg" width="50%" alt="SA-Option-6"><br>  图7 SA Option 6<br></div>   
@@ -607,7 +647,7 @@
 </ul>
 </blockquote>
 <p>&emsp;&emsp;对于NR，频段号标识以字母”n”开头，即”n xx”，从而将其与LTE区分开来(LTE为Band xx)。</p>
-<h2 id="频段1-FR1"><a href="#频段1-FR1" class="headerlink" title="频段1(FR1)"></a>频段1(FR1)</h2><p>&emsp;&emsp;LTE各Band对应带宽如图8所示。数据来源于<a href="/source/_posts/LTE-Bands">R15-36.101</a> 。  </p>
+<h2 id="频段1-FR1"><a href="#频段1-FR1" class="headerlink" title="频段1(FR1)"></a>频段1(FR1)</h2><p>&emsp;&emsp;LTE各Band对应带宽如图8所示。数据来源于<a href="http://uug521.top/LTE/LTE-Bands/" target="_blank" rel="noopener">R15-36.101</a> 。  </p>
  <div align="center"><br> <img src="/images/5G-NR-Visio/P8-NR-Bandwidth.jpg" alt="Bandwidth-of-different-IT-Bands"><br> 图8 LTE Bands对应带宽<br> </div>   
 
 <p>  &emsp;&emsp;表3为RAN4 ＃83 在FR1(450MHz-6000MHz)定义的27个Bands（12个FDD，7个TDD，2个SDL和6个SUL）。    </p>
@@ -800,12 +840,10 @@
 <li>n71(663-698 MHz+617-652 MHz,FDD)：部分运营商（尤其是美国）考虑使用该频段，目的是在建设初期就实现广覆盖。 </li>
 </ul>
 </blockquote>
-<p> &emsp;&emsp;在FR1中引入了新的频带操作模式，即补充上行链路（Supplementary Uplink, SUL），通过载波聚合或双连接来为3.5GHz的下行链路DL的提供低频上行链路UL。在某些部署场景中，Band3(对应NR的n80)的上行覆盖能力与3.5G下行(假设无Massive  MIMO波束赋形增益) 覆盖能力相当，可以考虑将Band3作为上行与n78进行配对。但是有一点需要强调，由于3.5G频率大约为B3的两倍，会出现二次谐波，从而导致互调干扰。</p>
- <div align="center"><br>   <img src="/images/5G-NR-Visio/P10-Coverage-of-3.5G-and-700M.png" alt="Coverage-of-3.5G-and-700M"><br> </div>   
+<p> &emsp;&emsp;在FR1中引入了新的频带操作模式，即补充上行链路(Supplementary Uplink, SUL)，通过载波聚合或双连接来为3.5GHz的下行链路DL的提供低频上行链路UL。在某些部署场景中，Band3(对应NR的n80)的上行覆盖能力与3.5G下行(假设无Massive<br> MIMO波束赋形增益) 覆盖能力相当，可以考虑将Band3作为上行与n78进行配对。但是有一点需要强调，由于3.5G频率大约为B3的两倍，会出现二次谐波，从而导致互调干扰。</p>
+ <div align="center"><br>   <img src="/images/5G-NR-Visio/P10-Coverage-of-3.5G-and-700M.jpg" alt="Coverage-of-3.5G-and-700M"><br>   图10 3.5G与700M覆盖能力对比<br> </div>   
 
-<h2 id="频段2-FR2"><a href="#频段2-FR2" class="headerlink" title="频段2(FR2)"></a>频段2(FR2)</h2><p> &emsp;&emsp;在频谱利用率为30bps/Hz的条件下，FR1的带宽无法满足5G NR后阶段吞吐量目标(50 Gbps)。因此，要考虑以前没有用于蜂窝系统的新频段，新频段可用频谱为现有的十倍以上，且具有好几个G的连续频谱。<br>  &emsp;&emsp;ITU每四年组织一次世界无线电通信大会（WRC）。 下一次（WRC-19）在2019年举行，将在以下频段为移动宽带寻求新的频谱资源。  </p>
- <div align="center"><br>    表5：ITU WRC-19可能使用频段<br>  </div>    
-
+<h2 id="频段2-FR2"><a href="#频段2-FR2" class="headerlink" title="频段2(FR2)"></a>频段2(FR2)</h2><p> &emsp;&emsp;在频谱利用率为30bps/Hz的条件下，FR1的带宽无法满足5G NR后阶段吞吐量目标(50 Gbps)。因此，要考虑以前没有用于蜂窝系统的新频段，新频段可用频谱为现有的十倍以上，且具有好几个G的连续频谱。<br>  &emsp;&emsp;ITU每四年组织一次世界无线电通信大会（WRC）。下一次（WRC-19）在2019年举行，将在以下频段为移动宽带寻求新的频谱资源。<br> <div align="center"><br>    表5：ITU WRC-19可能使用频段<br>  </div>    </p>
 <table>
 <thead>
 <tr>
@@ -867,11 +905,14 @@
 </tr>
 </tbody>
 </table>
-<p> &emsp;&emsp;3GPP许可的频段有待ITU最终批准。如EESS(Earth Exploration Satellite System,地球探测卫星系统)对于n258频段可能产生的影响提出了相关顾虑，为保证保护频带够宽，可能需要调整其范围。</p>
-<p> &emsp;&emsp;总之，低频和高频的结合对于5G至关重要。低频和高频可通过载波聚合或双连接相结合,低频段可用于覆盖和控制，而高频段可提供更高的容量和数据速率。  </p>
+<p> &emsp;&emsp;3GPP许可的频段有待ITU最终批准。如EESS(Earth Exploration Satellite System,地球探测卫星系统)对于n258频段可能产生的影响提出了相关顾虑，为保证保护频带够宽，可能需要调整其范围。<br>  &emsp;&emsp;总之，低频和高频的结合对于5G至关重要。低频和高频可通过载波聚合或双连接相结合,低频段可用于覆盖和控制，而高频段可提供更高的容量和数据速率。  </p>
 <hr>
 <h1 id="LTE与NR互操作"><a href="#LTE与NR互操作" class="headerlink" title="LTE与NR互操作"></a>LTE与NR互操作</h1><p>  &emsp;&emsp;如前所述，5G NR初期部署主要方式如下：</p>
- <div align="center"><br>    <img src="/images/5G-NR-Visio/P11-NR-Deployment.png" alt="NR-Deployment"><br> </div><br> With non-standalone (NSA) option favored by many operators for initial deployment, LTE+NR interworking will<br> have different implications on both network architecture, services and user equipment capabilities.<br> With option 3 initial deployment, for example Low latency application might have limitations on the achievable<br> end to end latency, as while Low latency features introduced in Rel.14 and Rel.15 on LTE side, like short TTI<br> and self-contained frame structures might improve Radio latency, the performance will be limited by the<br> deployed EPC architecture and backhauling capabilities. A virtualized EPC design with Mobile edge Computing<br> integration and backhauling upgrade might be required to achieve the expected targets for this application on<br> NSA configuration.<br><br>&emsp;&emsp;许多运营商在部署初期都倾向于采用非独立部署(NSA)，LTE+NR互通将对网络架构、服务和用户设备功能都有不同的影响。<br>&emsp;&emsp;对于选项3的初始部署，以低延迟应用为例，可能会受限于端到端时延。虽然R14和R15中引入了低时延特性，如短TTI和自包含帧结构，其性能还是受限于已部署的EPC架构和回传能力。为达到NSA配置预期目标，需引入采用移动边缘计算(Mobile edge Computing,MEC)<br>和回传升级的虚拟化EPC。<br><br> <div align="center"><br>    <img src="/images/5G-NR-Visio/P12-LTE-Break-down.png" alt="LTE-Break-down"><br>    图12 LTE时延解析<br> </div>  
+ <div align="center"><br>    <img src="/images/5G-NR-Visio/P11-NR-Deployment.png" alt="NR-Deployment"><br> </div>   
+
+<p> With non-standalone (NSA) option favored by many operators for initial deployment, LTE+NR interworking will<br> have different implications on both network architecture, services and user equipment capabilities.<br> With option 3 initial deployment, for example Low latency application might have limitations on the achievable<br> end to end latency, as while Low latency features introduced in Rel.14 and Rel.15 on LTE side, like short TTI<br> and self-contained frame structures might improve Radio latency, the performance will be limited by the<br> deployed EPC architecture and backhauling capabilities. A virtualized EPC design with Mobile edge Computing<br> integration and backhauling upgrade might be required to achieve the expected targets for this application on<br> NSA configuration.</p>
+<p>&emsp;&emsp;许多运营商在部署初期都倾向于采用非独立部署(NSA)，LTE+NR互通将对网络架构、服务和用户设备功能都有不同的影响。<br>&emsp;&emsp;对于选项3的初始部署，以低延迟应用为例，可能会受限于端到端时延。虽然R14和R15中引入了低时延特性，如短TTI和自包含帧结构，其性能还是受限于已部署的EPC架构和回传能力。为达到NSA配置预期目标，需引入采用移动边缘计算(Mobile edge Computing,MEC)<br>和回传升级的虚拟化EPC。  </p>
+ <div align="center"><br>    <img src="/images/5G-NR-Visio/P12-LTE-Break-down.png" alt="LTE-Break-down"><br>    图12 LTE时延解析<br> </div>  
 
 <p>With the New Generation Core (NGC) deployment, and integration of network slicing, Network Function<br>virtualization (NFV) and Software defined network (SDN), more services and verticals could be addressed, after<br>getting rid of the limitation imposed by legacy EPC core network.<br>And that’s why NGC integration is not limited to 5G gNodeBs only, as LTE could also benefit from the new core<br>capabilities and with 3GPP Rel15, LTE integration with NGC and its completely new NAS layer is referred to as<br>eLTE or enhanced LTE.<br>From UE side, supporting the new bands for 5G NR, especially the mmWave bands, with the Dual Connectivity<br>support required for NSA option and the carrier aggregation support expected for both LTE and NR will add<br>to the complexity of the design of the RF front end, which includes the antennas, LNAs, filters, switches, and<br>Power Amplifiers.</p>
 <p>&emsp;&emsp;随着新一代核心网（NGC）的部署，它集成了网络切片，网络功能虚拟化（NFV）和软件定义网络（SDN）等功能，可以解决更多的服务和垂直难题，从而摆脱传统EPC核心网络的限制。这就是为什么NGC不仅局限于连接5G gNB，LTE也可以受益于新的核心网功能，称为eLTE(enhanced LTE)。<br>&emsp;&emsp;从UE方面来说，支持5G NR的新频段，特别是毫米波段，需要NSA选项所需的双连接支持以及LTE和NR所期望的载波聚合支持，这将增加RF前端设计的复杂性 其中包括天线，LNA，滤波器，开关和功率放大器。<br>&emsp;&emsp;通过覆盖多个频段以及在不同频段上进行并行和同步操作，需要进行复杂的设计，以确保最小的交叉对话和互调失真，高效的电路和最小的损耗。<br>&emsp;&emsp;LTE + NR的不同频带组合的数量是巨大的，并且它是3GPP RAN4中正在进行的努力，以定义在Rel15中支持的组合，Rel15是根据RAN4＃83的最新更新：  </p>
