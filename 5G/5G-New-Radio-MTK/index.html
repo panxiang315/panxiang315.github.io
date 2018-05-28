@@ -143,7 +143,7 @@
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P26-NR-CP.png">
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P27-NR-RRC-States.png">
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P28-SIB-in-NR.png">
-<meta property="og:updated_time" content="2018-05-28T00:45:20.437Z">
+<meta property="og:updated_time" content="2018-05-28T05:06:11.883Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5G NR-移动宽带新时代">
 <meta name="twitter:description" content="本文译自MTK的5G白皮书。   source: https://www.mediatek.cn/innovations/whitepapers-list title: 5G NR - A New Era for Enhanced Mobile Broadband 纯属个人学习使用，已加密">
@@ -185,8 +185,8 @@
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 <script>
     (function(){
-        if('315'){
-            if (prompt('请输入文章密码') !== '315'){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
                 alert('密码错误！');
                 history.back();
             }
@@ -450,7 +450,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  13,101字
+                  13,427字
                 </span>
               
 
@@ -466,7 +466,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  48分
+                  50分
                 </span>
               
             </div>
@@ -522,7 +522,60 @@
 <p>&emsp;&emsp;在Option 3系列中，UE连接到5G NR和E-UTRA。对于控制平面(CP)，它完全依赖现有的EPS S1-MME接口程序和LTE-RRC协议。对于用户平面(UP)，存在几种变形，这就是三个子选项(3/3a/3x)不同的地方。在Option 3中，用户面数据在4G的PDCP层聚合，但是4G的PDCP不是针对5G设计的，无法支撑5G的数据速率，会出现明显的瓶颈。于是有了3a和3x两个变种。一种选项是3a，它基于单独的LTE和NR PDCP层。这个选项对于UE而言是最简单的，因为它不需要分离承载。选项3a对网络也有好处，它只要求现有的LTE eNodeB（eNB）支持5G控制面互通，不需要用户面增强。另一种选项是3x，它与选项3互为镜像，区别在于它利用的是NR的PDCP层，从而避免了Option 3中PDCP的瓶颈问题。与3a相比，3x对eNB的要求更高，需要支持NR用户面互通。Option 3系列之间的主要差异如表1所示。  </p>
 <div align="center"><br><br>  表1 NSA Option 3 系列之间差异<br></div>   
 
-
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">Option 3</th>
+<th style="text-align:center">Option 3a</th>
+<th style="text-align:center">Option 3x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">LTE和NR使用无线资源</td>
+<td style="text-align:center">可能是同一载波</td>
+<td style="text-align:center">不能是同一载波，需要至少两个DBR用于LTE和NR的用户面传输</td>
+<td style="text-align:center">可能是同一载波</td>
+</tr>
+<tr>
+<td style="text-align:center">动态分流Dynamic offload</td>
+<td style="text-align:center">由LTE eNB控制，long SCG建立后可动态</td>
+<td style="text-align:center">需要涉及MME，非常静态</td>
+<td style="text-align:center">由LTE eNB控制，long CG建立后可动态</td>
+</tr>
+<tr>
+<td style="text-align:center">额外的处理能力要求</td>
+<td style="text-align:center">额外的PDCP处理能力</td>
+<td style="text-align:center">无</td>
+<td style="text-align:center">额外的PDCP处理能力</td>
+</tr>
+<tr>
+<td style="text-align:center">缓存要求</td>
+<td style="text-align:center">承载分离意味着增加重新排序 - 缓冲需求</td>
+<td style="text-align:center">无</td>
+<td style="text-align:center">承载分离意味着增加重新排序 - 缓冲需求</td>
+</tr>
+<tr>
+<td style="text-align:center">eNB-gNB回传要求</td>
+<td style="text-align:center">Xx/Xn接口需提供5-30ms时延及足够容量</td>
+<td style="text-align:center">无</td>
+<td style="text-align:center">Xx/Xn接口需提供5-30ms时延及足够容量</td>
+</tr>
+<tr>
+<td style="text-align:center">用户平面时延</td>
+<td style="text-align:center">非共站部署时，有额外的用户平面时延</td>
+<td style="text-align:center">无</td>
+<td style="text-align:center">非共站部署时，有额外的用户平面时延</td>
+</tr>
+<tr>
+<td style="text-align:center">对LTE模型影响</td>
+<td style="text-align:center">高</td>
+<td style="text-align:center">低</td>
+<td style="text-align:center">中</td>
+</tr>
+</tbody>
+</table>
 <p>&emsp;&emsp;全球许多运营商都宣布支持Option 3系列中的一种，以实现5G的初期部署，其收益是非常明显的。虽然5G核心网特性显著，应用场景广泛，但是运营商还是迫不及待的推动5G接入网部署，这其实是很好理解的：带宽的增长可以扩大现有LTE MBB应用场景。随着时间的推移，选项3x受到了更多的青睐，因为它对现有4G网络投资小，网络带宽提升大。其次是选项3a，关注选项3的较少，因为对需要4G网络硬件升级，投资太大。<br>&emsp;&emsp;Option 3系列之后，3GPP R15版本将包含SA Option 2，即5G独立部署(SA)，包括独立的核心网和接入网，如图4所示。与NSA Option 3相比，部分运营商在初始阶段没有选择Option 2。Option 2的优点和缺点都是显而易见的：一方面，它直接演进到下一代移动网络，涉及的接口较少，降低了复杂性；另一方面，这必然会带来更大规模的投资。预计4G和5G的共存将至少在前期/中期占优势。    </p>
 <div align="center"><br>  <img src="/images/5G-NR-Visio/P4-SA-Option2.jpg" width="50%" alt="SA-Option2"><br>  图4 SA Option 2<br></div>  
 
@@ -553,38 +606,275 @@
 </li>
 </ul>
 </blockquote>
-<p>&emsp;&emsp;对于NR，频段号标识以字母”n”开头，即”n xx”，从而将其与LTE区分开来(LTE为Band xx)。LTE各Band对应带宽如图8所示。数据来源于<a href="/source/_posts/LTE-Bands">R15-36.101</a> </p>
- <div align="center"><br> <img src="/images/5G-NR-Visio/P8-NR-Bandwidth.jpg" alt="Bandwidth-of-different-IT-Bands"><br> 图8 LTE Bands对应带宽<br> </div><br>  &emsp;&emsp;下表为RAN4<code>＃83</code>在FR1(450MHz-6000MHz)定义的27个Bands（12个FDD，7个TDD，2个SDL和6个SUL）。<br><br><div align="center"><br>   表3 NR 频段<br>| Band number |     UL    |     DL    | Duplex mode |<br>|:———–:|:———:|:———:|:———–:|<br>|      n1     | 1920-1980 | 2210-2710 |     FDD     |<br>|      n2     | 1850-1910 | 1930-1990 |     FDD     |<br>|      n3     | 1710-1785 | 1805-1880 |     FDD     |<br>|      n5     |  824-849  |  869-894  |     FDD     |<br>|      n7     | 2500-2570 | 2620-2690 |     FDD     |<br>|      n8     |  880-915  |  925-960  |     FDD     |<br>|     n20     |  832-862  |  791-821  |     FDD     |<br>|     n28     |  703-748  |  758-803  |     FDD     |<br>|     n38     | 2570-2620 | 2570-2620 |     TDD     |<br>|     n41     | 2496-2690 | 2496-1690 |     TDD     |<br>|     n50     | 1432-1517 | 1432-1517 |     TDD     |<br>|     n51     | 1427-1432 | 1427-1432 |     TDD     |<br>|     n66     | 1710-1780 | 2210-2200 |     FDD     |<br>|     n70     | 1695-1710 | 1995-2020 |     FDD     |<br>|     n71     |  663-698  |  617-652  |     FDD     |<br>|     n74     | 1427-1470 | 1475-1518 |     FDD     |<br>|     n75     |    N/A    | 1432-1517 |     SDL     |<br>|     n76     |    N/A    | 1427-1432 |     SDL     |<br>|     n77     |  3.3-4.2  |  3.3-4.2  |     TDD     |<br>|     n78     |  3.3-3.8  |  3.3-3.8  |     TDD     |<br>|     n79     |  4.4-5.0  |  4.4-5.0  |     TDD     |<br>|     n80     | 1710-1785 |    N/A    |     SUL     |<br>|     n81     |  880-915  |    N/A    |     SUL     |<br>|     n82     |  832-862  |    N/A    |     SUL     |<br>|     n83     |  703-748  |    N/A    |     SUL     |<br>|     n84     | 1920-1980 |    N/A    |     SUL     |<br>|     n85     | 2496-2690 |    N/A    |     SUL     |<br></div>  
+<p>&emsp;&emsp;对于NR，频段号标识以字母”n”开头，即”n xx”，从而将其与LTE区分开来(LTE为Band xx)。</p>
+<h2 id="频段1-FR1"><a href="#频段1-FR1" class="headerlink" title="频段1(FR1)"></a>频段1(FR1)</h2><p>&emsp;&emsp;LTE各Band对应带宽如图8所示。数据来源于<a href="/source/_posts/LTE-Bands">R15-36.101</a> 。  </p>
+ <div align="center"><br> <img src="/images/5G-NR-Visio/P8-NR-Bandwidth.jpg" alt="Bandwidth-of-different-IT-Bands"><br> 图8 LTE Bands对应带宽<br> </div>   
 
+<p>  &emsp;&emsp;表3为RAN4 ＃83 在FR1(450MHz-6000MHz)定义的27个Bands（12个FDD，7个TDD，2个SDL和6个SUL）。    </p>
+<div align="center"><br>   表3 NR 频段<br> </div>  
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Band number</th>
+<th style="text-align:center">UL</th>
+<th style="text-align:center">DL</th>
+<th style="text-align:center">Duplex mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">n1</td>
+<td style="text-align:center">1920-1980</td>
+<td style="text-align:center">2210-2710</td>
+<td style="text-align:center">FDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n2</td>
+<td style="text-align:center">1850-1910</td>
+<td style="text-align:center">1930-1990</td>
+<td style="text-align:center">FDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n3</td>
+<td style="text-align:center">1710-1785</td>
+<td style="text-align:center">1805-1880</td>
+<td style="text-align:center">FDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n5</td>
+<td style="text-align:center">824-849</td>
+<td style="text-align:center">869-894</td>
+<td style="text-align:center">FDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n7</td>
+<td style="text-align:center">2500-2570</td>
+<td style="text-align:center">2620-2690</td>
+<td style="text-align:center">FDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n8</td>
+<td style="text-align:center">880-915</td>
+<td style="text-align:center">925-960</td>
+<td style="text-align:center">FDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n20</td>
+<td style="text-align:center">832-862</td>
+<td style="text-align:center">791-821</td>
+<td style="text-align:center">FDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n28</td>
+<td style="text-align:center">703-748</td>
+<td style="text-align:center">758-803</td>
+<td style="text-align:center">FDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n38</td>
+<td style="text-align:center">2570-2620</td>
+<td style="text-align:center">2570-2620</td>
+<td style="text-align:center">TDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n41</td>
+<td style="text-align:center">2496-2690</td>
+<td style="text-align:center">2496-1690</td>
+<td style="text-align:center">TDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n50</td>
+<td style="text-align:center">1432-1517</td>
+<td style="text-align:center">1432-1517</td>
+<td style="text-align:center">TDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n51</td>
+<td style="text-align:center">1427-1432</td>
+<td style="text-align:center">1427-1432</td>
+<td style="text-align:center">TDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n66</td>
+<td style="text-align:center">1710-1780</td>
+<td style="text-align:center">2210-2200</td>
+<td style="text-align:center">FDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n70</td>
+<td style="text-align:center">1695-1710</td>
+<td style="text-align:center">1995-2020</td>
+<td style="text-align:center">FDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n71</td>
+<td style="text-align:center">663-698</td>
+<td style="text-align:center">617-652</td>
+<td style="text-align:center">FDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n74</td>
+<td style="text-align:center">1427-1470</td>
+<td style="text-align:center">1475-1518</td>
+<td style="text-align:center">FDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n75</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">1432-1517</td>
+<td style="text-align:center">SDL</td>
+</tr>
+<tr>
+<td style="text-align:center">n76</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">1427-1432</td>
+<td style="text-align:center">SDL</td>
+</tr>
+<tr>
+<td style="text-align:center">n77</td>
+<td style="text-align:center">3.3-4.2</td>
+<td style="text-align:center">3.3-4.2</td>
+<td style="text-align:center">TDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n78</td>
+<td style="text-align:center">3.3-3.8</td>
+<td style="text-align:center">3.3-3.8</td>
+<td style="text-align:center">TDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n79</td>
+<td style="text-align:center">4.4-5.0</td>
+<td style="text-align:center">4.4-5.0</td>
+<td style="text-align:center">TDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n80</td>
+<td style="text-align:center">1710-1785</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">SUL</td>
+</tr>
+<tr>
+<td style="text-align:center">n81</td>
+<td style="text-align:center">880-915</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">SUL</td>
+</tr>
+<tr>
+<td style="text-align:center">n82</td>
+<td style="text-align:center">832-862</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">SUL</td>
+</tr>
+<tr>
+<td style="text-align:center">n83</td>
+<td style="text-align:center">703-748</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">SUL</td>
+</tr>
+<tr>
+<td style="text-align:center">n84</td>
+<td style="text-align:center">1920-1980</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">SUL</td>
+</tr>
+<tr>
+<td style="text-align:center">n85</td>
+<td style="text-align:center">2496-2690</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">SUL</td>
+</tr>
+</tbody>
+</table>
 <p> &emsp;&emsp;对比可知，许多LTE频段也用于5G NR，这对应了前面说的NR频谱没有限制。此外，还有一些新的频段相关提案将现有的LTE频段进行合并。如LTE的B42(3.4-3.6 GHz)和B43(3.6-3.8 GHz)带宽总和为200MHz，而且它们其实是连续的，因此将它们合并，作为5G在sub 6G最大可连续带宽的一部分。  </p>
 <div align="center"><br>  <img src="/images/5G-NR-Visio/P9-C-Band.jpg" alt="C-Band"><br>  图9 不同区域的C Band<br></div>   
 
-
-<p> &emsp;&emsp;在FR1中引入了新的频带操作模式，即补充上行链路（Supplementary Uplink, SUL），通过载波聚合或双连接来为3.5GHz的下行链路DL的提供低频上行链路UL。<br> &emsp;&emsp;这27个频段中有5个被许多运营商视为部署初期的优先频段。  </p>
+<p> &emsp;&emsp;这27个频段中有5个被许多运营商视为部署初期的优先频段。  </p>
 <blockquote>
 <ul>
 <li>n77(3.3-4.2 GHz,TDD)：如图9中所示，日本可能将5G频谱从3.4 GHz延伸到4.2 GHz。</li>
 <li>N78(3.3-3.8 GHz,TDD)：这个频段包括不同领域的融合，尤其是在欧洲。  </li>
 <li>n79(4.4-5.0 GHz,TDD)：中国、俄罗斯和日本正考虑将该频段作为5G频谱sub 6GHz的一部分。</li>
-<li>n28(703-748 MHz+758-803 MHz,FDD)：为确保深度覆盖并实现可靠通信，通过上行链路预算可知，使用高频段需要大量小区部署。因此需要引入低频率的频段（最好低于1GHz），以形成广覆盖。WRC-15申明，低频段首选n28频段，对于无法使用n28的国家，n20<br>(832-862 MHz+791-821 MHz,FDD)作为第二选择。</li>
+<li>n28(703-748 MHz+758-803 MHz,FDD)：为确保深度覆盖并实现可靠通信，通过上行链路预算可知，使用高频段需要大量小区部署。因此需要引入低频率的频段（最好低于1GHz），以形成广覆盖。WRC-15申明，低频段首选n28频段，对于无法使用n28的国家，n20 (832-862 MHz+791-821 MHz,FDD)作为第二选择。</li>
 <li>n71(663-698 MHz+617-652 MHz,FDD)：部分运营商（尤其是美国）考虑使用该频段，目的是在建设初期就实现广覆盖。 </li>
 </ul>
 </blockquote>
-<p>&emsp;&emsp;在某些部署场景中，Band3的上行覆盖能力与3.5G下行(假设无Massive MIMO波束赋形增益)覆盖能力相当，可以考虑将Band3作为上行与n78进行配对。但是有一点需要强调，由于3.5G频率大约为B3的两倍，会出现二次谐波，从而导致互调干扰。</p>
+<p> &emsp;&emsp;在FR1中引入了新的频带操作模式，即补充上行链路（Supplementary Uplink, SUL），通过载波聚合或双连接来为3.5GHz的下行链路DL的提供低频上行链路UL。在某些部署场景中，Band3(对应NR的n80)的上行覆盖能力与3.5G下行(假设无Massive  MIMO波束赋形增益) 覆盖能力相当，可以考虑将Band3作为上行与n78进行配对。但是有一点需要强调，由于3.5G频率大约为B3的两倍，会出现二次谐波，从而导致互调干扰。</p>
  <div align="center"><br>   <img src="/images/5G-NR-Visio/P10-Coverage-of-3.5G-and-700M.png" alt="Coverage-of-3.5G-and-700M"><br> </div>   
 
-<p> &emsp;&emsp;即使在确定上述频段的情况下，以后阶段5G NR的吞吐量目标达到50 Gbps，但计划的频谱效率不能达到30 bps/Hz，这就是为什么以前没有用于蜂窝系统的新频段必须是考虑。 利用这些频段，5MB NR的eMBB目标可以通过利用当前使用的频谱量的十倍来实现，具有多GHz的连续频谱。<br> &emsp;&emsp;国际电联每四年组织世界无线电通信大会（WRC）。 下一个将在2019年举行，（WRC-19）将在下列频段为移动宽带频谱进行研究：<br> &emsp;&emsp;尽管如此，由于全球频段协调的复杂性，一些国家可能计划在特定的非全球统一频段进行试验和部署，28GHz频段的情况就是如此，目标是美国，韩国和日本的5G部署，而不是 在国际电联计划的频段内<br> &emsp;&emsp;在其他地区，此类范围的可能示例可能包括欧洲的5.925-8.5 GHz和10-10.6 GHz，非洲的7.075 - 10.5 GHz和15.35 - 17.3 GHz。<br> &emsp;&emsp;对于3GPP和RAN4协议，对于版本15，兴趣仅限于频率高达52.6 GHz，更高频率将在下一个版本中进行研究。FR2中识别的频段在3GPP中显示如下： </p>
-  <div align="center"><br>    表5：<br>  </div>  
+<h2 id="频段2-FR2"><a href="#频段2-FR2" class="headerlink" title="频段2(FR2)"></a>频段2(FR2)</h2><p> &emsp;&emsp;在频谱利用率为30bps/Hz的条件下，FR1的带宽无法满足5G NR后阶段吞吐量目标(50 Gbps)。因此，要考虑以前没有用于蜂窝系统的新频段，新频段可用频谱为现有的十倍以上，且具有好几个G的连续频谱。<br>  &emsp;&emsp;ITU每四年组织一次世界无线电通信大会（WRC）。 下一次（WRC-19）在2019年举行，将在以下频段为移动宽带寻求新的频谱资源。  </p>
+ <div align="center"><br>    表5：ITU WRC-19可能使用频段<br>  </div>    
 
-<p> &emsp;&emsp;3GPP达成的频段将成为国际电联最终批准的最终批准协议，例如，对于Band258，EESS（地球探测卫星系统）提出了一些关于利用该频段可能产生的影响的问题，这可能会导致它开始改变 分配以允许足够的保护频带。<br>  &emsp;&emsp;总之，低频和高频的结合对于5G操作至关重要。 低频段可用于覆盖和控制，而高频段可提供更好的容量和更高的数据速率。 较低和较高频谱段可以在载波聚合或双连接模型中运行，并且初始5G规范包括将在接下来的章节中讨论的双连接能力。  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">主要业务已分配给移动业务</th>
+<th style="text-align:center">可能额外分配给移动业务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">24.25-27.6 GHz37-40.5 GHz</td>
+<td style="text-align:center">31.8-33.4 GHz</td>
+</tr>
+<tr>
+<td style="text-align:center">42.5-43.5 GHz</td>
+<td style="text-align:center">40.5-42.5 GHz</td>
+</tr>
+<tr>
+<td style="text-align:center">47.2-50.2 GHz</td>
+<td style="text-align:center">47-47.2 GHz</td>
+</tr>
+</tbody>
+</table>
+<p> &emsp;&emsp;尽管如此，由于全球频段协调的复杂性，一些国家可能计划在特定的非全球统一频段进行试验和部署。比如28GHz频段，美国，韩国和日本计划在该频段部署5G，但它并不在ITU计划的频段范围内。其他地区类似的还包括欧洲的5.925-8.5 GHz和10-10.6 GHz，非洲的7 .075-10.5 GHz和15.35-17.3 GHz。<br> &emsp;&emsp;对于3GPP和RAN4协议的R15版本，涉及频率最高达52.6 GHz，更高频率将在下一个版本中进行研究。3GPP中FR2频段如表5所示：</p>
+  <div align="center"><br>    表5：FR2 频段<br>  </div>  
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Band number</th>
+<th style="text-align:center">UL</th>
+<th style="text-align:center">DL</th>
+<th style="text-align:center">Duplex mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">n257</td>
+<td style="text-align:center">26.5GHz-29.5GHz</td>
+<td style="text-align:center">26.5-29.5GHz</td>
+<td style="text-align:center">TDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n258</td>
+<td style="text-align:center">24.75-27.5GHz</td>
+<td style="text-align:center">24.75-27.5GHz</td>
+<td style="text-align:center">TDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n259</td>
+<td style="text-align:center">31.8-33.4GHz</td>
+<td style="text-align:center">31.8-33.4GHz</td>
+<td style="text-align:center">TDD</td>
+</tr>
+<tr>
+<td style="text-align:center">n260</td>
+<td style="text-align:center">37.4GHz</td>
+<td style="text-align:center">37-40GHz</td>
+<td style="text-align:center">TDD</td>
+</tr>
+</tbody>
+</table>
+<p> &emsp;&emsp;3GPP许可的频段有待ITU最终批准。如EESS(Earth Exploration Satellite System,地球探测卫星系统)对于n258频段可能产生的影响提出了相关顾虑，为保证保护频带够宽，可能需要调整其范围。</p>
+<p> &emsp;&emsp;总之，低频和高频的结合对于5G至关重要。低频和高频可通过载波聚合或双连接相结合,低频段可用于覆盖和控制，而高频段可提供更高的容量和数据速率。  </p>
 <hr>
-<h1 id="LTE与NR互操作"><a href="#LTE与NR互操作" class="headerlink" title="LTE与NR互操作"></a>LTE与NR互操作</h1><p>  &emsp;&emsp;如前所述，主要的初始5G NR部署可以总结如下</p>
- <div align="center"><br>    <img src="/images/5G-NR-Visio/P11-NR-Deployment.png" alt="NR-Deployment"><br> </div>   
+<h1 id="LTE与NR互操作"><a href="#LTE与NR互操作" class="headerlink" title="LTE与NR互操作"></a>LTE与NR互操作</h1><p>  &emsp;&emsp;如前所述，5G NR初期部署主要方式如下：</p>
+ <div align="center"><br>    <img src="/images/5G-NR-Visio/P11-NR-Deployment.png" alt="NR-Deployment"><br> </div><br> With non-standalone (NSA) option favored by many operators for initial deployment, LTE+NR interworking will<br> have different implications on both network architecture, services and user equipment capabilities.<br> With option 3 initial deployment, for example Low latency application might have limitations on the achievable<br> end to end latency, as while Low latency features introduced in Rel.14 and Rel.15 on LTE side, like short TTI<br> and self-contained frame structures might improve Radio latency, the performance will be limited by the<br> deployed EPC architecture and backhauling capabilities. A virtualized EPC design with Mobile edge Computing<br> integration and backhauling upgrade might be required to achieve the expected targets for this application on<br> NSA configuration.<br><br>&emsp;&emsp;许多运营商在部署初期都倾向于采用非独立部署(NSA)，LTE+NR互通将对网络架构、服务和用户设备功能都有不同的影响。<br>&emsp;&emsp;对于选项3的初始部署，以低延迟应用为例，可能会受限于端到端时延。虽然R14和R15中引入了低时延特性，如短TTI和自包含帧结构，其性能还是受限于已部署的EPC架构和回传能力。为达到NSA配置预期目标，需引入采用移动边缘计算(Mobile edge Computing,MEC)<br>和回传升级的虚拟化EPC。<br><br> <div align="center"><br>    <img src="/images/5G-NR-Visio/P12-LTE-Break-down.png" alt="LTE-Break-down"><br>    图12 LTE时延解析<br> </div>  
 
-<p>&emsp;&emsp;由于许多运营商在初始部署时都倾向于采用非独立（NSA）选项，因此LTE + NR互通对网络架构，服务和用户设备功能都有不同的影响。<br>&emsp;&emsp;对于选项3的初始部署，例如低延迟应用可能对可实现的端到端延迟有限制，因为在LTE侧的版本14和版本15中引入的低延迟特征，如短TTI和自包含帧结构可能改善无线电等待时间，性能将受到部署的EPC体系结构和回程能力的限制。可能需要采用移动边缘计算集成和回传升级的虚拟化EPC设计，以在NSA配置上实现此应用的预期目标。  </p>
- <div align="center"><br>    <img src="/images/5G-NR-Visio/P12-LTE-Break-down.png" alt="LTE-Break-down"><br> </div>  
-
-<p>&emsp;&emsp;随着新一代核心（NGC）的部署，以及网络切片，网络功能虚拟化（NFV）和软件定义网络（SDN）的整合，在摆脱传统EPC核心网络的限制后，可以解决更多的服务和垂直问题。<br>&emsp;&emsp;这就是为什么NGC集成不仅仅局限于5G gNodeB，因为LTE也可以受益于新的核心能力，并且3GPP Rel15与LTE集成了NGC，其全新的NAS层被称为eLTE或增强型LTE。<br>&emsp;&emsp;从UE方面来说，支持5G NR的新频段，特别是毫米波段，需要NSA选项所需的双连接支持以及LTE和NR所期望的载波聚合支持，这将增加RF前端设计的复杂性 其中包括天线，LNA，滤波器，开关和功率放大器。<br>&emsp;&emsp;通过覆盖多个频段以及在不同频段上进行并行和同步操作，需要进行复杂的设计，以确保最小的交叉对话和互调失真，高效的电路和最小的损耗。<br>&emsp;&emsp;LTE + NR的不同频带组合的数量是巨大的，并且它是3GPP RAN4中正在进行的努力，以定义在Rel15中支持的组合，Rel15是根据RAN4＃83的最新更新：  </p>
+<p>With the New Generation Core (NGC) deployment, and integration of network slicing, Network Function<br>virtualization (NFV) and Software defined network (SDN), more services and verticals could be addressed, after<br>getting rid of the limitation imposed by legacy EPC core network.<br>And that’s why NGC integration is not limited to 5G gNodeBs only, as LTE could also benefit from the new core<br>capabilities and with 3GPP Rel15, LTE integration with NGC and its completely new NAS layer is referred to as<br>eLTE or enhanced LTE.<br>From UE side, supporting the new bands for 5G NR, especially the mmWave bands, with the Dual Connectivity<br>support required for NSA option and the carrier aggregation support expected for both LTE and NR will add<br>to the complexity of the design of the RF front end, which includes the antennas, LNAs, filters, switches, and<br>Power Amplifiers.</p>
+<p>&emsp;&emsp;随着新一代核心网（NGC）的部署，它集成了网络切片，网络功能虚拟化（NFV）和软件定义网络（SDN）等功能，可以解决更多的服务和垂直难题，从而摆脱传统EPC核心网络的限制。这就是为什么NGC不仅局限于连接5G gNB，LTE也可以受益于新的核心网功能，称为eLTE(enhanced LTE)。<br>&emsp;&emsp;从UE方面来说，支持5G NR的新频段，特别是毫米波段，需要NSA选项所需的双连接支持以及LTE和NR所期望的载波聚合支持，这将增加RF前端设计的复杂性 其中包括天线，LNA，滤波器，开关和功率放大器。<br>&emsp;&emsp;通过覆盖多个频段以及在不同频段上进行并行和同步操作，需要进行复杂的设计，以确保最小的交叉对话和互调失真，高效的电路和最小的损耗。<br>&emsp;&emsp;LTE + NR的不同频带组合的数量是巨大的，并且它是3GPP RAN4中正在进行的努力，以定义在Rel15中支持的组合，Rel15是根据RAN4＃83的最新更新：  </p>
   <div align="center"><br>    表6：<br>  </div>  
 
 <p>&emsp;&emsp;但考虑到所有这些不同的频段组合，并考虑到可能的设备实施方案，由于激活所需的不同RF元件的当前要求，具有3或4CC LTE + 1或2 CC NR的DL组合会对设备电池寿命产生一些负面影响 加上处理能力要求。<br>&emsp;&emsp;然而，对于运营商具有有限的初始5G频谱分配的情况，需要这样的组合，因为利用LTE可以提供的最大吞吐量来达到5G促销的“营销等级”吞吐量所需的最大吞吐量。<br>&emsp;&emsp;而对于具有大5G频谱分配（例如100MHz Sub 6GHz载波）的运营商而言，拥有1或2个LTE载波组件来锚定控制平面是更现实的方法。<br>&emsp;&emsp;LTE + NR互通的另一个方面是UL配置期望，因为在Nonstandalone配置内，UE需要维持2个UL连接; 一个用于LTE，另一个用于5G NR。 5G NR预计默认具有UL 2x2 MIMO，但考虑到NSA部署，遵循此要求将意味着UE将不得不为UL处理3层，这引入了新的挑战。</p>
@@ -1029,6 +1319,10 @@
                   <a href="https://blog.csdn.net/panfly_315" title="CSDN" target="_blank">CSDN</a>
                 </li>
               
+                <li class="links-of-blogroll-item">
+                  <a href="http://greychess.cn" title="前端大佬" target="_blank">前端大佬</a>
+                </li>
+              
             </ul>
           </div>
         
@@ -1048,7 +1342,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5G部署方案选项"><span class="nav-number">2.</span> <span class="nav-text">5G部署方案选项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#频谱"><span class="nav-number">3.</span> <span class="nav-text">频谱</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LTE与NR互操作"><span class="nav-number">4.</span> <span class="nav-text">LTE与NR互操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#NR物理层"><span class="nav-number">5.</span> <span class="nav-text">NR物理层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#波形和多路访问方案"><span class="nav-number">5.1.</span> <span class="nav-text">波形和多路访问方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法"><span class="nav-number">5.2.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#帧结构"><span class="nav-number">5.3.</span> <span class="nav-text">帧结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#物理信道带宽"><span class="nav-number">5.4.</span> <span class="nav-text">物理信道带宽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同步参考信号"><span class="nav-number">5.5.</span> <span class="nav-text">同步参考信号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UE测量"><span class="nav-number">5.6.</span> <span class="nav-text">UE测量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调制"><span class="nav-number">5.7.</span> <span class="nav-text">调制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#信道编码"><span class="nav-number">5.8.</span> <span class="nav-text">信道编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多天线技术及波束赋形"><span class="nav-number">5.9.</span> <span class="nav-text">多天线技术及波束赋形</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5G用户面"><span class="nav-number">6.</span> <span class="nav-text">5G用户面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5G控制面"><span class="nav-number">7.</span> <span class="nav-text">5G控制面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#未来之路"><span class="nav-number">8.</span> <span class="nav-text">未来之路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#新的多重访问"><span class="nav-number">8.1.</span> <span class="nav-text">新的多重访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动回传"><span class="nav-number">8.2.</span> <span class="nav-text">自动回传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G-NR在未经许可的频谱"><span class="nav-number">8.3.</span> <span class="nav-text">5G NR在未经许可的频谱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#卫星和非地面网络"><span class="nav-number">8.4.</span> <span class="nav-text">卫星和非地面网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#V2X"><span class="nav-number">8.5.</span> <span class="nav-text">V2X</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5G部署方案选项"><span class="nav-number">2.</span> <span class="nav-text">5G部署方案选项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#频谱"><span class="nav-number">3.</span> <span class="nav-text">频谱</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#频段1-FR1"><span class="nav-number">3.1.</span> <span class="nav-text">频段1(FR1)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#频段2-FR2"><span class="nav-number">3.2.</span> <span class="nav-text">频段2(FR2)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LTE与NR互操作"><span class="nav-number">4.</span> <span class="nav-text">LTE与NR互操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#NR物理层"><span class="nav-number">5.</span> <span class="nav-text">NR物理层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#波形和多路访问方案"><span class="nav-number">5.1.</span> <span class="nav-text">波形和多路访问方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法"><span class="nav-number">5.2.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#帧结构"><span class="nav-number">5.3.</span> <span class="nav-text">帧结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#物理信道带宽"><span class="nav-number">5.4.</span> <span class="nav-text">物理信道带宽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同步参考信号"><span class="nav-number">5.5.</span> <span class="nav-text">同步参考信号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UE测量"><span class="nav-number">5.6.</span> <span class="nav-text">UE测量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调制"><span class="nav-number">5.7.</span> <span class="nav-text">调制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#信道编码"><span class="nav-number">5.8.</span> <span class="nav-text">信道编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多天线技术及波束赋形"><span class="nav-number">5.9.</span> <span class="nav-text">多天线技术及波束赋形</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5G用户面"><span class="nav-number">6.</span> <span class="nav-text">5G用户面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5G控制面"><span class="nav-number">7.</span> <span class="nav-text">5G控制面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#未来之路"><span class="nav-number">8.</span> <span class="nav-text">未来之路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#新的多重访问"><span class="nav-number">8.1.</span> <span class="nav-text">新的多重访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动回传"><span class="nav-number">8.2.</span> <span class="nav-text">自动回传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G-NR在未经许可的频谱"><span class="nav-number">8.3.</span> <span class="nav-text">5G NR在未经许可的频谱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#卫星和非地面网络"><span class="nav-number">8.4.</span> <span class="nav-text">卫星和非地面网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#V2X"><span class="nav-number">8.5.</span> <span class="nav-text">V2X</span></a></li></ol></li></ol></div>
             
 
           </div>
