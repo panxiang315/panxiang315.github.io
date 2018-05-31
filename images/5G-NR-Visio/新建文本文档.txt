@@ -1,0 +1,21 @@
+P11-5G-NR-Deployment
+
+P13-3GPP-Physical-Layer-Specs
+
+P14-frequency-versus-cell-size
+
+P16-Different-Subframe-structures
+
+NR Control Plane Protocol Stack
+
+P23-Data-Flow
+
+P24-structure-of-MPDU
+
+P27-RRC-States
+
+P28-SIB
+
+P22-PDCP-duplication
+
+ Network£¬µÍ¹¦ºÄ¹ãÓòÍø
