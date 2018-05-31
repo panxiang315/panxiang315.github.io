@@ -5,9 +5,9 @@
   <subtitle>background of my life</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="/"/>
+  <link href="https://panxiang315.github.io/"/>
   <updated>2018-05-30T03:27:26.422Z</updated>
-  <id>/</id>
+  <id>https://panxiang315.github.io/</id>
   
   <author>
     <name>Pan Xiang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>心理的作用力与反作用力</title>
-    <link href="/psychology/reprint/psychology-interaction/"/>
-    <id>/psychology/reprint/psychology-interaction/</id>
+    <link href="https://panxiang315.github.io/psychology/reprint/psychology-interaction/"/>
+    <id>https://panxiang315.github.io/psychology/reprint/psychology-interaction/</id>
     <published>2018-05-30T02:41:53.000Z</published>
     <updated>2018-05-30T03:27:26.422Z</updated>
     
@@ -31,19 +31,19 @@
     
     </summary>
     
-      <category term="psychology" scheme="/categories/psychology/"/>
+      <category term="psychology" scheme="https://panxiang315.github.io/categories/psychology/"/>
     
-      <category term="reprint" scheme="/categories/psychology/reprint/"/>
+      <category term="reprint" scheme="https://panxiang315.github.io/categories/psychology/reprint/"/>
     
     
-      <category term="皮格马利翁效应" scheme="/tags/%E7%9A%AE%E6%A0%BC%E9%A9%AC%E5%88%A9%E7%BF%81%E6%95%88%E5%BA%94/"/>
+      <category term="皮格马利翁效应" scheme="https://panxiang315.github.io/tags/%E7%9A%AE%E6%A0%BC%E9%A9%AC%E5%88%A9%E7%BF%81%E6%95%88%E5%BA%94/"/>
     
   </entry>
   
   <entry>
     <title>告别自我中心思维</title>
-    <link href="/psychology/reprint/psychology-Self-centered/"/>
-    <id>/psychology/reprint/psychology-Self-centered/</id>
+    <link href="https://panxiang315.github.io/psychology/reprint/psychology-Self-centered/"/>
+    <id>https://panxiang315.github.io/psychology/reprint/psychology-Self-centered/</id>
     <published>2018-05-30T02:07:57.000Z</published>
     <updated>2018-05-30T03:42:54.372Z</updated>
     
@@ -55,19 +55,19 @@
     
     </summary>
     
-      <category term="psychology" scheme="/categories/psychology/"/>
+      <category term="psychology" scheme="https://panxiang315.github.io/categories/psychology/"/>
     
-      <category term="reprint" scheme="/categories/psychology/reprint/"/>
+      <category term="reprint" scheme="https://panxiang315.github.io/categories/psychology/reprint/"/>
     
     
-      <category term="聚光灯效应" scheme="/tags/%E8%81%9A%E5%85%89%E7%81%AF%E6%95%88%E5%BA%94/"/>
+      <category term="聚光灯效应" scheme="https://panxiang315.github.io/tags/%E8%81%9A%E5%85%89%E7%81%AF%E6%95%88%E5%BA%94/"/>
     
   </entry>
   
   <entry>
     <title>从直觉思维走向理性思维</title>
-    <link href="/psychology/reprint/psychology-intuition/"/>
-    <id>/psychology/reprint/psychology-intuition/</id>
+    <link href="https://panxiang315.github.io/psychology/reprint/psychology-intuition/"/>
+    <id>https://panxiang315.github.io/psychology/reprint/psychology-intuition/</id>
     <published>2018-05-30T00:54:41.000Z</published>
     <updated>2018-05-30T02:57:26.665Z</updated>
     
@@ -79,21 +79,21 @@
     
     </summary>
     
-      <category term="psychology" scheme="/categories/psychology/"/>
+      <category term="psychology" scheme="https://panxiang315.github.io/categories/psychology/"/>
     
-      <category term="reprint" scheme="/categories/psychology/reprint/"/>
+      <category term="reprint" scheme="https://panxiang315.github.io/categories/psychology/reprint/"/>
     
     
-      <category term="理性" scheme="/tags/%E7%90%86%E6%80%A7/"/>
+      <category term="理性" scheme="https://panxiang315.github.io/tags/%E7%90%86%E6%80%A7/"/>
     
-      <category term="基础概率" scheme="/tags/%E5%9F%BA%E7%A1%80%E6%A6%82%E7%8E%87/"/>
+      <category term="基础概率" scheme="https://panxiang315.github.io/tags/%E5%9F%BA%E7%A1%80%E6%A6%82%E7%8E%87/"/>
     
   </entry>
   
   <entry>
     <title>LTE-Bands</title>
-    <link href="/LTE/LTE-Bands/"/>
-    <id>/LTE/LTE-Bands/</id>
+    <link href="https://panxiang315.github.io/LTE/LTE-Bands/"/>
+    <id>https://panxiang315.github.io/LTE/LTE-Bands/</id>
     <published>2018-05-25T07:29:40.000Z</published>
     <updated>2018-05-30T08:02:18.032Z</updated>
     
@@ -105,17 +105,17 @@
     
     </summary>
     
-      <category term="LTE" scheme="/categories/LTE/"/>
+      <category term="LTE" scheme="https://panxiang315.github.io/categories/LTE/"/>
     
     
-      <category term="Bands" scheme="/tags/Bands/"/>
+      <category term="Bands" scheme="https://panxiang315.github.io/tags/Bands/"/>
     
   </entry>
   
   <entry>
     <title>Meeting</title>
-    <link href="/Learning/Meeting/"/>
-    <id>/Learning/Meeting/</id>
+    <link href="https://panxiang315.github.io/Learning/Meeting/"/>
+    <id>https://panxiang315.github.io/Learning/Meeting/</id>
     <published>2018-05-24T07:17:37.000Z</published>
     <updated>2018-05-30T03:27:20.340Z</updated>
     
@@ -127,15 +127,15 @@
     
     </summary>
     
-      <category term="Learning" scheme="/categories/Learning/"/>
+      <category term="Learning" scheme="https://panxiang315.github.io/categories/Learning/"/>
     
     
   </entry>
   
   <entry>
     <title>5G NR-移动宽带新时代</title>
-    <link href="/5G/5G-New-Radio-MTK/"/>
-    <id>/5G/5G-New-Radio-MTK/</id>
+    <link href="https://panxiang315.github.io/5G/5G-New-Radio-MTK/"/>
+    <id>https://panxiang315.github.io/5G/5G-New-Radio-MTK/</id>
     <published>2018-05-22T10:53:41.000Z</published>
     <updated>2018-05-31T09:12:31.735Z</updated>
     
@@ -154,19 +154,19 @@
     
     </summary>
     
-      <category term="5G" scheme="/categories/5G/"/>
+      <category term="5G" scheme="https://panxiang315.github.io/categories/5G/"/>
     
     
-      <category term="MTK" scheme="/tags/MTK/"/>
+      <category term="MTK" scheme="https://panxiang315.github.io/tags/MTK/"/>
     
-      <category term="NR" scheme="/tags/NR/"/>
+      <category term="NR" scheme="https://panxiang315.github.io/tags/NR/"/>
     
   </entry>
   
   <entry>
     <title>Markdown语法简介</title>
-    <link href="/Hexo/How-To-Use-Markdown/"/>
-    <id>/Hexo/How-To-Use-Markdown/</id>
+    <link href="https://panxiang315.github.io/Hexo/How-To-Use-Markdown/"/>
+    <id>https://panxiang315.github.io/Hexo/How-To-Use-Markdown/</id>
     <published>2018-05-22T01:16:06.000Z</published>
     <updated>2018-05-25T07:38:50.627Z</updated>
     
@@ -178,19 +178,19 @@
     
     </summary>
     
-      <category term="Hexo" scheme="/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://panxiang315.github.io/categories/Hexo/"/>
     
     
-      <category term="Markdown" scheme="/tags/Markdown/"/>
+      <category term="Markdown" scheme="https://panxiang315.github.io/tags/Markdown/"/>
     
-      <category term="语法" scheme="/tags/%E8%AF%AD%E6%B3%95/"/>
+      <category term="语法" scheme="https://panxiang315.github.io/tags/%E8%AF%AD%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>利用Hexo搭建个人博客</title>
-    <link href="/Hexo/Hexo-to-blog/"/>
-    <id>/Hexo/Hexo-to-blog/</id>
+    <link href="https://panxiang315.github.io/Hexo/Hexo-to-blog/"/>
+    <id>https://panxiang315.github.io/Hexo/Hexo-to-blog/</id>
     <published>2018-05-21T11:33:59.000Z</published>
     <updated>2018-05-30T08:02:18.020Z</updated>
     
@@ -202,19 +202,19 @@
     
     </summary>
     
-      <category term="Hexo" scheme="/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://panxiang315.github.io/categories/Hexo/"/>
     
     
-      <category term="next" scheme="/tags/next/"/>
+      <category term="next" scheme="https://panxiang315.github.io/tags/next/"/>
     
-      <category term="过程" scheme="/tags/%E8%BF%87%E7%A8%8B/"/>
+      <category term="过程" scheme="https://panxiang315.github.io/tags/%E8%BF%87%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>欢迎来到我的博客</title>
-    <link href="/Learning/test/hello-world/"/>
-    <id>/Learning/test/hello-world/</id>
+    <link href="https://panxiang315.github.io/Learning/test/hello-world/"/>
+    <id>https://panxiang315.github.io/Learning/test/hello-world/</id>
     <published>2018-05-20T07:53:03.080Z</published>
     <updated>2018-05-30T03:10:11.522Z</updated>
     
@@ -226,12 +226,12 @@
     
     </summary>
     
-      <category term="Learning" scheme="/categories/Learning/"/>
+      <category term="Learning" scheme="https://panxiang315.github.io/categories/Learning/"/>
     
-      <category term="test" scheme="/categories/Learning/test/"/>
+      <category term="test" scheme="https://panxiang315.github.io/categories/Learning/test/"/>
     
     
-      <category term="hello" scheme="/tags/hello/"/>
+      <category term="hello" scheme="https://panxiang315.github.io/tags/hello/"/>
     
   </entry>
   
