@@ -143,7 +143,7 @@
 <meta property="og:image" content="http://uug521.top/images/5G-NR-Visio/P26-CP-Protocol-Stack.jpg">
 <meta property="og:image" content="http://uug521.top/images/5G-NR-Visio/P27-RRC-States.jpg">
 <meta property="og:image" content="http://uug521.top/images/5G-NR-Visio/P28-SIB.jpg">
-<meta property="og:updated_time" content="2018-06-05T07:27:00.169Z">
+<meta property="og:updated_time" content="2018-06-05T07:52:28.592Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5G NR-移动宽带新时代">
 <meta name="twitter:description" content="本文译自MTK的5G白皮书。   source: https://www.mediatek.cn/innovations/whitepapers-list title: 5G NR - A New Era for Enhanced Mobile Broadband 纯属个人学习使用">
@@ -461,7 +461,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  13,648字
+                  13,650字
                 </span>
               
 
@@ -669,7 +669,7 @@
 <h2 id="频段1-FR1"><a href="#频段1-FR1" class="headerlink" title="频段1(FR1)"></a>频段1(FR1)</h2><p>&emsp;&emsp;LTE各Band对应带宽如图8所示。数据来源于<a href="https://panxiang315.github.io/LTE/LTE-Bands/" target="_blank" rel="noopener">R15-36.101</a> 。  </p>
  <div align="center"><br> <img src="/images/5G-NR-Visio/P8-NR-Bandwidth.jpg" alt="Bandwidth-of-different-IT-Bands"><br> 图8 LTE Bands对应带宽<br> </div>   
 
-<p>  &emsp;&emsp;表3为RAN4 ＃83 在FR1(450MHz-6000MHz)定义的27个Bands（12个FDD，7个TDD，2个SDL和6个SUL）。    </p>
+<p>  &emsp;&emsp;表3为RAN4 ＃83 在FR1(450MHz-6000MHz)定义的27个频段（12个FDD，7个TDD，2个SDL和6个SUL）。    </p>
 <div align="center"><br>   表3 NR 频段<br> </div>  
 
 <table>
@@ -929,11 +929,11 @@
 <p> &emsp;&emsp;3GPP许可的频段还有待ITU最终批准。如EESS(Earth Exploration Satellite System,地球探测卫星系统)对于n258频段可能产生的影响提出了相关顾虑，为保证保护频带够宽，可能需要调整其范围。<br>  &emsp;&emsp;总之，低频和高频的结合对于5G至关重要。低频和高频可通过载波聚合或双连接相结合，低频段可用于覆盖和控制，而高频段可提供更高的容量和数据速率。  </p>
 <hr>
 <h1 id="LTE与NR互操作"><a href="#LTE与NR互操作" class="headerlink" title="LTE与NR互操作"></a>LTE与NR互操作</h1><p>  &emsp;&emsp;如前所述，5G初期部署主要方式如下：</p>
- <div align="center"><br>    <img src="/images/5G-NR-Visio/P11-5G-NR-Deployment.jpg" width="90%" alt="NR-Deployment"><br>    图11 5G NR部署方式<br> </div>   
+ <div align="center"><br>    <img src="/images/5G-NR-Visio/P11-5G-NR-Deployment.jpg" width="80%" alt="NR-Deployment"><br>    图11 5G NR部署方式<br> </div>   
 
 
 <p>&emsp;&emsp;许多运营商在部署初期都倾向于采用NSA部署方式，LTE+NR互通将对网络架构、服务和用户设备功能都有不同的影响。<br>&emsp;&emsp;对于Option 3的初始部署，以低时延应用为例，可能会受限于端到端时延。虽然R14和R15中引入了低时延特性，如短TTI和自包含帧结构，其性能还是受限于已部署的EPC架构和回传能力。为达到NSA部署的预期目标，需引入集成了移动边缘计算(Mobile edge Computing, MEC)的虚拟化EPC，并升级回传。  </p>
- <div align="center"><br>    <img src="/images/5G-NR-Visio/P12-latency-breakdown.jpg" width="70%" alt="LTE-Break-down"><br>    图12 LTE时延解析<br> </div>  
+ <div align="center"><br>    <img src="/images/5G-NR-Visio/P12-latency-breakdown.jpg" width="80%" alt="LTE-Break-down"><br>    图12 LTE时延解析<br> </div>  
 
 <p>&emsp;&emsp;随着新一代核心网(NGC)的部署，它集成了网络切片、网络功能虚拟化(Network Function Virtualization, NFV)和软件定义网络(Software Defined Network, SDN)等功能，可以解决更多的服务和垂直难题，从而摆脱传统EPC核心网的限制。这就是为什么NGC不仅局限于连接5G gNB，LTE也可以受益于新的核心网功能，与NGC相连的LTE称为eLTE(enhanced LTE)。<br>&emsp;&emsp;对UE而言，支持5G NR的新频段（特别是毫米波段），NSA选项所需的双连接支持以及LTE和NR所需的载波聚合功能，都将增加RF前端设计的复杂度，包括天线、低噪声放大器、滤波器、开关和功率放大器等。  </p>
 <p>&emsp;&emsp;由于5G包含多个频段，在不同频段上要并行同步操作，需要进行复杂的设计，从而确保最小的交调和互调失真，高效的电路和最小的损耗。LTE+NR的不同频段排列组合方式很多，3GPP RAN4正在定义哪些组合需要在R15中支持，最新版是根据RAN4 #83会议确定，如下表所示：    </p>
