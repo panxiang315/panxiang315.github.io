@@ -143,7 +143,7 @@
 <meta property="og:image" content="http://uug521.top/images/5G-NR-Visio/P26-CP-Protocol-Stack.jpg">
 <meta property="og:image" content="http://uug521.top/images/5G-NR-Visio/P27-RRC-States.jpg">
 <meta property="og:image" content="http://uug521.top/images/5G-NR-Visio/P28-SIB.jpg">
-<meta property="og:updated_time" content="2018-06-05T01:18:46.548Z">
+<meta property="og:updated_time" content="2018-06-05T07:27:00.169Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5G NR-移动宽带新时代">
 <meta name="twitter:description" content="本文译自MTK的5G白皮书。   source: https://www.mediatek.cn/innovations/whitepapers-list title: 5G NR - A New Era for Enhanced Mobile Broadband 纯属个人学习使用">
@@ -1361,14 +1361,14 @@
 <h1 id="5G用户面"><a href="#5G用户面" class="headerlink" title="5G用户面"></a>5G用户面</h1><p>&emsp;&emsp;5G NR用户面(User Plane, UP)协议栈基于LTE设计，但有差异。NR用户面协议栈如图20所示，适用于新的5G无线接入网，即NG-RAN（同时连接5G NR和LTE）。  </p>
 <div align="center"><br>     <img src="/images/5G-NR-Visio/P20-UP-Protocol-Stack.jpg" width="80%" alt="NR-UP"><br>     图20-NR用户面协议<br> </div>  
 
-<p>&emsp;&emsp;与LTE相比，NR引入了一个新的层：SDAP(Service Data Adaptation Protocol)层。这个新层的功能归属于5G系统的新QoS架构（在5G核心网中）。当LTE连接到5G核心网时（即Option 5,7），SDAP也可应用于LTE。SDAP层完成以下功能：  </p>
+<p>&emsp;&emsp;与LTE相比，NR引入了一个新的层：SDAP(Service Data Adaptation Protocol)层。这个新层的功能归属于5G系统的新QoS体系（在5G核心网中）。当LTE连接到5G核心网时（即Option 5,7），SDAP也可应用于LTE。SDAP层完成以下功能：  </p>
 <blockquote>
 <ul>
 <li>QoS流与数据无线承载之间的映射</li>
 <li>在DL和UL分组包中标记QoS流ID(QFI)</li>
 </ul>
 </blockquote>
-<p>&emsp;&emsp;NR新的QoS架构如图21所示。它以两种方式实现上行链路QoS映射：一、反射映射，即对于每个DRB，UE监视QFI并加入下行链路分组报头，反馈的上行分组包也使用相同的QoS策略；二、显式配置，在这种情况下，网络可以通过RRC直接为DRB上行链路指示QFI。<br>&emsp;&emsp;总体而言，引入新的SDAP层实现了第一个真正的上下行端到端QoS机制。  </p>
+<p>&emsp;&emsp;NR新的QoS体系如图21所示。它以两种方式实现上行链路QoS映射：一、反射映射，即对于每个DRB，UE监视QFI并加入下行链路分组报头，反馈的上行分组包也使用相同的QoS策略；二、显式配置，在这种情况下，网络可以通过RRC直接为DRB上行链路指示QFI。<br>&emsp;&emsp;总体而言，引入新的SDAP层实现了第一个真正的上下行端到端QoS体系。  </p>
  <div align="center"><br>      <img src="/images/5G-NR-Visio/P21-QoS.jpg" width="80%" alt="5G-QoS"><br>      图21 5G系统QOS<br> </div>  
 
 <p>&emsp;&emsp;NR UP的其他层也对现有LTE系统作出了功能增强。 下面通过这些增强功能来了解NR新功能以及每种解决方案的目的。<br>&emsp;&emsp;从PDCP层开始。 PDCP包括以下功能：  </p>
@@ -1385,8 +1385,8 @@
 <li>丢弃重复包</li>
 </ul>
 </blockquote>
-<p>&emsp;&emsp;NR在PDCP层引入的增强功能之一是针对接收设计的，目的是克服LTE PDCP无序解密的缺陷。在LTE中，低层的解密和排序时延会使得RLC层的顺序传输延迟增加。在NR中，不再在RLC上进行重排序，并且PDCP PDU可以无序传输。只有当接收到的PDU的SN与流不匹配时，PDCP才启动追踪传输和解密/执行完整性检查。如果完整性检查成功，则应将PDU存储在缓冲区中，直到从RLC接收到更小SN的PDU。之后，PDU将被重新排序，对应的SDU将顺序发送到上层。<br>&emsp;&emsp;另一项重要的增强功能是针对URLLC场景的，包括用于载波聚合的数据复制和基于PDCP分离承载的双连接。3GPP选择了它们而不是其他竞争选项，包括基于相同的MAC PDU（实现载波间的传输同步）和载波之间的MAC SDU的MAC复制（具备类似的优点，但在实现中更复杂）。基于双连接的PDCP复制通过在独立的MAC/调度器上构建，实现不同部署和回传场景的多样性。对于URLL高可靠传输，其误块率要求是非常高的（如$10^{-5}$残留误差）。PDCP重复解决方案有助于确保低误块率，以防各载波无法达到的情况（如：由于暂时中断/衰落，或由于意外的更改或错误的信道状态信息CSI）。  </p>
- <div align="center"><br>      <img src="/images/5G-NR-Visio/P22-PDCP-duplication.jpg" width="80%" alt="MAC-Duplication"><br>      图22 CA中的MAC重复<br> </div>  
+<p>&emsp;&emsp;NR在PDCP层引入的增强功能之一是针对接收设计的，目的是克服LTE PDCP无序解密的缺陷。在LTE中，低层的解密和排序时延会使得RLC层的顺序传输延迟增加。在NR中，不再在RLC上进行重排序，并且PDCP PDU可以无序传输。只有当接收到的PDU的SN与流不匹配时，PDCP才启动追踪传输和解密/执行完整性检查。如果完整性检查成功，则应将PDU存储在缓冲区中，直到从RLC接收到更小SN的PDU。之后，PDU将被重新排序，对应的SDU将顺序发送到上层。<br>&emsp;&emsp;另一项重要的增强功能是针对URLLC场景的，包括用于载波聚合的数据复制(data duplication)和基于PDCP分离承载的双连接。3GPP选择了它们而不是其他竞争选项，包括基于相同的MAC PDU（实现载波间的传输同步）和载波之间的MAC SDU的MAC复制（具备类似的优点，但在实现中更复杂）。基于双连接的PDCP复制通过在独立的MAC/调度器上构建，实现不同部署和回传场景的多样性。对于URLL高可靠传输，其误块率要求是非常高的（如$10^{-5}$残留误差）。PDCP复制解决方案有助于保障低BLER，以防分组包无法达到的情况（如：由于暂时中断/衰落，或由于意外的更改或错误的信道状态信息CSI）。  </p>
+ <div align="center"><br>      <img src="/images/5G-NR-Visio/P22-PDCP-duplication.jpg" width="80%" alt="MAC-Duplication"><br>      图22 数据复制流程<br> </div>  
 
 <p>&emsp;&emsp;再来看看RLC层的新功能。与LTE相同，NR的RLC层传输模式可配置成三种之一：透明模式(TM)、非确认模式(UM)和确认模式(AM)。RLC配置是针对每个逻辑信道，不依赖于numerology或TTI时长，并且ARQ可以在逻辑信道配置的任何numerology或TTI时长上操作。对于SRB0、寻呼和广播系统信息，使用TM模式；对于其他SRB使用AM模式；对于DRB，使用UM或AM模式；RLC层包括以下功能：  </p>
 <blockquote>
@@ -1614,7 +1614,9 @@
           
   <div class="comments" id="comments">
     
+
   </div>
+
 
 
         </div>
