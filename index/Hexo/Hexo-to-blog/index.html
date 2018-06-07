@@ -108,18 +108,18 @@
 
 
 
-<meta name="description" content="在利用Hexo搭建个人博客过程中遇到的问题和解决方法。主要是参考别人的经验，按照需要引入新功能。">
+<meta name="description" content="在利用Hexo搭建个人博客过程中遇到的问题和解决方法。 主要是参考别人的经验，按照需要引入新功能。 &amp;lt;!-- more --&amp;gt; 关键步骤 修改URL形式 在博客中点开渲染后的html文档，可以看到，网站格式为root/yera/month/day/file，由于年月日信息对于读者 来说重要程度不高，想替换成root/category/file。 打开整个网站（非主题）中的 _confi">
 <meta name="keywords" content="next,过程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用Hexo搭建个人博客">
 <meta property="og:url" content="http://uug521.top/index/Hexo/Hexo-to-blog/index.html">
 <meta property="og:site_name" content="pan&#39;s record">
-<meta property="og:description" content="在利用Hexo搭建个人博客过程中遇到的问题和解决方法。主要是参考别人的经验，按照需要引入新功能。">
+<meta property="og:description" content="在利用Hexo搭建个人博客过程中遇到的问题和解决方法。 主要是参考别人的经验，按照需要引入新功能。 &amp;lt;!-- more --&amp;gt; 关键步骤 修改URL形式 在博客中点开渲染后的html文档，可以看到，网站格式为root/yera/month/day/file，由于年月日信息对于读者 来说重要程度不高，想替换成root/category/file。 打开整个网站（非主题）中的 _confi">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-06-05T04:29:52.574Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用Hexo搭建个人博客">
-<meta name="twitter:description" content="在利用Hexo搭建个人博客过程中遇到的问题和解决方法。主要是参考别人的经验，按照需要引入新功能。">
+<meta name="twitter:description" content="在利用Hexo搭建个人博客过程中遇到的问题和解决方法。 主要是参考别人的经验，按照需要引入新功能。 &amp;lt;!-- more --&amp;gt; 关键步骤 修改URL形式 在博客中点开渲染后的html文档，可以看到，网站格式为root/yera/month/day/file，由于年月日信息对于读者 来说重要程度不高，想替换成root/category/file。 打开整个网站（非主题）中的 _confi">
 
 
 
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  415字
+                  417字
                 </span>
               
 
@@ -471,16 +471,34 @@
       
 
       
-        <p>在利用Hexo搭建个人博客过程中遇到的问题和解决方法。<br>主要是参考别人的经验，按照需要引入新功能。</p>
-<a id="more"></a>
-<h1 id="关键步骤"><a href="#关键步骤" class="headerlink" title="关键步骤"></a>关键步骤</h1><h2 id="修改URL形式"><a href="#修改URL形式" class="headerlink" title="修改URL形式"></a>修改URL形式</h2><p>在博客中点开渲染后的html文档，可以看到，网站格式为<code>root/yera/month/day/file</code>，由于年月日信息对于读者<br>来说重要程度不高，想替换成<code>root/category/file</code>。<br>打开整个网站（非主题）中的 <code>_config.yml</code>文件，</p>
-<h2 id="修改尾部余量"><a href="#修改尾部余量" class="headerlink" title="修改尾部余量"></a>修改<p>尾部余量</p></h2><p>起因：段结尾一般有个图，图本身上下就有余量，俩余量加一起很宽<br>找到 themes\next_2\source\css_common\scaffolding\base.styl<br>p { margin: 0 0 0 0; }分别为顺时针余量，改第三个为0，则删除余量间隔。</p>
-<h2 id="增加评论"><a href="#增加评论" class="headerlink" title="增加评论"></a>增加评论</h2><p>原先准备用gitment，后来这个作者跑路了，转用gitalk。<br>得用github账号评论，以后有需要了再加吧。</p>
-<p><a href="https://blog.csdn.net/yanzi1225627/article/details/77890414" target="_blank" rel="noopener">https://blog.csdn.net/yanzi1225627/article/details/77890414</a><br><a href="https://zonghongyan.github.io/2017/06/29/201706292034/" target="_blank" rel="noopener">https://zonghongyan.github.io/2017/06/29/201706292034/</a><br><a href="https://imsun.net/posts/gitment-introduction/" target="_blank" rel="noopener">https://imsun.net/posts/gitment-introduction/</a><br><a href="https://github.com/settings/applications/766829" target="_blank" rel="noopener">https://github.com/settings/applications/766829</a><br><a href="https://www.cnblogs.com/pangguoming/p/8094815.html" target="_blank" rel="noopener">https://www.cnblogs.com/pangguoming/p/8094815.html</a></p>
-<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">Client ID</span></span><br><span class="line"><span class="xml">151d92bb28cc8d3f739e</span></span><br><span class="line"><span class="xml">Client Secret</span></span><br><span class="line"><span class="xml">eed46e19142bd6899045444f2220696680df0f0a  </span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">gitment:</span></span><br><span class="line"><span class="xml">     enable: true</span></span><br><span class="line"><span class="xml">     githubID: panxiang315</span></span><br><span class="line"><span class="xml">     repo: panxiang315.github.io</span></span><br><span class="line"><span class="xml">     ClientID: 151d92bb28cc8d3f739e</span></span><br><span class="line"><span class="xml">     ClientSecret: eed46e19142bd6899045444f2220696680df0f0a</span></span><br><span class="line"><span class="xml">     lazy: true</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">elseif</span> theme.gitment.enable %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">           </span><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> theme.gitment.lazy %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">             <span class="tag">&lt;<span class="name">div</span> <span class="attr">onclick</span>=<span class="string">"ShowGitment()"</span> <span class="attr">id</span>=<span class="string">"gitment-display-</span></span></span></span><br><span class="line"><span class="xml">button"&gt;</span><span class="template-variable">&#123;&#123;  __('gitmentbutton') &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">             <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"gitment-container"</span> </span></span></span><br><span class="line"><span class="xml">style="display:none"&gt;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">           </span><span class="template-tag">&#123;% <span class="name"><span class="name">else</span></span> %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">             <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"gitment-container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">           </span><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">include</span></span> 'gitment.swig' %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">@import "gitment";</span></span><br></pre></td></tr></table></figure>
-<h2 id="贴图"><a href="#贴图" class="headerlink" title="贴图"></a>贴图</h2><p><a href="https://jverson.com/2017/05/28/qiniu-image-v2/" target="_blank" rel="noopener">https://jverson.com/2017/05/28/qiniu-image-v2/</a><br><a href="http://www.cnblogs.com/fanzhidongyzby/p/6637084.html" target="_blank" rel="noopener">http://www.cnblogs.com/fanzhidongyzby/p/6637084.html</a></p>
-<h2 id="参考轮子"><a href="#参考轮子" class="headerlink" title="参考轮子"></a>参考轮子</h2><p><a href="https://blog.csdn.net/qq_33699981/article/details/72716951" target="_blank" rel="noopener">建议直接先看这个博客</a><br><a href="https://qianling.pw/hexo-optimization/" target="_blank" rel="noopener">也可以看看这个博客</a></p>
-<p><a href="http://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="noopener">插入动态图表</a>很酷，可惜会报不安全，不人性化  </p>
+        <p>在利用Hexo搭建个人博客过程中遇到的问题和解决方法。
+主要是参考别人的经验，按照需要引入新功能。</p>
+<p>&lt;!-- more --&gt;</p>
+<h1>关键步骤</h1>
+<h2>修改URL形式</h2>
+<p>在博客中点开渲染后的html文档，可以看到，网站格式为<code>root/yera/month/day/file</code>，由于年月日信息对于读者
+来说重要程度不高，想替换成<code>root/category/file</code>。<br>
+打开整个网站（非主题）中的 <code>_config.yml</code>文件，</p>
+<h2>修改&lt;P&gt;尾部余量</h2>
+<p>起因：段结尾一般有个图，图本身上下就有余量，俩余量加一起很宽
+找到 themes\next_2\source\css_common\scaffolding\base.styl
+p { margin: 0 0 0 0; }分别为顺时针余量，改第三个为0，则删除余量间隔。</p>
+<h2>增加评论</h2>
+<p>原先准备用gitment，后来这个作者跑路了，转用gitalk。
+得用github账号评论，以后有需要了再加吧。</p>
+<p>https://blog.csdn.net/yanzi1225627/article/details/77890414
+https://zonghongyan.github.io/2017/06/29/201706292034/
+https://imsun.net/posts/gitment-introduction/
+https://github.com/settings/applications/766829
+https://www.cnblogs.com/pangguoming/p/8094815.html</p>
+<p><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">Client ID</span></span><br><span class="line"><span class="xml">151d92bb28cc8d3f739e</span></span><br><span class="line"><span class="xml">Client Secret</span></span><br><span class="line"><span class="xml">eed46e19142bd6899045444f2220696680df0f0a  </span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">gitment:</span></span><br><span class="line"><span class="xml">     enable: true</span></span><br><span class="line"><span class="xml">     githubID: panxiang315</span></span><br><span class="line"><span class="xml">     repo: panxiang315.github.io</span></span><br><span class="line"><span class="xml">     ClientID: 151d92bb28cc8d3f739e</span></span><br><span class="line"><span class="xml">     ClientSecret: eed46e19142bd6899045444f2220696680df0f0a</span></span><br><span class="line"><span class="xml">     lazy: true</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">elseif</span> theme.gitment.enable %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">           </span><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> theme.gitment.lazy %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">             <span class="tag">&lt;<span class="name">div</span> <span class="attr">onclick</span>=<span class="string">"ShowGitment()"</span> <span class="attr">id</span>=<span class="string">"gitment-display-</span></span></span></span><br><span class="line"><span class="xml">button"&gt;</span><span class="template-variable">&#123;&#123;  __('gitmentbutton') &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">             <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"gitment-container"</span> </span></span></span><br><span class="line"><span class="xml">style="display:none"&gt;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">           </span><span class="template-tag">&#123;% <span class="name"><span class="name">else</span></span> %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">             <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"gitment-container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">           </span><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">include</span></span> 'gitment.swig' %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">@import "gitment";</span></span><br></pre></td></tr></table></figure></p>
+<h2>贴图</h2>
+<p>https://jverson.com/2017/05/28/qiniu-image-v2/
+http://www.cnblogs.com/fanzhidongyzby/p/6637084.html</p>
+<h2>参考轮子</h2>
+<p><a href="https://blog.csdn.net/qq_33699981/article/details/72716951" target="_blank" rel="noopener">建议直接先看这个博客</a>
+<a href="https://qianling.pw/hexo-optimization/" target="_blank" rel="noopener">也可以看看这个博客</a></p>
+<p><a href="http://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="noopener">插入动态图表</a>很酷，可惜会报不安全，不人性化</p>
 <p><a href="https://blog.csdn.net/qwerty200696/article/details/79010629" target="_blank" rel="noopener">置顶</a></p>
 <p><a href="https://fontawesome.com/icons?from=io" target="_blank" rel="noopener">图标库</a></p>
 
@@ -750,7 +768,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关键步骤"><span class="nav-number">1.</span> <span class="nav-text">关键步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改URL形式"><span class="nav-number">1.1.</span> <span class="nav-text">修改URL形式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改尾部余量"><span class="nav-number">1.2.</span> <span class="nav-text">修改尾部余量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增加评论"><span class="nav-number">1.3.</span> <span class="nav-text">增加评论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#贴图"><span class="nav-number">1.4.</span> <span class="nav-text">贴图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考轮子"><span class="nav-number">1.5.</span> <span class="nav-text">参考轮子</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">关键步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">修改URL形式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">修改&lt;P&gt;尾部余量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">增加评论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.4.</span> <span class="nav-text">贴图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.5.</span> <span class="nav-text">参考轮子</span></a></li></ol></li></ol></div>
             
 
           </div>
