@@ -1,0 +1,959 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="弗洛伊德," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="pan's record" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="关键概念：自由意志「释义」在面对不同的选择时，不受阻碍自由地做出决定的能力。但神经科学的研究显示，自由意志可能并没有决定我们的行动，而只是行动产生之际的“旁观者”。「应用」如果自由意志真的如神经科学家所推测的那样，并不决定行为．那么它存在的重要意义是去理解我们自己的行为。每一次做出决定时，你都应该对自己的行为动机进行更深入的剖析．理解行为产生的深层原因。核心问题：自由意志是否存在？">
+<meta name="keywords" content="弗洛伊德">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自由意志是否存在？">
+<meta property="og:url" content="http://uug521.top/psychology/reprint/psychology-willing/index.html">
+<meta property="og:site_name" content="pan&#39;s record">
+<meta property="og:description" content="关键概念：自由意志「释义」在面对不同的选择时，不受阻碍自由地做出决定的能力。但神经科学的研究显示，自由意志可能并没有决定我们的行动，而只是行动产生之际的“旁观者”。「应用」如果自由意志真的如神经科学家所推测的那样，并不决定行为．那么它存在的重要意义是去理解我们自己的行为。每一次做出决定时，你都应该对自己的行为动机进行更深入的剖析．理解行为产生的深层原因。核心问题：自由意志是否存在？">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-07T00:39:10.874Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自由意志是否存在？">
+<meta name="twitter:description" content="关键概念：自由意志「释义」在面对不同的选择时，不受阻碍自由地做出决定的能力。但神经科学的研究显示，自由意志可能并没有决定我们的行动，而只是行动产生之际的“旁观者”。「应用」如果自由意志真的如神经科学家所推测的那样，并不决定行为．那么它存在的重要意义是去理解我们自己的行为。每一次做出决定时，你都应该对自己的行为动机进行更深入的剖析．理解行为产生的深层原因。核心问题：自由意志是否存在？">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://uug521.top/psychology/reprint/psychology-willing/"/>
+
+
+
+
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+  <title> 自由意志是否存在？ | pan's record </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?41fc030db57d5570dd22f78997dc4a7e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+<!-- <a href="https://github.com/panxiang315/panxiang315.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;
+         " src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a> -->
+
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta custom-logo">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">pan's record</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <h1 class="site-subtitle" itemprop="description">background of my life</h1>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://uug521.top/psychology/reprint/psychology-willing/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Pan Xiang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="pan's record">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="pan's record" src="/images/avatar.jpg">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                自由意志是否存在？
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-07T08:31:54+08:00">
+                2018-06-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/psychology/" itemprop="url" rel="index">
+                    <span itemprop="name">psychology</span>
+                  </a>
+                </span>
+
+                
+                
+                  >
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/psychology/reprint/" itemprop="url" rel="index">
+                    <span itemprop="name">reprint</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+
+          
+          
+
+          
+
+		  
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  2,227字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  7分
+                </span>
+              
+            </div>
+          
+
+          
+
+
+
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>关键概念</strong>：自由意志<br><strong>「释义」</strong>在面对不同的选择时，不受阻碍自由地做出决定的能力。但神经科学的研究显示，自由意志可能并没有决定我们的行动，而只是行动产生之际的“旁观者”。<br><strong>「应用」</strong>如果自由意志真的如神经科学家所推测的那样，并不决定行为．那么它存在的重要意义是去理解我们自己的行为。每一次做出决定时，你都应该对自己的行为动机进行更深入的剖析．理解行为产生的深层原因。<br><strong>核心问题</strong>：自由意志是否存在？</p>
+<a id="more"></a>
+<hr>
+<p>&emsp;&emsp;上一讲我跟你分享了潜伏在黑暗之中的潜意识。今天，我就跟你谈谈光明之下的意识，和你说说意识的核心——自由意志。</p>
+<h1 id="自由意志都是假象"><a href="#自由意志都是假象" class="headerlink" title="自由意志都是假象"></a>自由意志都是假象</h1><p>&emsp;&emsp;匈牙利著名的爱国诗人裴多菲写过一首诗，其中有一句是这样的： “生命诚可贵，爱情价更高，若为自由故，两者皆可抛。”这里的自由，指的就是我们的自由意志。<br>&emsp;&emsp;因为我们有自由意志，所以我们能根据自己的意愿作出决定和行动。但是，在今天这一讲里，我要告诉你，这一切可能都是假象。你也许会说，我的自由意志怎么可能是假象呢？我现在想举一下手，我的手就举起来了；想喝一杯水，于是我拿起水杯喝了一口水。<br>&emsp;&emsp;难道现在不是我在决定我的行为，难道我没有自由意志么？上面的这个观点，我们认为是理所当然的。但是随着科学的发展，对心理和意识认识的深化，有越来越多的哲学家、心理学家和神经科学家认为我们的自由意志只是一个副现象，也就是说，它只是一个副产品，和我们的行为没有任何因果关系。<br>&emsp;&emsp;你的一切在宇宙诞生的那一瞬间就都已被决定哲学家提出了一个称为“宇宙大爆炸决定论”的假说。什么是宇宙大爆炸决定论？137亿年前，一个致密炽热的点爆炸后形成了我们现在的宇宙。在爆炸之前没有空间，没有时间，没有物理的规则；而当这个爆炸产生之后，就有了各种物理规则和粒子的各种运动。所以，在宇宙大爆炸的一瞬间，物理规则就定下来了，粒子的运动初始值也定下来了，那么宇宙作为一个系统，它的每一步都是可以推导的了。<br>&emsp;&emsp;也就是说，如果我们能够知道宇宙大爆炸的所有初始值，以及所有的规则和公式，那么我们就可以推导出从宇宙大爆炸到现在甚至到未来的每一个状态和每一件事情。得更直白一些，我们现在所做的一切，包含我现在嘴里说出的每一个字，以及我将要说出的每一个字，其实在137亿年前的宇宙大爆炸的那个瞬间就已经决定了。<br>&emsp;&emsp;既然你每一刻的言语、思想、行动都是在宇宙大爆炸的那一瞬间就已经定下来了，那么你哪里还有什么自由意志呢？自由意志只是无意识的副现象当然，你可以说这只是哲学家们的一个思维实验而已，宇宙那么复杂，谁能算得清楚？而我现在想举下手，然后我的手就举起来了，这难道不是我的行动我做主，我的自由意志的完美体现么？心理学家说，不是。<br>&emsp;&emsp;在多年前，神经科学家发现了一个脑电成分，称为准备电位（readiness potential)，每次我们在举手前500到800毫秒就会出现。神经科学家们非常兴奋，认为这个准备电位就是我们自由意志的神经学基础。于是，心理学家在个发现的基础上，做了一个更加精细的实验，来记录当受试者想运动手指到手指运动这个过程的两个关键的时间。</p>
+<blockquote>
+<ul>
+<li>时间1：大脑想动一下手指的时间，也就是我们的自由意志；</li>
+<li>时间2：准备电位出现的时间。</li>
+</ul>
+</blockquote>
+<p>&emsp;&emsp;实验结果让人惊讶。首先，准备电位在真正动手指之前的535毫秒产生；而当我们产生了想动手指的想法的时间，仅仅比真正动手指早204毫秒。换句话说，当大脑产生一个准备动手指的准备电位之后，需要再过大约300毫秒，我们的大脑才会产生想动手指这个想法。也就是说，是大脑先产生了一个电活动，它决定了我要动一下手指；然后又过了300毫秒，我的自由意志才意识到，我想动一下手指。所以，我们所谓的自由意志并没有决定我们的行动，它只是一个旁观者。这里我可以作个类比。你想象你现在坐在车的副驾驶座上，你看见方向盘向左转了一下，然后你说这个车会向左转弯，结果车就真的向左转弯了。但是，你不会说，你控制了车的行驶方向，因为你清楚地知道你只是坐在副驾驶座上观察而已。<br>&emsp;&emsp;类似的事情也发生在自由意志上。在你动手指之前，你的无意识发出了两个信号，一个信号让你动一下手指，而另一个信号发给你的意识，通知你手指要动一下了。而你在得知你要动手指早于你手指的真正运动，你就产生了一个错觉，这个错觉就是你认为你有自由意志，是你的自由意志决定了你的行动。</p>
+<h1 id="自由意志会帮助你理解你的决定"><a href="#自由意志会帮助你理解你的决定" class="headerlink" title="自由意志会帮助你理解你的决定"></a>自由意志会帮助你理解你的决定</h1><p>&emsp;&emsp;既然我们的自由意志只是副现象，不能决定我们的行为，那么自由意志有什么意义？为什么我们还如此地珍惜自由意志？我想借用黑客帝国的一段对话来回答这个问题。在电影里，先知oracle拿出一颗糖，问尼奥，“你要吃这颗糖吗？”尼奥回答道：“你是预言家，你已经知道了我会吃或者是不会吃这颗糖，那么我的决定还有什么意义？” Oracle回答了一句非常深刻的话，她说：你到我这里来，并不是来作一个选择。你的选择其实已经作下来了。你到我这里来，只是来理解你的选择。”<br>&emsp;&emsp;正如oracle所说，我们的自由意志并不是来作决定的，它是来帮助我们理解我们为什么要作这个决定。我们每个人来到这个世上，都有着自己注定要完成的使命。但是，我们并不知道我们的使命是什么。所以，我们需要在前进的路上，不断地去反思，不停地去理解。只有当我们明白了我们的使命，我们在众多的岔路中，就不会迷失方向，就会走得更加坚定。<br>&emsp;&emsp;你的自由意志，虽然不能让你去作选择，但是会让你的选择变得更加高效，更加富有意义，让你的脚步变得更加地坚定。所以，丹麦哲学家索伦•克尔凯郭尔说，“只有不停地回顾，你才能领悟人生，但是要活出精彩，你必须扬帆向前！”<br>&emsp;&emsp;又到了我们这一讲要结束的时候，这里，我想用现代心理学创始人威廉•詹姆斯说过的一段话来作为对自由意志这一讲的结尾。他说：罗密欧想要朱丽叶就像铁屑想要磁铁一样。如果他们之间没有任何阻隔，他会奔向她，如同铁屑与磁铁相吸，迅如直线。但是如果他们之间有一堵墙，罗密欧与朱丽叶却不会像铁屑和磁铁一样，非常愚蠢地把脸贴在墙的两侧。<br>&emsp;&emsp;对于铁屑和磁铁而言，路径是注定的，而结局如何全靠偶然；而对于情人而言，路径曲折也罢，阻隔重重也罢，相逢在一起，相爱在一起，是他们注定的结局。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>&emsp;&emsp;自由意志只是一个副现象，它并不是来作决定的，而是来帮助我们理解，我们为什么要作这个决定。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+  
+        <div class="post-tags">
+          
+            <a href="/tags/弗洛伊德/" rel="tag"><i class="fa fa-tag"></i> 弗洛伊德</a>
+          
+        </div>
+      
+
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>🐶 您的支持将鼓励我继续创作 🐶</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赞赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.jpg" alt="Pan Xiang WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zhifubao.jpg" alt="Pan Xiang Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+        
+     <div>
+      
+      <ul class="post-copyright">
+         <li class="post-copyright-link">
+          <strong>本文作者：</strong>
+          <a href="/" title="欢迎访问 Pan Xiang 的个人博客">Pan Xiang</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文标题：</strong>
+          <a href="http://uug521.top/psychology/reprint/psychology-willing/" title="自由意志是否存在？">自由意志是否存在？</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文链接：</strong>
+          <a href="http://uug521.top/psychology/reprint/psychology-willing/" title="自由意志是否存在？">http://uug521.top/psychology/reprint/psychology-willing/</a>
+        </li>
+
+        <li class="post-copyright-date">
+            <strong>发布时间：</strong>2018年6月7日 - 08时06分
+        </li>
+
+        <li class="post-copyright-license">
+          <strong>版权声明： </strong>
+          本文由 Pan Xiang 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="license" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a> </br>转载请保留以上声明信息！
+        </li>
+      </ul>
+    
+  </div>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/telecommunication/NB-IoT/0-2-NB-IoT/" rel="next" title="NB-IoT白皮书">
+                <i class="fa fa-chevron-left"></i> NB-IoT白皮书
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/psychology/reprint/self1/" rel="prev" title="自我（上）：你和陌生人，谁更了解你自己？">
+                自我（上）：你和陌生人，谁更了解你自己？ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+
+  </div>
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Pan Xiang" />
+          <p class="site-author-name" itemprop="name">Pan Xiang</p>
+          <p class="site-description motion-element" itemprop="description">Learning, on the way</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/panxiang315" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/panxiangBupt" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://weibo.com/panxiangBupt" title="weibo" target="_blank">weibo</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://blog.csdn.net/panfly_315" title="CSDN" target="_blank">CSDN</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://greychess.cn" title="前端大佬" target="_blank">前端大佬</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#自由意志都是假象"><span class="nav-number">1.</span> <span class="nav-text">自由意志都是假象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自由意志会帮助你理解你的决定"><span class="nav-number">2.</span> <span class="nav-text">自由意志会帮助你理解你的决定</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fas fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Pan Xiang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io" rel="external nofollow">Hexo</a> 驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END -->
+  
+
+
+
+  
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+	<!-- 页面点击小红心 -->
+	<!-- <script type="text/javascript" src="/js/src/love.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>
