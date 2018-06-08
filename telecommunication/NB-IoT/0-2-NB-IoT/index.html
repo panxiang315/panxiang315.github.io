@@ -147,7 +147,7 @@
 <meta property="og:image" content="http://uug521.top/images/learning/NB-IoT-WP/P29-reconfiguration.jpg">
 <meta property="og:image" content="http://uug521.top/images/learning/NB-IoT-WP/P30-reconfiguration.jpg">
 <meta property="og:image" content="http://uug521.top/images/learning/NB-IoT-WP/P31-NPUSCH-transmission.jpg">
-<meta property="og:updated_time" content="2018-06-06T11:45:56.569Z">
+<meta property="og:updated_time" content="2018-06-08T03:46:56.870Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NB-IoT白皮书">
 <meta name="twitter:description" content="本文译自罗德施瓦茨的NB-IoT白皮书。   source: https://www.rohde-schwarz.com.cn/applications/white-paper_230854-314242.html title: Narrowband Internet of Things Whitepaper 纯属个人学习使用   https://mp.weixin.qq.com/s/d1vjqj">
@@ -465,7 +465,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  15,765字
+                  15,629字
                 </span>
               
 
@@ -481,7 +481,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  58分
+                  57分
                 </span>
               
             </div>
@@ -514,44 +514,53 @@
 <p><a href="https://mp.weixin.qq.com/s/d1vjqjFIY_XyLc-JtduFpg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/d1vjqjFIY_XyLc-JtduFpg</a></p>
 <a id="more"></a>  
 <hr>
-<p>&emsp;&emsp;3GPP R13版本中包含了一个新的无线技术标准——窄带物联网(Narrowband Internet of Things, NB-IoT)。NB-IoT针对机器类型传输进行了优化，简化流程以降低设备成本及功耗。此外，它还适用于在无线环境较差的场景，该类场景在机器通信中很常见。虽然NB-IoT是一个独立的无线接口，但它与LTE紧密相连，因此集成到了现有的LTE规范中。<br>&emsp;&emsp;在本白皮书中，我们将介绍NB-IoT技术，重点介绍它与LTE之间的紧密联系。  </p>
-<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>&emsp;&emsp;机器类型通信（MTC）的特征之一是广泛的能力。例如，监控摄像机在几乎静止时不得不提供大量的UL数据，而用于车队追踪的设备在执行大量切换时具有少量数据。<br>另一类设备没有这些功能。例如电表，煤气或水消耗等仪表读数的设备。它们通常是固定的，因此不需要优化的切换。通常只传输少量数据，这甚至不是延迟敏感的。然而，与传统设备相比，这些MTC设备的数量可能变得相当大，甚至达到几个数量级。使用现有的LTE技术会导致网络过载，因为尽管用户数据量很小，但信令量大致相同。 NB-IoT的第一个规格集中在这类设备上。<br>这些设备通常安装在没有电源的地方。因此，他们完全依靠电池运行，更换电池可能会非常昂贵，因为他们只能由经过培训的员工访问。因此，在某些情况下，电池寿命甚至可以决定整个设备的使用寿命。因此，优化的功耗对于正确的操作非常重要。另外，这些地方的覆盖面通常很差。因此，室内覆盖必须得到显着改善，认为23 dB是必要的。<br>由于其所需设备数量庞大，因此它们必须处于低成本范围。作为目标，每个模块的价格范围应低于5美元。<br>为了评估可能的解决方案，GERAN TSG [1]在3GPP中讨论了一个研究项目。除上述之外，主要要求是与现有的GSM，UMTS和LTE系统以及用于这些技术的硬件共存。</p>
-<div align="center"><br>  <img src="/images/learning/NB-IoT-WP/P1-three-IoT-standards.jpg" width="50%" alt="three-IoT-standards"><br>  图1-1 三种物联网标准<br></div> 
+<p>&emsp;&emsp;3GPP R13版本中引入了一个新的空口技术标准：窄带物联网(Narrowband Internet of Things, NB-IoT)。  &emsp;&emsp;NB-IoT针对机器型通信(Machine Type Communication, MTC)进行了优化，简化了流程从而降低设备成本和功耗。此外，它还适用于无线传播环境较差的场景，这种场景在机器通信中很常见。虽然NB-IoT是一个独立的无线空口，但它与LTE紧密相连，因此被集成到了现有的LTE规范中。<br>&emsp;&emsp;在本白皮书中，我们将介绍NB-IoT技术，重点介绍它与LTE之间的紧密联系。  </p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>&emsp;&emsp;MTC的特征之一是应用场景丰富。例如，处于静止状态的监控摄像机需要发送大量上行数据，而追踪型设备虽然数据量少，但要执行大量切换。<br>&emsp;&emsp;还有一类应用场景，如电表、水表及煤气表等仪表读数类设备。它们通常是固定的，因此不需要执行切换；只传输少量数据，对时延也不敏感。然而，这些MTC设备的数量庞大，甚至比传统设备数量高几个量级。若使用现有的LTE传输，虽然用户数据量很小，但是信令传输量大，会导致网络过载。NB-IoT的初始应用场景就是集中在这类场景中。<br>&emsp;&emsp;此外，这类设备通常没有连接电源，完全依靠电池工作。而替换电池成本较高，因为数量较多，需要大量技术人员。在大部分情况，电池寿命甚至可以决定整个设备的使用寿命。因此，优化的功耗设计对于该类应用场景尤其重要。这类场景无线传播环境差，必须实现室内深度覆盖，余量需达到23dB。<br>&emsp;&emsp;由于设备数量庞大，还必须控制设备成本，目标是单个模块价格低于5美元。<br>&emsp;&emsp;3GPP GERAN TSG$^{[1]}$对可能方案进行了评估，除上述要求之外，还需考虑与现有的GSM、UMTS和LTE系统共存。</p>
+<div align="center"><img src="/images/learning/NB-IoT-WP/P1-three-IoT-standards.jpg" width="50%" alt="three-IoT-standards"> 图1-1 三种物联网标准</div> 
 
-<p>这项研究已经确定了NB-IoT和EC-GSM两种解决方案，其中后者基于GSM标准。同时，纯LTE解决方案LTE-M也被纳入3GPP。它继续了第12版中已经完成的优化，并引入了新的设备类别cat-M1。<br>在本白皮书中，介绍了NB-IoT。虽然它被集成在LTE标准中，但它可以被看作是一个新的空中接口。因此，它不与LTE向后兼容。通过指定从现有标准或其附近使用的时间和频率资源来实现共存。<br>白皮书的结构如下：我们首先概述更具体的要求和网络架构，并提供物理层的详细信息。在描述了对小区的访问之后，我们展示了数据包如何通过空中接口传输。最后给出了该技术进一步发展的展望。</p>
-<hr>
-<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>根据前一章提到的一般MTC要求，推导了NB-IoT的以下标准特定要求：  </p>
+<p>&emsp;&emsp;研究确定了NB-IoT和EC-GSM两种解决方案，后者基于GSM标准。同时，纯LTE解决方案LTE-M也被纳入3GPP。它延续了R12中已经完成的优化，并引入了新的设备类型cat-M1。<br>&emsp;&emsp;本白皮书主要介绍NB-IoT标准。虽然它被集成在LTE标准中，但它不与LTE向后兼容，可以被看作是一个新的空口。通过给NB-IoT分配现有标准的时频资源或者其附近的时频资源来实现共存。本文结构如下：</p>
 <blockquote>
 <ul>
-<li>尽量减少信令开销，特别是在无线接口上</li>
-<li>为整个系统（包括核心网络）提供适当的安全性</li>
-<li>延长电池寿命</li>
-<li>支持IP和非IP数据的交付[2,3]</li>
-<li>支持SMS作为部署选项[4]</li>
+<li>首先概述NB-IoT需求及网络架构，并介绍物理层详细信息；</li>
+<li>然后描述小区接入过程，说明分组包如何通过空口传输；</li>
+<li>最后对技术发展进行了下一步的展望。  </li>
 </ul>
 </blockquote>
-<p>为了满足这些要求，LTE版本8/9的许多先进甚至基本特性都不被支持[5]。最显着的例子是在连接状态下UE没有切换。只支持空闲状态下的小区重选，甚至限于NB-IoT技术。由于没有与其他无线电技术进行交互，因此不支持相关功能。例如缺乏LTE-WLAN互通，设备内共存的干扰避免以及监测信道质量的测量。<br>大多数LTE高级功能也不受支持。这涉及例如载波聚合，双连接或设备到设备服务。另外，没有QoS概念，因为NB-IoT不用于延迟敏感的数据包。因此，所有需要保证比特率的业务，如实时IMS，也不在NB-IoT中提供。<br>有了这些要求，3GPP采用了与以前不同的方法。与其为所有类型的应用程序创建一个空中接口，用于小型非延迟敏感数据包的空中接口分开并优化。支持在NB-IoT技术上工作的UE用新的UE类别cat-NB1进行标记。</p>
-<h2 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h2><h3 id="核心网"><a href="#核心网" class="headerlink" title="核心网"></a>核心网</h3><p>&emsp;&emsp;在演进分组系统(Evolved Packet System, EPS)中定义了两种对于蜂窝物联网(Cellular Internet of Things, CIoT)的优化方案：用户面(User Plane, UP)优化和控制面(Control Plane, CP)优化，如图2-1所示。这两种优化方案都可以使用，但依赖于NB-IoT设备支持能力。  </p>
-<div align="center"><br>  <img src="/images/learning/NB-IoT-WP/P2-network-of-IoT.jpg" width="80%" alt="network-of-IoT"><br>  图2-1 两种优化方案<br></div> 
+<hr>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>&emsp;&emsp;基于前面提到的MTC普遍需求进行扩展，NB-IoT需求如下：  </p>
+<blockquote>
+<ul>
+<li>尽量减少信令开销，特别是在空口上</li>
+<li>为整个系统（包括核心网）提供适当的安全性保障</li>
+<li>延长电池寿命</li>
+<li>支持IP和非IP数据的传输$^{[2,3]}$</li>
+<li>短信息服务(Short Message Service, SMS)支持作为部署可选项$^{[4]}$</li>
+</ul>
+</blockquote>
+<p>&emsp;&emsp;为了满足这些需求，许多LTE R8/R9版本的高级特性，甚至基本特性在NB-IoT中都不支持$^{[5]}$。最显着的例子是在连接状态下，UE没无法进行切换。只支持空闲状态的小区重选，甚至仅限于在NB-IoT网络内重选。由于没有与其他无线技术进行互通，因此也不支持相关特性。例如，NB-IoT不支持LTE-WLAN互通、设备共存时的干扰规避以及无线信道质量测量。</p>
+<p>&emsp;&emsp;NB-IoT不支持大多数LTE高级特性，如载波聚合(Carrier Aggregation)、双连接(Dual Connectivity)或设备到设备(device-to-device)通信。此外，NB-IoT没有QoS概念，不能用于时延敏感的分组包传输。因此，所有需要保障比特率的业务（如实时IMS），NB-IoT都无法提供。  </p>
+<p>&emsp;&emsp;针对上述独特需求，3GPP采取了与以前不同的解决方案：为非时延敏感的小型数据包传输场景，定义独立的无线空口标准并进行优化，而不是为所有类型的应用场景定义单个统一标准。</p>
+<h2 id="网络架构"><a href="#网络架构" class="headerlink" title="网络架构"></a>网络架构</h2><h3 id="核心网"><a href="#核心网" class="headerlink" title="核心网"></a>核心网</h3><p>&emsp;&emsp;在演进分组系统(Evolved Packet System, EPS)中定义了两种对于蜂窝物联网(Cellular Internet of Things, CIoT)的优化方案：用户面(User Plane, UP)优化和控制面(Control Plane, CP)优化，如图2-1所示。这两种优化方案都可以使用，但依赖于NB-IoT设备支持能力。  </p>
+<div align="center"> <img src="/images/learning/NB-IoT-WP/P2-network-of-IoT.jpg" width="80%" alt="network-of-IoT"> 图2-1 两种优化方案</div> 
 
 <blockquote>
-<p>红线指示控制面CIoT EPS优化的数据通道；蓝线指示用户面CIoT EPS优化的数据通道 </p>
+<p>注：红线指示控制面CIoT EPS优化的数据通道；蓝线指示用户面CIoT EPS优化的数据通道 </p>
 </blockquote>
 <p>&emsp;&emsp;在控制面CIoT EPS优化中，上行数据从eNodeB发往MME（而不是直接发往SGW）。接下来数据有2条路径可选：</p>
 <blockquote>
 <ul>
-<li>发往SGW后再发往PGW</li>
+<li>发往SGW，子后再发往PGW</li>
 <li>发往SCEF（Service Capability Exposure Function），该路径只能用于非IP数据包的传输</li>
 </ul>
 </blockquote>
-<p>&emsp;&emsp;这些节点最终将数据发送给应用服务器(CIoT服务器)。下行数据在相反方向使用相同的路径来传输。在这种解决方案下，不会为用户数据传输建立专门的数据承载（DRB），数据包是通过信令承载（SRB）来传输的，因此省去了NAS层和核心网建立连接的信令流程，缩短唤醒恢复时延。因此，这种解决方案只适用于频率低且低速率业务的数据传输。<br>&emsp;&emsp;SCEF是专门为机器类型数据（machine-type data）而设计的一个新节点，它用于在控制面上传输非IP数据，并为认证及授权等网络服务提供了一个抽象的接口。  </p>
-<p>通过用户平面CIoT EPS优化，数据以与常规数据业务相同的方式传输，即通过无线电承载通过SGW和PGW传输到应用服务器。因此，它在建立连接时会产生一些开销，但它有助于发送一系列数据分组。该路径同时支持IP和非IP数据传输。</p>
-<h3 id="接入网"><a href="#接入网" class="headerlink" title="接入网"></a>接入网</h3><p>在整体接入网络架构上，与LTE [6]没有区别：</p>
-<div align="center"><br>  <img src="/images/learning/NB-IoT-WP/P3-air-interface.jpg" width="50%" alt="air-interface"><br>  图2-2 空中接口<br></div> 
+<p>&emsp;&emsp;这些节点最终将数据发送给应用服务器(CIoT服务器)。下行数据在相反方向使用相同的路径来传输。<br>&emsp;&emsp;在控制面CIoT EPS优化中，不会为用户数据传输建立专门的数据承载(DRB)，数据包是通过信令承载(SRB)来传输的，因此省去了NAS层和核心网建立连接的信令流程，缩短唤醒恢复时延。因此，这种优化方案只适用于频率低且低速率业务的数据传输。</p>
+<p>&emsp;&emsp;SCEF是专门为机器型数据(machine-type data)而设计的一个新节点，它用于在控制面上传输非IP数据，并为认证及授权等网络服务提供了一个抽象的接口。<br>&emsp;&emsp;通过用户平面CIoT EPS优化，数据以与常规数据业务相同的方式传输，即通过无线电承载通过SGW和PGW传输到应用服务器。因此，它在建立连接时会产生一些信令开销，但它有助于发送连续数据分组。该路径同时支持IP和非IP数据传输。</p>
+<h3 id="接入网"><a href="#接入网" class="headerlink" title="接入网"></a>接入网</h3><p>&emsp;&emsp;在整体接入网络架构方面，NB-IoT与LTE没有区别$^{[6]}$，如图2-2所示：  </p>
+<div align="center"><img src="/images/learning/NB-IoT-WP/P3-air-interface.jpg" width="40%" alt="air-interface">图2-2 空中接口</div> 
 
-<p>使用S1接口将eNB连接到MME和S-GW，不同之处在于承载NB-IoT消息和数据分组。 即使没有定义切换，两个eNB之间仍然存在一个X2接口，这可以在UE进入空闲状态后实现快速恢复，详细信息请参见章节4.5.1，“RRC连接建立” 即使是恢复过程是到另一个eNB的情况也是如此。</p>
-<h2 id="频带"><a href="#频带" class="headerlink" title="频带"></a>频带</h2><p>NB-IoT使用与LTE中相同的频带号(Band Number)，并为<a href="https://panxiang315.github.io/telecommunication/LTE/LTE-Bands/" target="_blank" rel="noopener">LTE使用频带</a>的子集。 R13中NB-IoT使用频带如表2-1所示$^[7]$：</p>
-<div align="center"><br>   表2-1 NB-IoT频段<br></div>   
+<p>&emsp;&emsp;eNB通过S1接口连接到MME和S-GW。虽然NB-IoT中没有切换功能，但是两个两个eNB之间仍然存在一个X2接口，它可以让空闲状态的UE快速恢复连接，详细信息参见[章节4.5.1]。</p>
+<h2 id="频带"><a href="#频带" class="headerlink" title="频带"></a>频带</h2><p>&emsp;&emsp;NB-IoT使用与LTE中相同的频带号(Band Number)，并为<a href="https://panxiang315.github.io/telecommunication/LTE/LTE-Bands/" target="_blank" rel="noopener">LTE使用频带</a>的子集。 R13中NB-IoT使用频带如表2-1所示$^{[7]}$：</p>
+<div align="center">表2-1 NB-IoT频段</div>   
 
 <table>
 <thead>
@@ -634,21 +643,21 @@
 </tr>
 </tbody>
 </table>
-<p>&emsp;&emsp;值得一提的是，NB-IoT大多数使用频率都处于现有LTE频带的低频。这是因为低频信号覆盖广，穿透性强，更符合MTC应用场景需求。  </p>
+<p>&emsp;&emsp;从上表可以看出，NB-IoT大部分使用的频率都处于现有LTE频带的低频。这是因为低频信号覆盖广，穿透性强，更符合MTC应用场景需求。  </p>
 <hr>
-<h1 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h1><h2 id="操作模式"><a href="#操作模式" class="headerlink" title="操作模式"></a>操作模式</h2><p>&emsp;&emsp;NB-IoT在频域上占用了180 kHz有效带宽$^[8]$，对应于LTE传输中的一个RB。NB-IoT支持三种操作模式：</p>
+<h1 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h1><h2 id="操作模式"><a href="#操作模式" class="headerlink" title="操作模式"></a>操作模式</h2><p>&emsp;&emsp;NB-IoT在频域上占用了180 kHz有效带宽$^{[8]}$，对应于LTE传输中的一个RB。NB-IoT支持三种操作模式：</p>
 <blockquote>
 <ul>
-<li>独立部署(Stand alone Operation)：一种可能的部署方式是重耕GSM频谱。GSM的单载波带宽为200kHz，可以将NB-IoT部署在GSM频带上，并在频带的两端各预留10kHz作为保护频带；  </li>
-<li>保护频带部署(Guard band operation)：利用LTE载波的保护频带上的未使用的RB（Resource Block，资源块）资源来部署NB-IoT；</li>
-<li>带内部署（in-band operation）：利用LTE载波带内RB来部署NB-IoT。  </li>
+<li>独立部署(Stand alone Operation)：一种可能的部署方式是重耕GSM频谱。GSM的单载波带宽为200kHz，可以将NB-IoT部署在GSM频带上，并在频带的两端各预留10kHz作为保护频带  </li>
+<li>保护频带部署(Guard band operation)：利用LTE载波的保护频带上的未使用的RB资源来部署NB-IoT</li>
+<li>带内部署（In-band operation）：利用LTE载波带内RB来部署NB-IoT  </li>
 </ul>
 </blockquote>
 <p>&emsp;&emsp;NB-IoT三种操作模式如下图所示。</p>
-<div align="center"><br>  <img src="/images/learning/NB-IoT-WP/P4-Operation-modes.jpg" width="80%" alt="Operation-modes"><br>  图3-1 NB-IoT操作模式<br></div> 
+<div align="center"><img src="/images/learning/NB-IoT-WP/P4-Operation-modes.jpg" width="100%" alt="Operation-modes">图3-1 NB-IoT操作模式</div> 
 
-<p>&emsp;&emsp;对于独立部署方式，图中NB-IoT所占频谱仅作为示例。当然，这种操作模式也适用于没有相邻的GSM载波。<br>&emsp;&emsp;在带内部署中，LTE与NB-IoT之间的资源分配不固定。 然而，并非所有LTE载波内的RB都可以用于小区连接。仅限于以下值：  </p>
-<div align="center"><br>   表3-1 在NB-IoT带内部署中允许小区连接的LTE PRB编号<br></div>   
+<p>&emsp;&emsp;对于独立部署方式，图中NB-IoT所占频谱仅作为示例。当然，这种操作模式也适用于没有相邻的GSM载波。<br>&emsp;&emsp;对于带内部署方式，LTE与NB-IoT之间的资源分配不固定。 然而，并非所有LTE载波内的RB都可以用于小区连接。仅限于以下值：  </p>
+<div align="center"> 表3-1 在NB-IoT带内部署中允许小区连接的LTE PRB编号</div>   
 
 <table>
 <thead>
@@ -668,29 +677,32 @@
 <td style="text-align:center">2,7,17,22</td>
 <td style="text-align:center">4,9,14,19, 30,35,40,45</td>
 <td style="text-align:center">2,7,12,17, 22,27,32,42, 47,52,57,62, 67,72</td>
-<td style="text-align:center">4,9,14,19, 24,29,34,39, 44,55,60,65, 70,75,</td>
+<td style="text-align:center">4,9,14,19, 24,29,34,39, 44,55,60,65, 70,75,80,85, 90,95</td>
 </tr>
 </tbody>
 </table>
-<p>80,85, 90,95 |  </p>
-<p>&emsp;&emsp;如上表所示，不支持LTE带宽为1.4MHz时的带内操作。当为NB-IoT分配资源时，必须考虑LTE系统使用的资源（如每个子帧开始时的小区特定参考信号（CRS）或下行链路控制信道）之间的冲突。 这也反映在表3-1中，不使用6个内部资源块，因为它们被分配给LTE中的同步信号。<br>&emsp;&emsp;对于保护频带操作，UE仅同步到信号，对于该信号，频带完全处于保护频带中。<br>&emsp;&emsp;为了应对不同的无线电条件，可能有多达3个覆盖增强（CE）级别，CE级别0到CE级别2.CE级别0对应于正常覆盖，并且CE级别2对应最坏情况，其中覆盖可能被认为非常差。它取决于网络，定义了多少个CE等级。接收到的参考信号的功率阈值列表在每个CE级别的小区中广播。不同CE级别的主要影响是消息必须重复多次。</p>
-<p>&emsp;&emsp;对于R13版本，NB-IoT UE只支持FDD LTE系统，且只支持半双工type-B模式。这意味着上下行频率不同，且UE可以处在接收或发送状态，但不能同时收发。此外，从上行切换到下行，或从下行切换到上行时，中间必须存在至少一个保护子帧(guard subframe)，以便UE在发送机和接收机之间进行切换。</p>
-<h2 id="下行"><a href="#下行" class="headerlink" title="下行"></a>下行</h2><p>对于DL，三个物理通道</p>
+<p>&emsp;&emsp;如上表所示，不支持LTE带宽为1.4MHz时的带内操作。在为NB-IoT分配资源时，必须考虑LTE系统使用的资源（如每个子帧开始时的小区特定参考信号CRS或下行控制信道）之间的冲突。 这也反映在表3-1中，不使用6个中间的RB，因为它们被分配给LTE中的同步信号。<br>&emsp;&emsp;对于保护频带操作，UE仅同步到信号，对于该信号，频带完全处于保护频带中。<br>&emsp;&emsp;为了应对不同的无线传播环境，最多可达3个覆盖增强(Coverage Enhancement, CE)等级，CE0-CE2。CE0对应于正常覆盖，CE2对应覆盖较差的场景。等级数量取决于网络定义了多少个CE等级。各CE级别对应的RSRP功率阈值列表在小区中广播。CE等级不同主要影响消息的重传次数。<br>&emsp;&emsp;对于R13版本，NB-IoT UE只支持FDD，且只支持半双工type-B模式。这意味着上下行频率不同，且UE可以处在接收或发送状态，但不能同时收发。此外，从上行切换到下行，或从下行切换到上行时，中间必须存在至少一个保护子帧(guard subframe)，以便UE在发送机和接收机之间进行切换。</p>
+<h2 id="下行"><a href="#下行" class="headerlink" title="下行"></a>下行</h2><p>&emsp;&emsp;NB-IoT下行包括三个物理通道，信道种类比LTE要少，不包含物理多播信道(PMCH)，因为NB-IoT没有MBMS服务。</p>
 <blockquote>
 <ul>
-<li>NPBCH，窄带物理广播信道</li>
-<li>NPDCCH，窄带物理下行控制信道</li>
-<li>NPDSCH，窄带物理下行共享信道<br>并定义了两个物理信号。 这些信道比LTE要少，不包含物理多播信道PMCH，因为没有用于NB-IoT的MBMS服务。</li>
-<li>NRS，窄带参考信号</li>
-<li>NPSS和NSSS，主要和辅助同步信号</li>
+<li>NPBCH(Narrowband Physical Broadcast Channel)，窄带物理广播信道</li>
+<li>NPDCCH(Narrowband Physical Downlink Control Channel)，窄带物理下行控制信道</li>
+<li>NPDSCH(Narrowband Physical Downlink Shared Channel)，窄带物理下行共享信道</li>
 </ul>
 </blockquote>
-<p>下图说明了传输通道和物理通道之间的连接：</p>
-<div align="center"><br>  <img src="/images/learning/NB-IoT-WP/P5-mapping.jpg" width="50%" alt="mapping"><br>  图3-2 传输信道及物理信道映射关系<br></div> 
+<p>&emsp;&emsp;NB-IoT共定义了两个物理信号：</p>
+<blockquote>
+<ul>
+<li>NRS(Narrowband Reference Signal)，窄带参考信号</li>
+<li>NPSS和NSSS(Narrowband Primary/Secondary Synchronization Signals)，窄带主同步信号和窄带辅同步信号</li>
+</ul>
+</blockquote>
+<p>&emsp;&emsp;下图为传输信道和物理信道之间的映射关系：</p>
+<div align="center"><img src="/images/learning/NB-IoT-WP/P5-mapping.jpg" width="60%" alt="mapping">图3-2 传输信道及物理信道映射关系</div> 
 
-<p>MIB信息始终通过NPBCH传输，其余信令信息和数据通过NPDSCH传输。 NPDCCH控制UE和eNB之间的数据传输。<br>物理DL信道始终是QPSK调制的。 NB-IoT支持使用一个或两个天线端口AP0和AP1进行操作。 对于后一种情况，应用空频分组编码（SFBC）。 一旦选择，相同的传输方案适用于NPBCH，NPDCCH和NPDSCH。<br>像在LTE中一样，每个小区具有分配的物理小区ID（PCI），窄带物理小区ID（NCellID）。 定义了NCellID的504个不同的值。 其值由辅助同步信号NSSS提供，请参见第13页的章节3.2.3，“同步信号”。</p>
-<h3 id="帧结构"><a href="#帧结构" class="headerlink" title="帧结构"></a>帧结构</h3><p>在DL中，使用具有正常循环前缀（CP）的15kHz子载波间隔来应用OFDM。 每个OFDM符号由12个子载波组成，这样占用180kHz的带宽。 7个OFDMA符号被捆绑成一个时隙，以便该时隙具有以下资源网格[9]：</p>
-<div align="center"><br>  <img src="/images/learning/NB-IoT-WP/P6-Resource-grid.jpg" width="40%" alt="Resource-grid"><br>  图3-3 单时隙资源网格<br></div> 
+<p>&emsp;&emsp;主系统模块(Master Information Block, MIB)信息通过NPBCH传输，其余信令和数据通过NPDSCH传输。PDCCH控制UE和eNB之间的数据传输。<br>&emsp;&emsp;物理下行信道均采用QPSK调制，且支持使用一个或两个天线端口进行传输，后者采用SFBC编码。一旦选择，NPBCH，NPDCCH和NPDSCH将使用相同的调制编码方案。<br>&emsp;&emsp;LTE为每个小区分配物理小区ID(Physical Cell ID, PCI)，与之类似，NB-IoT为小区分配窄带物理小区ID(Narrowband physical cell ID， NCellID)，包含504个不同的值，详见[3.2.3 同步信号]。</p>
+<h3 id="帧结构"><a href="#帧结构" class="headerlink" title="帧结构"></a>帧结构</h3><p>&emsp;&emsp;在下行中，OFDM子载波间隔为15kHz，循环前缀(Cyclic Prefix, CP)为常规CP。每个OFDM符号由12个子载波组成，占据180kHz带宽。7个OFDMA符号组成一个时隙，单时隙资源网格如图3-3$^{[9]}$：</p>
+<div align="center"><img src="/images/learning/NB-IoT-WP/P6-Resource-grid.jpg" width="40%" alt="Resource-grid">图3-3 单时隙资源网格</div> 
 
 <p>对于一个资源块，这与正常CP长度下的LTE的资源网格相同，这对带内操作模式很重要。 资源元素被定义为一个OFDMA符号中的一个子载波，并且在图3-3中由一个正方形表示。这些资源元素中的每一个传送具有根据调制方案的值的复数值。<br>这些时隙按照与LTE相同的方式总结为子帧和无线帧：</p>
 <div align="center"><br>  <img src="/images/learning/NB-IoT-WP/P7-Frame-structure.jpg" width="60%" alt="Frame-structure"><br>  图3-4 15kHz子载波上下行帧结构<br></div> 
@@ -1118,7 +1130,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1127,7 +1139,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1136,7 +1148,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1216,7 +1228,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">2.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#需求"><span class="nav-number">2.1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络结构"><span class="nav-number">2.2.</span> <span class="nav-text">网络结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#核心网"><span class="nav-number">2.2.1.</span> <span class="nav-text">核心网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接入网"><span class="nav-number">2.2.2.</span> <span class="nav-text">接入网</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#频带"><span class="nav-number">2.3.</span> <span class="nav-text">频带</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#物理层"><span class="nav-number">3.</span> <span class="nav-text">物理层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#操作模式"><span class="nav-number">3.1.</span> <span class="nav-text">操作模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下行"><span class="nav-number">3.2.</span> <span class="nav-text">下行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#帧结构"><span class="nav-number">3.2.1.</span> <span class="nav-text">帧结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#窄带参考信号"><span class="nav-number">3.2.2.</span> <span class="nav-text">窄带参考信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步信号"><span class="nav-number">3.2.3.</span> <span class="nav-text">同步信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#窄带物理广播信道"><span class="nav-number">3.2.4.</span> <span class="nav-text">窄带物理广播信道</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#专用信道"><span class="nav-number">3.2.5.</span> <span class="nav-text">专用信道</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#控制信道NPDCCH"><span class="nav-number">3.2.5.1.</span> <span class="nav-text">控制信道NPDCCH</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#业务信道NPDSCH"><span class="nav-number">3.2.5.2.</span> <span class="nav-text">业务信道NPDSCH</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上行"><span class="nav-number">3.3.</span> <span class="nav-text">上行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#时隙结构"><span class="nav-number">3.3.1.</span> <span class="nav-text">时隙结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理上行共享信道"><span class="nav-number">3.3.2.</span> <span class="nav-text">物理上行共享信道</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考信号"><span class="nav-number">3.3.3.</span> <span class="nav-text">参考信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#随机接入信道"><span class="nav-number">3.3.4.</span> <span class="nav-text">随机接入信道</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#功率控制"><span class="nav-number">3.4.</span> <span class="nav-text">功率控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上行功率控制"><span class="nav-number">3.4.1.</span> <span class="nav-text">上行功率控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下行功率控制"><span class="nav-number">3.4.2.</span> <span class="nav-text">下行功率控制</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小区接入"><span class="nav-number">4.</span> <span class="nav-text">小区接入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#协议栈及信令承载"><span class="nav-number">4.1.</span> <span class="nav-text">协议栈及信令承载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统信息"><span class="nav-number">4.2.</span> <span class="nav-text">系统信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#调度"><span class="nav-number">4.2.1.</span> <span class="nav-text">调度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变更通知"><span class="nav-number">4.2.2.</span> <span class="nav-text">变更通知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">4.2.3.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小区选择及移动性"><span class="nav-number">4.3.</span> <span class="nav-text">小区选择及移动性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#随机接入流程"><span class="nav-number">4.4.</span> <span class="nav-text">随机接入流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接控制"><span class="nav-number">4.5.</span> <span class="nav-text">连接控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RRC连接建立"><span class="nav-number">4.5.1.</span> <span class="nav-text">RRC连接建立</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RRC连接释放"><span class="nav-number">4.5.2.</span> <span class="nav-text">RRC连接释放</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UE能力发送"><span class="nav-number">4.6.</span> <span class="nav-text">UE能力发送</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#寻呼"><span class="nav-number">4.7.</span> <span class="nav-text">寻呼</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据传输"><span class="nav-number">5.</span> <span class="nav-text">数据传输</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#控制面优化"><span class="nav-number">5.1.</span> <span class="nav-text">控制面优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户面优化"><span class="nav-number">5.2.</span> <span class="nav-text">用户面优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据连接的建立与配置"><span class="nav-number">5.2.1.</span> <span class="nav-text">数据连接的建立与配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多载波配置"><span class="nav-number">5.2.2.</span> <span class="nav-text">多载波配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制信道接收"><span class="nav-number">5.2.3.</span> <span class="nav-text">控制信道接收</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上行业务信道传输"><span class="nav-number">5.2.4.</span> <span class="nav-text">上行业务信道传输</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下行业务信道接收"><span class="nav-number">5.2.5.</span> <span class="nav-text">下行业务信道接收</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结与展望"><span class="nav-number">6.</span> <span class="nav-text">总结与展望</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">7.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">2.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#需求"><span class="nav-number">2.1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络架构"><span class="nav-number">2.2.</span> <span class="nav-text">网络架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#核心网"><span class="nav-number">2.2.1.</span> <span class="nav-text">核心网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接入网"><span class="nav-number">2.2.2.</span> <span class="nav-text">接入网</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#频带"><span class="nav-number">2.3.</span> <span class="nav-text">频带</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#物理层"><span class="nav-number">3.</span> <span class="nav-text">物理层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#操作模式"><span class="nav-number">3.1.</span> <span class="nav-text">操作模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下行"><span class="nav-number">3.2.</span> <span class="nav-text">下行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#帧结构"><span class="nav-number">3.2.1.</span> <span class="nav-text">帧结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#窄带参考信号"><span class="nav-number">3.2.2.</span> <span class="nav-text">窄带参考信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步信号"><span class="nav-number">3.2.3.</span> <span class="nav-text">同步信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#窄带物理广播信道"><span class="nav-number">3.2.4.</span> <span class="nav-text">窄带物理广播信道</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#专用信道"><span class="nav-number">3.2.5.</span> <span class="nav-text">专用信道</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#控制信道NPDCCH"><span class="nav-number">3.2.5.1.</span> <span class="nav-text">控制信道NPDCCH</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#业务信道NPDSCH"><span class="nav-number">3.2.5.2.</span> <span class="nav-text">业务信道NPDSCH</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上行"><span class="nav-number">3.3.</span> <span class="nav-text">上行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#时隙结构"><span class="nav-number">3.3.1.</span> <span class="nav-text">时隙结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理上行共享信道"><span class="nav-number">3.3.2.</span> <span class="nav-text">物理上行共享信道</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考信号"><span class="nav-number">3.3.3.</span> <span class="nav-text">参考信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#随机接入信道"><span class="nav-number">3.3.4.</span> <span class="nav-text">随机接入信道</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#功率控制"><span class="nav-number">3.4.</span> <span class="nav-text">功率控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上行功率控制"><span class="nav-number">3.4.1.</span> <span class="nav-text">上行功率控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下行功率控制"><span class="nav-number">3.4.2.</span> <span class="nav-text">下行功率控制</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小区接入"><span class="nav-number">4.</span> <span class="nav-text">小区接入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#协议栈及信令承载"><span class="nav-number">4.1.</span> <span class="nav-text">协议栈及信令承载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统信息"><span class="nav-number">4.2.</span> <span class="nav-text">系统信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#调度"><span class="nav-number">4.2.1.</span> <span class="nav-text">调度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变更通知"><span class="nav-number">4.2.2.</span> <span class="nav-text">变更通知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">4.2.3.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小区选择及移动性"><span class="nav-number">4.3.</span> <span class="nav-text">小区选择及移动性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#随机接入流程"><span class="nav-number">4.4.</span> <span class="nav-text">随机接入流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接控制"><span class="nav-number">4.5.</span> <span class="nav-text">连接控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RRC连接建立"><span class="nav-number">4.5.1.</span> <span class="nav-text">RRC连接建立</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RRC连接释放"><span class="nav-number">4.5.2.</span> <span class="nav-text">RRC连接释放</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UE能力发送"><span class="nav-number">4.6.</span> <span class="nav-text">UE能力发送</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#寻呼"><span class="nav-number">4.7.</span> <span class="nav-text">寻呼</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据传输"><span class="nav-number">5.</span> <span class="nav-text">数据传输</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#控制面优化"><span class="nav-number">5.1.</span> <span class="nav-text">控制面优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户面优化"><span class="nav-number">5.2.</span> <span class="nav-text">用户面优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据连接的建立与配置"><span class="nav-number">5.2.1.</span> <span class="nav-text">数据连接的建立与配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多载波配置"><span class="nav-number">5.2.2.</span> <span class="nav-text">多载波配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制信道接收"><span class="nav-number">5.2.3.</span> <span class="nav-text">控制信道接收</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上行业务信道传输"><span class="nav-number">5.2.4.</span> <span class="nav-text">上行业务信道传输</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下行业务信道接收"><span class="nav-number">5.2.5.</span> <span class="nav-text">下行业务信道接收</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结与展望"><span class="nav-number">6.</span> <span class="nav-text">总结与展望</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">7.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
@@ -1390,6 +1402,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
