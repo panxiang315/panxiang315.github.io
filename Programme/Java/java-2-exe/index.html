@@ -108,40 +108,40 @@
 
 
 
-<meta name="description" content="&amp;emsp;&amp;emsp;Java的特点之一是平台独立与可移植性，这一特点依赖于其跨平台的运行标准环境JRE。但是当用户的电脑上没有安装jdk或jre时，若强行让用户安装，会严重影响用户体验。为解决上述问题，可将Java的可执行jar包打包成setup.exe文件，直接带着jre，供用户使用。 使用软件   exe4j：用于将jar包转为exe文件 Inno Setup：将上述exe文件打包成软件安">
+<meta name="description" content="&amp;emsp;&amp;emsp;Java的特点之一是平台独立与可移植性，这一特点依赖于其跨平台的运行标准环境JRE。但是当用户的电脑上没有安装jdk或jre时，若强行让用户安装，会严重影响用户体验。为解决上述问题，可将Java的可执行jar包打包成setup.exe文件，直接带着jre，供用户使用。&amp;emsp;&amp;emsp;这里也插一句，jre在极度精简的情况下，也可能有几十M。当你自己的代码量相对jre而">
 <meta name="keywords" content="exe4j,Inno Setup">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java文件生成exe安装文件">
-<meta property="og:url" content="http://uug521.top/Programme/Java/java-2-exe/index.html">
+<meta property="og:url" content="https://panxiang315.github.io/Programme/Java/java-2-exe/index.html">
 <meta property="og:site_name" content="pan&#39;s record">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;Java的特点之一是平台独立与可移植性，这一特点依赖于其跨平台的运行标准环境JRE。但是当用户的电脑上没有安装jdk或jre时，若强行让用户安装，会严重影响用户体验。为解决上述问题，可将Java的可执行jar包打包成setup.exe文件，直接带着jre，供用户使用。 使用软件   exe4j：用于将jar包转为exe文件 Inno Setup：将上述exe文件打包成软件安">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;Java的特点之一是平台独立与可移植性，这一特点依赖于其跨平台的运行标准环境JRE。但是当用户的电脑上没有安装jdk或jre时，若强行让用户安装，会严重影响用户体验。为解决上述问题，可将Java的可执行jar包打包成setup.exe文件，直接带着jre，供用户使用。&amp;emsp;&amp;emsp;这里也插一句，jre在极度精简的情况下，也可能有几十M。当你自己的代码量相对jre而">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step0-1.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step0-2.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step0.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step1.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step2.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step3.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step4.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step4.1.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step4.2.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step4.3.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step5.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step5.1.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step5.2.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step6.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step6.1.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step6.2.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step7.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step10.1.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step10.2.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step10.3.png">
-<meta property="og:image" content="http://uug521.top/images/programme/java2exe/step10.4.png">
-<meta property="og:updated_time" content="2018-06-08T11:40:02.047Z">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step0-1.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step0-2.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step0.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step1.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step2.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step3.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step4.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step4.1.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step4.2.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step4.3.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step5.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step5.1.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step5.2.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step6.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step6.1.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step6.2.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step7.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step10.1.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step10.2.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step10.3.png">
+<meta property="og:image" content="https://panxiang315.github.io/images/programme/java2exe/step10.4.png">
+<meta property="og:updated_time" content="2018-06-11T01:27:46.345Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java文件生成exe安装文件">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;Java的特点之一是平台独立与可移植性，这一特点依赖于其跨平台的运行标准环境JRE。但是当用户的电脑上没有安装jdk或jre时，若强行让用户安装，会严重影响用户体验。为解决上述问题，可将Java的可执行jar包打包成setup.exe文件，直接带着jre，供用户使用。 使用软件   exe4j：用于将jar包转为exe文件 Inno Setup：将上述exe文件打包成软件安">
-<meta name="twitter:image" content="http://uug521.top/images/programme/java2exe/step0-1.png">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;Java的特点之一是平台独立与可移植性，这一特点依赖于其跨平台的运行标准环境JRE。但是当用户的电脑上没有安装jdk或jre时，若强行让用户安装，会严重影响用户体验。为解决上述问题，可将Java的可执行jar包打包成setup.exe文件，直接带着jre，供用户使用。&amp;emsp;&amp;emsp;这里也插一句，jre在极度精简的情况下，也可能有几十M。当你自己的代码量相对jre而">
+<meta name="twitter:image" content="https://panxiang315.github.io/images/programme/java2exe/step0-1.png">
 
 
 
@@ -169,7 +169,7 @@
 
 
 
-  <link rel="canonical" href="http://uug521.top/Programme/Java/java-2-exe/"/>
+  <link rel="canonical" href="https://panxiang315.github.io/Programme/Java/java-2-exe/"/>
 
 
 
@@ -348,7 +348,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://uug521.top/Programme/Java/java-2-exe/">
+  <link itemprop="mainEntityOfPage" href="https://panxiang315.github.io/Programme/Java/java-2-exe/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Pan Xiang">
@@ -455,7 +455,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,410字
+                  1,513字
                 </span>
               
 
@@ -471,7 +471,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  5分
+                  6分
                 </span>
               
             </div>
@@ -493,7 +493,7 @@
       
 
       
-        <p>&emsp;&emsp;Java的特点之一是平台独立与可移植性，这一特点依赖于其跨平台的运行标准环境JRE。但是当用户的电脑上没有安装jdk或jre时，若强行让用户安装，会严重影响用户体验。为解决上述问题，可将Java的可执行jar包打包成setup.exe文件，直接带着jre，供用户使用。</p>
+        <p>&emsp;&emsp;Java的特点之一是平台独立与可移植性，这一特点依赖于其跨平台的运行标准环境JRE。但是当用户的电脑上没有安装jdk或jre时，若强行让用户安装，会严重影响用户体验。为解决上述问题，可将Java的可执行jar包打包成setup.exe文件，直接带着jre，供用户使用。<br>&emsp;&emsp;这里也插一句，jre在极度精简的情况下，也可能有几十M。当你自己的代码量相对jre而言比较小的情况下，如果还带着jre就有点像配有背包电池的手机。这个时候，你就可以考虑用前端解决问题了，因为前端仅依赖于几乎每台电脑都已经安装的浏览器。</p>
 <p><strong>使用软件</strong></p>
 <blockquote>
 <ul>
@@ -536,8 +536,9 @@
 <p>然后点击左侧的Preferred VM，选择Client hotspot VM，然后next。<br><img src="/images/programme/java2exe/step6.2.png" alt="step6.2"></p>
 <p>7.选择软件启动画面</p>
 <p>该步骤可选，之后就一直默认点next就行了。<br><img src="/images/programme/java2exe/step7.png" alt="step7"></p>
-<p>&emsp;&emsp;在运行过程中，java.exe依照一套逻辑来寻找可以用的JRE，首先查找自己所在的目录下有没有JRE，其次查找自己的父目录下有没有JRE；最后才是查询Windows的注册表。<br>&emsp;&emsp;现在我们的程序可以在任意的计算机上执行了，可是缺点是致命的，比方说我的程序才160K，可是不论走到哪里都要背着几十M甚至一百多M的JRE，未免有点小题大做吧，其实作为我们的私有的JRE，好多内容都是可以抛弃的。可以清理几个库文件里面不需要的内容，这需要仔细的整理，会很费功夫。  </p>
-<h2 id="emsp-emsp-清理完后，可以通过下面这个棒棒的软件来进一步瘦身了。"><a href="#emsp-emsp-清理完后，可以通过下面这个棒棒的软件来进一步瘦身了。" class="headerlink" title="&emsp;&emsp;清理完后，可以通过下面这个棒棒的软件来进一步瘦身了。"></a>&emsp;&emsp;清理完后，可以通过下面这个棒棒的软件来进一步瘦身了。</h2><h1 id="步骤三：生成setup-exe安装包"><a href="#步骤三：生成setup-exe安装包" class="headerlink" title="步骤三：生成setup.exe安装包"></a>步骤三：生成setup.exe安装包</h1><h2 id="安装inno-setup"><a href="#安装inno-setup" class="headerlink" title="安装inno setup"></a>安装inno setup</h2><p>下载并安装：<br><a href="https://blog.csdn.net/hebbely/article/details/78168071" target="_blank" rel="noopener">inno setup中文版下载地址</a>中文版记得别装附加软件！！<br><a href="http://www.jrsoftware.org/isdl.php#stable" target="_blank" rel="noopener">inno setup英文版下载地址</a></p>
+<p>&emsp;&emsp;在运行过程中，java.exe依照一套逻辑来寻找可以用的JRE，首先查找自己所在的目录下有没有JRE，其次查找自己的父目录下有没有JRE；最后才是查询Windows的注册表。<br>&emsp;&emsp;现在我们的程序可以在任意的计算机上执行了，可是缺点是致命的，比方说我的程序才160K，可是不论走到哪里都要背着几十M甚至一百多M的JRE，未免有点小题大做吧，其实作为我们的私有的JRE，好多内容都是可以抛弃的。可以清理几个库文件里面不需要的内容，这需要仔细的整理，会很费功夫。<br>&emsp;&emsp;清理完后，可以通过下面这个棒棒的软件来进一步瘦身了。</p>
+<hr>
+<h1 id="步骤三：生成setup-exe安装包"><a href="#步骤三：生成setup-exe安装包" class="headerlink" title="步骤三：生成setup.exe安装包"></a>步骤三：生成setup.exe安装包</h1><h2 id="安装inno-setup"><a href="#安装inno-setup" class="headerlink" title="安装inno setup"></a>安装inno setup</h2><p>下载并安装：<br><a href="https://blog.csdn.net/hebbely/article/details/78168071" target="_blank" rel="noopener">inno setup中文版下载地址</a>中文版记得别装附加软件！！<br><a href="http://www.jrsoftware.org/isdl.php#stable" target="_blank" rel="noopener">inno setup英文版下载地址</a></p>
 <p>打开后点击文件&gt;新建，就可以开始了<br><img src="/images/programme/java2exe/step10.1.png" alt="step10"></p>
 <p>这里可以自定义软件的一些附加信息，填完后下一步<br><img src="/images/programme/java2exe/step10.2.png" alt="step10"></p>
 <p>按照默认的直接下一步<br><img src="/images/programme/java2exe/step10.3.png" alt="step10"></p>
@@ -604,12 +605,12 @@
 
         <li class="post-copyright-link">
           <strong>本文标题：</strong>
-          <a href="http://uug521.top/Programme/Java/java-2-exe/" title="Java文件生成exe安装文件">Java文件生成exe安装文件</a>
+          <a href="https://panxiang315.github.io/Programme/Java/java-2-exe/" title="Java文件生成exe安装文件">Java文件生成exe安装文件</a>
         </li>
 
         <li class="post-copyright-link">
           <strong>本文链接：</strong>
-          <a href="http://uug521.top/Programme/Java/java-2-exe/" title="Java文件生成exe安装文件">http://uug521.top/Programme/Java/java-2-exe/</a>
+          <a href="https://panxiang315.github.io/Programme/Java/java-2-exe/" title="Java文件生成exe安装文件">https://panxiang315.github.io/Programme/Java/java-2-exe/</a>
         </li>
 
         <li class="post-copyright-date">
@@ -636,6 +637,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Programme/Node-js/admin-theme/" rel="prev" title="Vali Admin使用教程">
+                Vali Admin使用教程 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -707,7 +712,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -716,7 +721,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -725,7 +730,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">31</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -786,6 +791,10 @@
                   <a href="http://www.zhangxinxu.com/wordpress/" title="前端大佬" target="_blank">前端大佬</a>
                 </li>
               
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.w3cplus.com/" title="大漠大佬" target="_blank">大漠大佬</a>
+                </li>
+              
             </ul>
           </div>
         
@@ -805,7 +814,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#步骤一：生成jar包"><span class="nav-number">1.</span> <span class="nav-text">步骤一：生成jar包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#步骤二：生成exe可执行文件"><span class="nav-number">2.</span> <span class="nav-text">步骤二：生成exe可执行文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装exe4j"><span class="nav-number">2.1.</span> <span class="nav-text">安装exe4j</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jar包转化"><span class="nav-number">2.2.</span> <span class="nav-text">jar包转化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#emsp-emsp-清理完后，可以通过下面这个棒棒的软件来进一步瘦身了。"><span class="nav-number">2.3.</span> <span class="nav-text">  清理完后，可以通过下面这个棒棒的软件来进一步瘦身了。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#步骤三：生成setup-exe安装包"><span class="nav-number">3.</span> <span class="nav-text">步骤三：生成setup.exe安装包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装inno-setup"><span class="nav-number">3.1.</span> <span class="nav-text">安装inno setup</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#步骤一：生成jar包"><span class="nav-number">1.</span> <span class="nav-text">步骤一：生成jar包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#步骤二：生成exe可执行文件"><span class="nav-number">2.</span> <span class="nav-text">步骤二：生成exe可执行文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装exe4j"><span class="nav-number">2.1.</span> <span class="nav-text">安装exe4j</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jar包转化"><span class="nav-number">2.2.</span> <span class="nav-text">jar包转化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#步骤三：生成setup-exe安装包"><span class="nav-number">3.</span> <span class="nav-text">步骤三：生成setup.exe安装包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装inno-setup"><span class="nav-number">3.1.</span> <span class="nav-text">安装inno setup</span></a></li></ol></li></ol></div>
             
 
           </div>
