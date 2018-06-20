@@ -147,7 +147,7 @@
 <meta property="og:image" content="https://panxiang315.github.io/images/learning/NB-IoT-WP/P29-reconfiguration.jpg">
 <meta property="og:image" content="https://panxiang315.github.io/images/learning/NB-IoT-WP/P30-reconfiguration.jpg">
 <meta property="og:image" content="https://panxiang315.github.io/images/learning/NB-IoT-WP/P31-NPUSCH-transmission.jpg">
-<meta property="og:updated_time" content="2018-06-11T01:17:21.237Z">
+<meta property="og:updated_time" content="2018-06-12T02:43:07.899Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NB-IoT白皮书">
 <meta name="twitter:description" content="本文译自罗德施瓦茨的NB-IoT白皮书。   source: 源地址 title: Narrowband Internet of Things Whitepaper 纯属个人学习使用">
@@ -703,19 +703,19 @@
 <h3 id="帧结构"><a href="#帧结构" class="headerlink" title="帧结构"></a>帧结构</h3><p>&emsp;&emsp;在下行中，OFDM子载波间隔为15kHz，循环前缀(Cyclic Prefix, CP)为常规CP。每个OFDM符号由12个子载波组成，占据180kHz带宽。7个OFDMA符号组成一个时隙，单时隙资源网格如图3-3$^{[9]}$：</p>
 <div align="center"><img src="/images/learning/NB-IoT-WP/P6-Resource-grid.jpg" width="40%" alt="Resource-grid">图3-3 单时隙资源网格</div> 
 
-<p>对于一个资源块，这与正常CP长度下的LTE的资源网格相同，这对带内操作模式很重要。 资源元素被定义为一个OFDMA符号中的一个子载波，并且在图3-3中由一个正方形表示。这些资源元素中的每一个传送具有根据调制方案的值的复数值。<br>这些时隙按照与LTE相同的方式总结为子帧和无线帧：</p>
+<p>&emsp;&emsp;对于一个资源块，这与正常CP长度下的LTE的资源网格相同，这对带内操作模式很重要。资源元素被定义为一个OFDMA符号中的一个子载波，并且在图3-3中由一个正方形表示。这些资源元素中的每一个传送具有根据调制方案的值的复数值。<br>&emsp;&emsp;这些时隙按照与LTE相同的方式总结为子帧和无线帧：</p>
 <div align="center"><br>  <img src="/images/learning/NB-IoT-WP/P7-Frame-structure.jpg" width="60%" alt="Frame-structure"><br>  图3-4 15kHz子载波上下行帧结构<br></div> 
 
-<p>有1024个循环重复的无线电帧，每个持续时间为10毫秒。 无线电帧被分成10个SF，每个SF由两个插槽组成。<br>除了系统帧之外，还定义了超帧的概念，其对系统帧周期的数量进行计数，即每次系统帧号码换行时它都被递增。 它是一个10位计数器，所以超帧周期跨越1024个系统帧周期，对应于近3小时的时间间隔。</p>
-<h3 id="窄带参考信号"><a href="#窄带参考信号" class="headerlink" title="窄带参考信号"></a>窄带参考信号</h3><p>窄带参考信号（NRS）在可用于广播或专用DL传输的所有SF中传输，无论数据是否实际传输，请参阅第16页的第3.2.5章“专用信道”以了解更多详细信息。<br>根据传输方案的不同，NRS可以在一个天线端口或两个天线端口上传输。 它的值与LTE中的CRS一样创建，NCellID用于PCI。 映射序列如下图所示：</p>
+<p>&emsp;&emsp;有1024个循环重复的无线电帧，每个持续时间为10毫秒。无线电帧被分成10个SF，每个SF由两个插槽组成。<br>&emsp;&emsp;除了系统帧之外，还定义了超帧的概念，其对系统帧周期的数量进行计数，即每次系统帧号码换行时它都被递增。 它是一个10位计数器，所以超帧周期跨越1024个系统帧周期，对应于近3小时的时间间隔。</p>
+<h3 id="窄带参考信号"><a href="#窄带参考信号" class="headerlink" title="窄带参考信号"></a>窄带参考信号</h3><p>&emsp;&emsp;窄带参考信号（NRS）在可用于广播或专用DL传输的所有SF中传输，无论数据是否实际传输，请参阅第16页的第3.2.5章“专用信道”以了解更多详细信息。<br>&emsp;&emsp;根据传输方案的不同，NRS可以在一个天线端口或两个天线端口上传输。 它的值与LTE中的CRS一样创建，NCellID用于PCI。 映射序列如下图所示：</p>
 <div align="center"><br>  <img src="/images/learning/NB-IoT-WP/P8-reference-signals-mapping.jpg" width="80%" alt="reference-signals-mapping"><br>  图3-5 参考信号映射<br></div> 
 
-<p>图3-5中所示的NRS映射还在频率范围内循环移位NCellID mod 6。 当在两个AP上发送NRS时，则在用于AP0上的NRS的每个资源元素上，AP1上的相同资源元素被设置为零，反之亦然。<br>对于带内操作，对于未用于MBSFN的SF，也在NB-IoT频带中发送LTE CRS。利用NRS的结构，在LTE CRS和NRS之间不存在重叠，但是对于速率匹配和资源元素映射必须考虑CRS。所有的DL传输都不能使用这些资源元素，而必须跳过它们。<br>带内操作的一个重要方面涉及NcellID。它可能与嵌入LTE小区的PCI相同或不相同。这由MIB-NB中的opeartionMode参数指示，请参阅第14页上的第3.2.4节“窄带物理广播信道”，它将具有相同PCI的带内操作区分为真或假。如果该参数设置为真，则NCellID和PCI相同，并且UE可以假定天线端口的数量与LTE小区中的相同。然后可以从任一参考信号集推断该信道。因此，LTE CRS端口0与NRS端口0相关联，并且CRS端口1与NRS端口1相关联。如果相同PCI被设置为假，则UE可能不采取任何这些假设。</p>
-<h3 id="同步信号"><a href="#同步信号" class="headerlink" title="同步信号"></a>同步信号</h3><p>对于帧和子帧中的第一同步以及为了确定NCellID，重用主同步信号（PSS）和辅同步信号（SSS）的LTE概念。利用这些信号，还可以在UE接收器中改进定时和频率估计。<br>为了区分这些信号与它们的LTE对应物，它们分别被表示为NPSS和NSSS。 其结构如下图所示：</p>
+<p>&emsp;&emsp;图3-5中所示的NRS映射还在频率范围内循环移位NCellID mod 6。 当在两个AP上发送NRS时，则在用于AP0上的NRS的每个资源元素上，AP1上的相同资源元素被设置为零，反之亦然。<br>&emsp;&emsp;对于带内操作，对于未用于MBSFN的SF，也在NB-IoT频带中发送LTE CRS。利用NRS的结构，在LTE CRS和NRS之间不存在重叠，但是对于速率匹配和资源元素映射必须考虑CRS。所有的DL传输都不能使用这些资源元素，而必须跳过它们。<br>&emsp;&emsp;带内操作的一个重要方面涉及NcellID。它可能与嵌入LTE小区的PCI相同或不相同。这由MIB-NB中的opeartionMode参数指示，请参阅第14页上的第3.2.4节“窄带物理广播信道”，它将具有相同PCI的带内操作区分为真或假。如果该参数设置为真，则NCellID和PCI相同，并且UE可以假定天线端口的数量与LTE小区中的相同。然后可以从任一参考信号集推断该信道。因此，LTE CRS端口0与NRS端口0相关联，并且CRS端口1与NRS端口1相关联。如果相同PCI被设置为假，则UE可能不采取任何这些假设。</p>
+<h3 id="同步信号"><a href="#同步信号" class="headerlink" title="同步信号"></a>同步信号</h3><p>&emsp;&emsp;对于帧和子帧中的第一同步以及为了确定NCellID，重用主同步信号（PSS）和辅同步信号（SSS）的LTE概念。利用这些信号，还可以在UE接收器中改进定时和频率估计。<br>&emsp;&emsp;为了区分这些信号与它们的LTE对应物，它们分别被表示为NPSS和NSSS。 其结构如下图所示：</p>
 <div align="center"><br>  <img src="/images/learning/NB-IoT-WP/P9-npss-and-nsss.jpg" width="80%" alt="npss-and-nsss"><br>  图3-6 NPSS和NSSS<br></div> 
 
-<p>前3个OFDM符号被省略，因为当NB-IoT以带内模式运行时，它们可以在LTE中承载PDCCH。 请注意，在UE与NPSS和NSSS同步期间，可能不知道操作模式，因此该保护时间适用于所有模式。 另外，两个同步信号都被LTE的CRS打孔。 没有规定哪个天线端口用于同步信号，甚至可以在任何两个SF之间改变。<br>在频域中采用长度为11的Zadoff-Chu序列用于NPSS的序列生成。这个序列是固定的，因此没有关于细胞的信息。它在每个无线帧的SF5中发送，以便它的接收允许UE确定帧边界。<br>NSSS序列由长度为131的频域Zadoff-Chu序列产生，根据无线电帧号进行二进制加扰和循环移位。 NCellID是一个附加的输入参数，因此它可以从序列中派生出来。像LTE一样，定义了504个PCI值。 NSSS在每个偶数编号的无线电帧的最后一个SF中传输。<br>对于带内操作，NPSS和NSSS的传输以及下一节中描述的NPBCH只能在PRB上进行，如表3-1所示。选择用于接收该信息的载波称为主载波。<br>使用这种结构，UE不能混淆NB同步信号与LTE系统发送的信号。因此，不存在错误检测的危险，具有任一技术的UE自动路由到正确的频率范围。</p>
-<h3 id="窄带物理广播信道"><a href="#窄带物理广播信道" class="headerlink" title="窄带物理广播信道"></a>窄带物理广播信道</h3><p>NPBCH承载窄带主信息块（MIB-NB）。 MIB-NB包含34比特，并且在640ms的时间周期上发送，即64个无线电帧。 其中提供了以下信息：</p>
+<p>&emsp;&emsp;前3个OFDM符号被省略，因为当NB-IoT以带内模式运行时，它们可以在LTE中承载PDCCH。 请注意，在UE与NPSS和NSSS同步期间，可能不知道操作模式，因此该保护时间适用于所有模式。 另外，两个同步信号都被LTE的CRS打孔。 没有规定哪个天线端口用于同步信号，甚至可以在任何两个SF之间改变。<br>&emsp;&emsp;在频域中采用长度为11的Zadoff-Chu序列用于NPSS的序列生成。这个序列是固定的，因此没有关于细胞的信息。它在每个无线帧的SF5中发送，以便它的接收允许UE确定帧边界。<br>&emsp;&emsp;NSSS序列由长度为131的频域Zadoff-Chu序列产生，根据无线电帧号进行二进制加扰和循环移位。 NCellID是一个附加的输入参数，因此它可以从序列中派生出来。像LTE一样，定义了504个PCI值。 NSSS在每个偶数编号的无线电帧的最后一个SF中传输。<br>&emsp;&emsp;对于带内操作，NPSS和NSSS的传输以及下一节中描述的NPBCH只能在PRB上进行，如表3-1所示。选择用于接收该信息的载波称为主载波。<br>使用这种结构，UE不能混淆NB同步信号与LTE系统发送的信号。因此，不存在错误检测的危险，具有任一技术的UE自动路由到正确的频率范围。</p>
+<h3 id="窄带物理广播信道"><a href="#窄带物理广播信道" class="headerlink" title="窄带物理广播信道"></a>窄带物理广播信道</h3><p>&emsp;&emsp;NPBCH承载窄带主信息块（MIB-NB）。 MIB-NB包含34比特，并且在640ms的时间周期上发送，即64个无线电帧。 其中提供了以下信息：</p>
 <blockquote>
 <ul>
 <li>指示系统帧号（SFN）的最高有效位（MSB）的4位，其余最低有效位（LSB）隐含地从MIB-NB开始导出</li>
@@ -729,15 +729,15 @@
 </blockquote>
 <div align="center"><br>  <img src="/images/learning/NB-IoT-WP/P10-NPBCH.jpg" width="80%" alt="PBCH"><br>  图3-7 NPBCH映射到子帧中<br></div> 
 
-<p>物理层基带处理后，产生的MIB-NB被分成8个块。 第一个数据块分别在第一个子帧（SF0）上传输，并在下一个7个连续无线电帧的SF0中重复。 在以下无线电帧的SF0中，对BL2执行相同的过程。 这个过程一直持续到整个MIB-NB被发送。 通过对所有传输使用SF0，如果NB-IoT被部署为带内操作，则避免了NPBCH与LTE上潜在的MBSFN传输冲突。<br>NPBCH的SF结构如下图所示：</p>
+<p>&emsp;&emsp;物理层基带处理后，产生的MIB-NB被分成8个块。 第一个数据块分别在第一个子帧（SF0）上传输，并在下一个7个连续无线电帧的SF0中重复。 在以下无线电帧的SF0中，对BL2执行相同的过程。 这个过程一直持续到整个MIB-NB被发送。 通过对所有传输使用SF0，如果NB-IoT被部署为带内操作，则避免了NPBCH与LTE上潜在的MBSFN传输冲突。<br>&emsp;&emsp;NPBCH的SF结构如下图所示：</p>
 <div align="center"><br>  <img src="/images/learning/NB-IoT-WP/P11-NPBCH-RE.jpg" width="50%" alt="NPBCH-RE"><br>  图3-8 NPBCH占用RE<br></div> 
 
-<p>符号映射在NRS和LTE CRS周围，总是假定为NRS定义了两个天线端口，为CRS定义了4个天线端口。 这个假设是必要的，因为UE仅从读取MIB-NB获得实际的天线端口信息。 频率范围内的参考信号位置由NSSS提供的NCellID给出。 尽管NCellID可能与带内操作中的PCI不同，但是其范围受到限制，使得其指向相同的频率位置，因此UE在频率范围中CRS的循环移位是已知的。 同样，前3个OFDM符号被省略以避免与LTE的控制信道可能的冲突。</p>
-<h3 id="专用信道"><a href="#专用信道" class="headerlink" title="专用信道"></a>专用信道</h3><p>控制和共享信道的原理也适用于NB-IoT，定义窄带物理下行链路控制信道（NPDCCH）和窄带物理下行链路共享信道（NPDSCH）。 并非所有的SF都可以用于专用DL信道的传输。 在RRC信令中，可以用信号发送指示有效SF的10位或40位的位图，其以周期性的方式被应用。 对于没有指示SF有效的情况，专用DL信道传输被推迟到下一个有效SF。</p>
-<h4 id="控制信道NPDCCH"><a href="#控制信道NPDCCH" class="headerlink" title="控制信道NPDCCH"></a>控制信道NPDCCH</h4><p>NPDCCH指示哪个UE在NPDSCH中存在数据，在哪里找到它们以及它们重复多久。 此外，其中提供了UL许可，显示了UE将用于UL中的数据传输的资源。 最后，NPDCCH中还包含诸如寻呼或系统信息更新等附加信息。<br>NPDCCH子帧设计如下图所示：</p>
+<p>&emsp;&emsp;符号映射在NRS和LTE CRS周围，总是假定为NRS定义了两个天线端口，为CRS定义了4个天线端口。 这个假设是必要的，因为UE仅从读取MIB-NB获得实际的天线端口信息。 频率范围内的参考信号位置由NSSS提供的NCellID给出。 尽管NCellID可能与带内操作中的PCI不同，但是其范围受到限制，使得其指向相同的频率位置，因此UE在频率范围中CRS的循环移位是已知的。 同样，前3个OFDM符号被省略以避免与LTE的控制信道可能的冲突。</p>
+<h3 id="专用信道"><a href="#专用信道" class="headerlink" title="专用信道"></a>专用信道</h3><p>&emsp;&emsp;控制和共享信道的原理也适用于NB-IoT，定义窄带物理下行链路控制信道（NPDCCH）和窄带物理下行链路共享信道（NPDSCH）。 并非所有的SF都可以用于专用DL信道的传输。 在RRC信令中，可以用信号发送指示有效SF的10位或40位的位图，其以周期性的方式被应用。 对于没有指示SF有效的情况，专用DL信道传输被推迟到下一个有效SF。</p>
+<h4 id="控制信道NPDCCH"><a href="#控制信道NPDCCH" class="headerlink" title="控制信道NPDCCH"></a>控制信道NPDCCH</h4><p>&emsp;&emsp;NPDCCH指示哪个UE在NPDSCH中存在数据，在哪里找到它们以及它们重复多久。 此外，其中提供了UL许可，显示了UE将用于UL中的数据传输的资源。 最后，NPDCCH中还包含诸如寻呼或系统信息更新等附加信息。<br>&emsp;&emsp;NPDCCH子帧设计如下图所示：</p>
 <div align="center"><br>  <img src="/images/learning/NB-IoT-WP/P12-NPDCCH-RE.jpg" width="50%" alt="NPDCCH-RE"><br>  图3-9 NPDCCH占用RE<br></div> 
 
-<p>用于NPDCCH的资源元素用绿色表示。它们必须映射在以蓝色显示的NRS和围绕CRS（紫色）的带内操作中。由NB-SIB1用信号发送的控制区大小的参数lN start表示OFDM开始符号。对于带内操作，可以避免与LTE控制信道冲突。对于保护带和独立操作模式，控制区域大小默认为0，为NPDCCH提供更多的资源元素。<br>在每个SF上，定义了两个窄带控制信道单元（NCCE），NCCE0和NCCE1。它们在图3-9中用深绿色（NCCE0）和浅绿色（NCCE1）表示。定义了两种NPDCCH格式来使用它们：</p>
+<p>&emsp;&emsp;用于NPDCCH的资源元素用绿色表示。它们必须映射在以蓝色显示的NRS和围绕CRS（紫色）的带内操作中。由NB-SIB1用信号发送的控制区大小的参数lN start表示OFDM开始符号。对于带内操作，可以避免与LTE控制信道冲突。对于保护带和独立操作模式，控制区域大小默认为0，为NPDCCH提供更多的资源元素。<br>在每个SF上，定义了两个窄带控制信道单元（NCCE），NCCE0和NCCE1。它们在图3-9中用深绿色（NCCE0）和浅绿色（NCCE1）表示。定义了两种NPDCCH格式来使用它们：</p>
 <blockquote>
 <ul>
 <li>NPDCCH格式0取一个NCCE。因此，它们中的两个可以在SF内传输。</li>
@@ -1129,7 +1129,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1138,7 +1138,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1147,7 +1147,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

@@ -143,7 +143,7 @@
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P26-CP-Protocol-Stack.jpg">
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P27-RRC-States.jpg">
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P28-SIB.jpg">
-<meta property="og:updated_time" content="2018-06-05T08:35:56.784Z">
+<meta property="og:updated_time" content="2018-06-13T08:27:09.576Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5G NR-移动宽带新时代">
 <meta name="twitter:description" content="本文译自MTK的5G白皮书。   source: https://www.mediatek.cn/innovations/whitepapers-list title: 5G NR - A New Era for Enhanced Mobile Broadband 纯属个人学习使用">
@@ -461,7 +461,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  13,648字
+                  13,750字
                 </span>
               
 
@@ -477,7 +477,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  51分
+                  52分
                 </span>
               
             </div>
@@ -854,7 +854,7 @@
 <ul>
 <li>n77(3.3-4.2 GHz, TDD)：如图9中所示，该频段将B42和B43合并后还向上拓宽了，这是因为日本可能将5G频谱从3.4 GHz延伸到4.2 GHz，。</li>
 <li>N78(3.3-3.8 GHz, TDD)：这个频段包括不同领域的融合，尤其是在欧洲。  </li>
-<li>n79(4.4-5.0 GHz, TDD)：中国、俄罗斯和日本正考虑将该频段作为5G频谱sub 6GHz的一部分。</li>
+<li>n79(4.4-5.0 GHz, TDD)：中国、俄罗斯和日本正考虑将该频段作为5G频谱sub 6GHz的一部分。该频段会跟5G频段上的WiFi也会有干扰问题，不能同时部署。</li>
 <li>n28(703-748 MHz+758-803 MHz, FDD)：为确保深度覆盖并实现可靠通信，通过上行链路预算可知，使用高频段需要大量小区部署。因此需要引入低频率的频段（最好低于1GHz），以形成广覆盖。WRC-15申明，低频段首选n28频段，对于无法使用n28的国家，n20 (832-862   MHz+791-821 MHz, FDD)作为第二选择。</li>
 <li>n71(663-698 MHz+617-652 MHz, FDD)：部分运营商（尤其是美国）考虑使用该频段，目的是在建设初期就实现广覆盖。 </li>
 </ul>
@@ -1020,7 +1020,7 @@
 <blockquote>
 <ul>
 <li>若使用单个功率放大器，将意味着功率必须在3流之间分配，导致较差的上行覆盖。</li>
-<li>若使用多个的功率放大器来保持最大功率，则电池消耗、散热将受到负面影响，也有可能因功率过大引起比吸收率(Specific Absorption Ratio, SAR)问题。  </li>
+<li>若使用多个的功率放大器来保持最大功率，则电池消耗、散热将受到负面影响，也有可能因功率过大引起比吸收率(Specific Absorption Ratio, SAR)问题。双连接优先考虑LTE功率，再把额外功率给NR使用，实现动态功率共享。  </li>
 </ul>
 </blockquote>
 <p>&emsp;&emsp;目前相关研究和仿真还在进行，以得出最终结论。但也许出于复杂度和收益的均衡考虑，5G NR中的2×2 MIMO可能用于SA部署，而对于NSA，5G NR上行单流可能更有意义。  </p>
@@ -1109,7 +1109,7 @@
 <p>&emsp;&emsp;NR定义了两种时隙配置，配置0包含14个OFDM符号，可应用于所有numerology；配置1包含7个OFDM符号，仅适用于子载波间隔小于或等于60 KHz。<br> &emsp;&emsp;除了承载信标传输的时隙之外，任何时隙可以是全部下行链路、全部上行链路、或者部分下行链路和部分上行链路，从而可以实现自包含集成子帧（集成了调度、数据和确认信息）。<br> &emsp;&emsp;时隙聚合也是支持的，即数据传输调度可以跨越一个或多个时隙，并且通过物理信令完成时隙类型切换。  </p>
  <div align="center"><br>     <img src="/images/5G-NR-Visio/P16-Different-Subframe-structures.jpg" width="60%" alt="Different-Subframe"><br>     图16 不同子载波结构<br> </div>  
 
-<p> &emsp;&emsp;为处理不同numerology配置和高带宽，5G NR的帧结构定义中引入了一些新的概念，尤其是高带宽方面。MTK提出UE宽带和窄带的复用，使得UE可以调节带宽来节省功耗。部分带宽(Bandwidth part)就是给定numerology配置的RB中的一串连续的PRB。单个UE最多可以配置4个部分带宽，但是在给定时间内只有一个部分带宽是有效的。<br>  &emsp;&emsp;如图17所示，载波资源块（Carrier resource blocks, CRB）定义在所有载波带宽内，编号从0到Max-1，而物理资源块(Physical Resource Blocks, PRB)定义在部分带宽内的。  </p>
+<p> &emsp;&emsp;为处理不同numerology配置和高带宽，5G NR的帧结构定义中引入了一些新的概念，尤其是高带宽方面。MTK提出UE宽带和窄带的复用，使得UE可以调节带宽来节省功耗。部分带宽(Bandwidth Part,BWP)<br> 就是给定numerology配置的RB中的一串连续的PRB。单个UE最多可以配置4个部分带宽，但是在给定时间内只有一个部分带宽是有效的。部分带宽就相当于LTE中的带宽，不同的是可以动态调整(根据UE的数据量)，上下行的BWP带宽可不相同。目的是节省终端功耗。<br>  &emsp;&emsp;如图17所示，载波资源块（Carrier resource blocks, CRB）定义在所有载波带宽内，编号从0到Max-1，而物理资源块(Physical Resource Blocks, PRB)定义在部分带宽内的。  </p>
  <div align="center"><br>     <img src="/images/5G-NR-Visio/P17-BW-Part.jpg" width="50%" alt="Carrier-BW"><br>     图17 部分带宽(Bandwidth part)概念<br> </div>  
 
 <h2 id="物理信道带宽"><a href="#物理信道带宽" class="headerlink" title="物理信道带宽"></a>物理信道带宽</h2><p>  &emsp;&emsp;在sub 6G频段(FR1)，5G NR的最大信道带宽为100MHz，在毫米波频段(FR2)，5G NR的最大信道带宽达400MHz。与LTE相比，5GNR带宽效率利用率更高，达到99％（如使用15kHz子载波间隔时，275RB占用50MHz带宽中的49.5MHz），而LTE为90％（如100RB仅利用20MHz带宽中的18MHz）。与LTE的另一个不同之处在于，NR没有为上下行链路保留明确的DC子载波。<br>  &emsp;&emsp;无论使用何种numerology配置，资源块都由12个子载波组成，但是对于每种numerology配置，定义了资源块的最小和最大数量，在确定相应的子载波间隔后，信道的最小和最大带宽如表7所示。  </p>
@@ -1660,7 +1660,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1669,7 +1669,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1678,7 +1678,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

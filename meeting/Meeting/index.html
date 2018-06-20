@@ -116,7 +116,7 @@
 <meta property="og:description" content="内容：记录开会信息，已加密">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://panxiang315.github.io/images/meeting.jpg">
-<meta property="og:updated_time" content="2018-06-08T03:51:26.918Z">
+<meta property="og:updated_time" content="2018-06-19T01:50:56.387Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="会议纪要">
 <meta name="twitter:description" content="内容：记录开会信息，已加密">
@@ -427,7 +427,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  319字
+                  1,312字
                 </span>
               
 
@@ -443,7 +443,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  1分
+                  5分
                 </span>
               
             </div>
@@ -474,6 +474,40 @@
 <h2 id="2018-05-24"><a href="#2018-05-24" class="headerlink" title="2018-05-24"></a>2018-05-24</h2><p>时间:2018-05-24-PM<br>主题:NR测试终端进展<br>对方：Inter</p>
 <p>实验室：郑州<br>SUL评估阶段，与CA对比，大部分运营商倾向于直接将LTE的上下行同时划出相同频谱给NR，以防止FDD频谱出现不对称的现象。而不倾向于使用SUL。<br>趋向于直接使用低频重耕LTE的1.8频谱，而不适用3.5频谱，因为在3.5需要使用Massive MIMO，成本有点高。等待信息部放宽对频谱重耕的限制。<br>MTP无法测试1.8及3.5的干扰，因为他们实际上是分开的。同时也无法进行上行的LTE和NR的联合功率控制。这个测试版本只能测试功能，无法测试性能。<br>只测量SSB，还没有使用CRS，厂家也这么倾向。<br>URLLC场景主要用于垂直行业。毫米波有大部分非授权频段，可能就没有运营商的份额了。<br>建议使用毫米波部署在类似智慧工厂的场景，使用URLLC。<br>SSB个数问题，现在是有1个和8个的配置，后期外场测试可能会增加其他1-8的数<br>双周期问题</p>
 <hr>
+<p>时间：2018-06-12 AM<br>主题：3D MIMO天线<br>对方：大唐</p>
+<p>容量增长使得压力增大，需要解决方案<br>大唐在联通只有TDD的份额，所以如果这个TDD的3D MIMO效果好，可以提高大唐在联通的份额<br>需要考虑热点容量解决问题，不应该是用于解决覆盖问题<br>另外大唐的设备价格高，联通的用户习惯也不一致。<br>TDD的上行还是受限，上行需要FDD解决<br>功耗也有点大，1200W，正常的为300-400，约为3倍<br>另外还有传输问题，原有传输设备端口已经满了，可能需要单独拉传输<br>还有覆盖和容量之间的权衡，需要有参数进行调控，如果用户数大，不应该覆盖太广，这样影响用户体验<br>这种3D MIMO的一般就是用单扇区指向忙小区，BBU也是专用的，原有俩扇区BBU还得继续存在</p>
+<hr>
+<p>时间：2018-06-13 AM<br>主题：5G链路预算<br>对方：华为</p>
+<p>1、链路预算：需求分析-链路预算工程-输出结果<br>AAU：RRU+天线，基站侧的线缆损耗可视为0<br>传播模型：UMA模型-3GPP 差异主要体现在平均楼高和平均楼间距(街道宽度)<br>衰减余量：雨衰余量（毫米波频段需要考虑）干扰余量NR会比LTE小一点，因为是窄波束，非持续发送</p>
+<p>2、与LTE差异总结</p>
+<blockquote>
+<ul>
+<li>馈线损耗：AAU无馈线损耗</li>
+<li>天线增益：单个TRX天线增益即物理天线增益；NR为单天线增益10dBi+波束增益14dB（放在了解调门限里体现）</li>
+<li>传播模型：Cost231-Hata  36.873-Uma（城市街道模型）/Rma/38.901 Umi</li>
+<li>穿透损耗：跟频段相关(密集市区3.5G选了26dB) 毫米波需要考虑雨衰（ITU-R-REC-P.530 保持率99%-99.99%) NR的LOS需要考虑树衰（3.5G大概俩树14dB，28G大概17dB）可参考FCC北美的测试结果</li>
+</ul>
+</blockquote>
+<p>传播模型参数<br>DU h30 w10<br>u  h20 w20<br>su  h10 w30</p>
+<p>干扰余量： 上行 3.5G 64TR 2<br>           下行O2I 3.5G 64TR 7 O2O可以用穿损倒推（就是加上穿透损耗）</p>
+<p>阴影衰落余量：高斯分布，其中方差跟场景有关，场景起伏不大，则方差小</p>
+<p>人体损耗，没有加入手持损耗<br>在LTE的时候，打电话3dB 用手机是1dB</p>
+<p>频率/LOS/NLOS<br>28GHz 15dB 8dB<br>3.5GHz 6dB 3dB</p>
+<hr>
+<p>时间：2018-06-13 AM<br>主题：室分产品<br>对方：华为</p>
+<p>类型：原有扩/新增<br>光电复合缆的可以级联<br>原为39xx系列 后为59xx系列</p>
+<p>时间：2018-06-13 AM<br>主题：CU/DU分离<br>对方：华为</p>
+<pre><code>合一部署      分离
+</code></pre><p>传输 NSA存在迂回流量 避免迂回流量<br>新业务 扩展困难    容易<br>建网成本  按现网，无额外成本   额外成本高，服务器和机房改造<br>可靠性  CT可靠性高       IT可靠性低，需要通过软件功能提高可靠性</p>
+<p>建议：初期合，后期分离，边缘DC规模建设</p>
+<p>时间：2018-06-13 PM<br>主题：终端<br>对方：华为</p>
+<p>先Option 3x NSA 之后直接 Option 2 SA 不过渡Option 7</p>
+<p>2T的占面积大，但是1T的工艺复杂，只有一家美国的能做，所以华为倾向使用2T 23dBm 而不是1T 26dBm</p>
+<p>Band3和 n78的谐波干扰，会造成20dB的灵敏度损耗。即使是拆开天线也有10dB。所以两种频段也最好是TD的</p>
+<p>时间：2018-06-14 AM<br>主题：超导滤波器<br>对方：上海联通及中科院物理研究所</p>
+<p>320x320x320 插损3dB 不能加放大器，会抬升底噪<br>最好是跟RRU做到一起，体积翻倍</p>
+<p>时间：2018-06-19 AM<br>主题：机场方案<br>对方：联通北分</p>
+<p>时间长度有限，30-35分钟，需要精简<br>车联网还需要一段时间，预计3年左右</p>
 
       
     </div>
@@ -635,7 +669,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -644,7 +678,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -653,7 +687,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
