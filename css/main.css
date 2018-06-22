@@ -1897,7 +1897,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a71c21;
+  background: #e95ea6;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2988,9 +2988,21 @@ hr {
   text-align: center;
   width: 15%;
 }
+.tac-w20 {
+  text-align: center;
+  width: 20%;
+}
+.tac-w40 {
+  text-align: center;
+  width: 40%;
+}
 .tac-w55 {
   text-align: center;
   width: 55%;
+}
+.tal-w40 {
+  text-align: left;
+  width: 40%;
 }
 .tal-w55 {
   text-align: left;
