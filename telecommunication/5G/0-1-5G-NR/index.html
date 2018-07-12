@@ -143,7 +143,7 @@
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P26-CP-Protocol-Stack.jpg">
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P27-RRC-States.jpg">
 <meta property="og:image" content="https://panxiang315.github.io/images/5G-NR-Visio/P28-SIB.jpg">
-<meta property="og:updated_time" content="2018-06-21T04:17:17.843Z">
+<meta property="og:updated_time" content="2018-07-11T11:26:45.351Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5G NR-移动宽带新时代">
 <meta name="twitter:description" content="本文译自MTK的5G白皮书。   source: https://www.mediatek.cn/innovations/whitepapers-list title: 5G NR - A New Era for Enhanced Mobile Broadband 纯属个人学习使用">
@@ -461,7 +461,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  13,750字
+                  13,745字
                 </span>
               
 
@@ -477,7 +477,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  52分
+                  51分
                 </span>
               
             </div>
@@ -515,7 +515,7 @@
 <p>&emsp;&emsp;这些应用场景代表了对无线网络的基本要求：带宽、时延和高密度。5G部署的初始阶段位于靠近eMBB的三角形的eMBB-URLLC侧。3GPP R13中通过了低功耗广域(Low Power Wide Area, LPWA)技术标准NB-IoT和eMTC，将可以满足mMTC场景的要求，缺点是吞吐量有限。而完整的URLLC场景需要5G核心网的部署，才能实现全面的端到端时延降低。同时，任务关键性场景需要网络全面覆盖，这对于初期部署而言难以实现。因此，初期主要是NR及LTE的带宽增长以及时延改善。这将有助于开拓新的移动高宽带应用，如AR/VR（增强现实/虚拟现实），360°UHD视频等等。  </p>
 <hr>
 <h1 id="5G部署选项"><a href="#5G部署选项" class="headerlink" title="5G部署选项"></a>5G部署选项</h1><p>&emsp;&emsp;对于4G而言，无线接入网和核心网是整体演进的。系统架构主要包括接入网(Access Network, AN)和核心网(core)，对应于E-UTRAN(演进的通用陆地无线接入网络)和EPC(演进的分组核心网)，它们共同组成了EPS(Evolved Packet System，演进分组系统)。<br>&emsp;&emsp;5G的情况则不同，无线接入网与核心网是独立演进的。这是由于其应用场景广泛（eMBB，URLLC和mMTC等），需要3GPP的5G NR、LTE、NB-IoT等相关标准支持。这种独立演进的特性也是一个重要的市场推动因素，它允许运营商选择最符合其目标的演进路线。5G NR、LTE和5G核心网的部署选项，如图2所示。  </p>
-<div align="center"><br>   <img src="/images/5G-NR-Visio/P2-5G-Deployment-options.jpg" width="70%" alt="5G-Deployment-Options"><br>     图2 5G部署方式选项<br> </div>  
+<div align="center">   <img src="/images/5G-NR-Visio/P2-5G-Deployment-options.jpg" width="70%" alt="5G-Deployment-Options">     图2 5G部署方式选项 </div>  
 
 <blockquote>
 <ul>
@@ -530,10 +530,11 @@
 </blockquote>
 <p>&emsp;&emsp;值得注意的是，3GPP规定的新的5G系统包括新的接入网和新的核心网。接入网可以是3GPP(LTE和NR)接入，也可以是非3GPP(如WiFi)接入。不管接入是否为3GPP接入，核心网都是同一套接口。<br>&emsp;&emsp;4G的双连接架构在3GPP R12版本中被标准化（但是未被使用），即UE可以使用两个不同的eNB的无线资源。其中，一个eNB与MME之间存在S1-MME连接，该eNB称为MeNB(Master eNB)，另一个为SeNB(Secondary eNB)。<br> &emsp;&emsp;双连接中，用户面承载可以由MeNB或者SeNB独立服务，也可由MeNB和SeNB同时服务。仅由MeNB服务时称为MCG(MeNB Controlled Group)承载，仅由SeNB服务时称为SCG(SeNB Controlled Group)承载。同时由MeNB和SeNB服务时称为分离承载(split bearer)，两个站点的承载在PDCP层分离。数据分流锚点的PDCP层负责PDU编号、MeNB和SeNB之间分配、聚合、分类及顺序上传。<br>&emsp;&emsp;另一种选项是承载切换(bearer switching)，MeNB和SeNB之间没有承载分流，但在用户面可以在它们之间切换，与承载分离方式相比，承载切换方案在PDCP层没有聚合增益。<br>&emsp;&emsp;在5G部署初期，4G双连接概念将被引入，将现有的4G网络（核心网和接入网）作为基础，把5G的gNB添加到当前的4G网络中。与载波聚合不同，双连接可以提供类似的增益，但可以不共站部署，这是5G部署的一个非常重要的方面。 </p>
 <h2 id="Option3"><a href="#Option3" class="headerlink" title="Option3"></a>Option3</h2><p> &emsp;&emsp;3GPP R15版本基于Option 3系列选项进行NSA部署，即“LTE assisted EPC Connected”。NSA选项3/3a/3x如图3所示。  </p>
-<div align="center"><br>  <img src="/images/5G-NR-Visio/P3-Option3.jpg" width="100%" alt="NSA-Option"><br>  图3 NSA Option 3 系列<br></div>   
+<div align="center">  <img src="/images/5G-NR-Visio/P3-Option3.jpg" width="100%" alt="NSA-Option">  图3 NSA Option 3 系列</div>   
 
 <p>&emsp;&emsp;在Option 3系列中，UE同时连接到5G NR和4G E-UTRA。控制面(Control Plane, CP)完全依赖现有的EPS S1-MME接口和LTE-RRC协议，即4G E-UTRA为MCG，5G NR为SCG。三个子选项(3/3a/3x)的区别在于用户面(User Plane, UP)。在Option 3中，用户面数据在4G的PDCP层分离，即“Split bearer via MCG”，但是4G的PDCP不是针对5G设计的，无法支撑5G的数据速率，会出现明显的瓶颈。于是有了3a和3x两个变种。一种选项是3a，它基于单独的LTE和NR PDCP层。这个选项对于UE而言是最简单的，因为它没有进行承载分离；对网络也有好处，它只要求现有的LTE eNodeB（eNB）支持5G控制面互通，不需要对用户面进行增强。另一种选项是3x，它与选项3互为镜像，区别在于它利用的是NR的PDCP层，即“Split bearer via SCG”，从而避免了Option 3中PDCP的瓶颈问题。与3a相比，3x对eNB的要求更高，需要支持NR用户面互通。Option 3系列之间的主要差异如表1所示。  </p>
-<div align="center"><br>   表1 NSA Option 3 系列之间差异<br></div>   
+<div align="center">   表1 NSA Option 3 系列之间差异</div>   
+
 
 <table>
 <thead>
@@ -591,10 +592,11 @@
 </table>
 <p>&emsp;&emsp;全球许多运营商都宣布支持Option 3系列中的一种，以实现5G的初期部署，其收益是非常明显的。虽然5G核心网特性显著，应用场景广泛，但是运营商还是迫不及待的推动5G接入网部署，这其实是很好理解的：带宽的增长可以扩大现有LTE MBB应用场景。<br>&emsp;&emsp;随着时间的推移，选项3x受到了更多的青睐，因为它对现有4G网络投资小，网络带宽提升大。其次是选项3a，关注选项3的较少，因为对需要4G网络硬件升级，提升PDCP处理能力，投资太大。  </p>
 <h2 id="Option2"><a href="#Option2" class="headerlink" title="Option2"></a>Option2</h2><p>&emsp;&emsp;Option 3系列之后，3GPP R15版本将包含SA Option 2，即5G独立部署(SA)，包括独立的核心网和接入网，如图4所示。与NSA Option 3相比，少量运营商选择Option 2进行初期部署。Option 2的优点和缺点都是显而易见的：一方面，它直接演进到下一代移动网络，涉及的接口较少，降低了复杂性；另一方面，这必然会带来更大规模的投资。预计4G和5G的共存将至少在前期/中期占优势。    </p>
-<div align="center"><br>  <img src="/images/5G-NR-Visio/P4-SA-Option2.jpg" width="50%" alt="SA-Option2"><br>  图4 SA Option 2<br></div>  
+<div align="center">  <img src="/images/5G-NR-Visio/P4-SA-Option2.jpg" width="50%" alt="SA-Option2">  图4 SA Option 2</div>  
 
 <p>&emsp;&emsp;NSA选项与SA选项的主要区别如下表所示。  </p>
-<div align="center"><br>   表2 NSA与SA主要区别<br></div>   
+<div align="center">   表2 NSA与SA主要区别</div>   
+
 
 <table>
 <thead>
@@ -638,14 +640,17 @@
 </tbody>
 </table>
 <h2 id="Option7"><a href="#Option7" class="headerlink" title="Option7"></a>Option7</h2><p>&emsp;&emsp;R15最终版本也将包含Option 7系列，如图5所示。许多运营商认为Option 7是从最初的Option 3演进而来的。先根据Option 3利用4G EPC承载5G网络，等5G核心网成熟后，用5G核心网NGC替换原有的4G核心网EPC，然后将NR和LTE迁移到新的核心网上。届时，5G的所有应用场景都成为可能。与Option 3系列类似，Option 7也分为3种：7/7a/7x。Option 7未计划在2020年之前推出。  </p>
-<div align="center"><br>  <img src="/images/5G-NR-Visio/P5-Option7.jpg" alt="NSA-Option-7"><br>  图5 NSA Option 7系列<br></div> 
+<div align="center">  <img src="/images/5G-NR-Visio/P5-Option7.jpg" alt="NSA-Option-7">  图5 NSA Option 7系列</div> 
+
 
 <h2 id="Option4"><a href="#Option4" class="headerlink" title="Option4"></a>Option4</h2><p>&emsp;&emsp;在5G NR部署驱动下，Option 4也在运营商考虑之中，它对LTE投资较低。但Option 4需要全覆盖的5G网络，因此倾向于部署在低于1GHz的频段上，如美国运营商T-Mobile计划用600MHz部署5G网络。对于Option 4，5G为全覆盖网络，作为主小区，不需要像Option 3一样考虑eNB PDCP层管理承载分离的场景,因此只有2种子选项，如图6所示。  </p>
-<div align="center"><br>  <img src="/images/5G-NR-Visio/P6-Option4.jpg" alt="NSA-Option-4"><br>  图6 NSA Option 4 系列<br></div>   
+<div align="center">  <img src="/images/5G-NR-Visio/P6-Option4.jpg" alt="NSA-Option-4">  图6 NSA Option 4 系列</div>   
+
 
 <h2 id="Option5"><a href="#Option5" class="headerlink" title="Option5"></a>Option5</h2><p>&emsp;&emsp;Option 5与Option 7类似，将LTE eNB连接到5G核心网，但不同的是，没有NR形成双连接。这个选项为运营商提供了一条核心网演进路线，该选项可以在不依赖5G NR的情况下利用5G核心网络的优势（如网络切片）。Option 5引入了额外的复杂度和成本，但附加价值仍不明确，可能会应用在某些垂直行业。5G部署初期，运营商更关注的是NR NSA部署（如Option 3），预计优先在无线接入部分开始5G投资。之后5G核心网完成后，迁移无线接入部分形SA组网（即Option 2）。因此Option 5应该不会在5G的初期部署阶段出现。  </p>
 <h2 id="Option6"><a href="#Option6" class="headerlink" title="Option6"></a>Option6</h2><p>&emsp;&emsp;Option 6中，5G gNB独立部署，连接到4G核心网EPC。这个选项在已经被3GPP抛弃了。  </p>
-<div align="center"><br>  <img src="/images/5G-NR-Visio/P7-SA-Option6.jpg" width="70%" alt="SA-Option-6"><br>  图7 SA Option 6<br></div>   
+<div align="center">  <img src="/images/5G-NR-Visio/P7-SA-Option6.jpg" width="70%" alt="SA-Option-6">  图7 SA Option 6</div>   
+
 
 <hr>
 <h1 id="频谱"><a href="#频谱" class="headerlink" title="频谱"></a>频谱</h1><p>&emsp;&emsp;无线频谱是电信业的“原材料”，是所有无线技术的基础。3GPP RAN4组对5G的频谱定义为”band agnostic”，即不依赖于频谱资源，意味着5G可以部署在低、中或高频段，没有任何限制。对于R15版本，频段指定在以下两个频段范围(FR)：</p>
@@ -667,10 +672,12 @@
 </blockquote>
 <p>&emsp;&emsp;对于NR，频点号标识以字母”n”开头，即”n xx”，从而将其与LTE区分开来(LTE为Band xx /B xx)。</p>
 <h2 id="频段1-FR1"><a href="#频段1-FR1" class="headerlink" title="频段1(FR1)"></a>频段1(FR1)</h2><p>&emsp;&emsp;LTE各Band对应带宽如图8所示。数据来源于<a href="https://panxiang315.github.io/LTE/LTE-Bands/">R15-36.101</a> 。  </p>
- <div align="center"><br> <img src="/images/5G-NR-Visio/P8-NR-Bandwidth.jpg" alt="Bandwidth-of-different-IT-Bands"><br> 图8 LTE Bands对应带宽<br> </div>   
+ <div align="center"> <img src="/images/5G-NR-Visio/P8-NR-Bandwidth.jpg" alt="Bandwidth-of-different-IT-Bands"> 图8 LTE Bands对应带宽 </div>   
+
 
 <p>  &emsp;&emsp;表3为RAN4 ＃83 在FR1(450MHz-6000MHz)定义的27个频段（12个FDD，7个TDD，2个SDL和6个SUL）。    </p>
-<div align="center"><br>   表3 NR 频段<br> </div>  
+<div align="center">   表3 NR 频段 </div>  
+
 
 <table>
 <thead>
@@ -847,7 +854,8 @@
 </tbody>
 </table>
 <p> &emsp;&emsp;对比可知，许多LTE频段也用于5G NR，这对应了前面说的NR频谱没有限制。此外，还有一些新的频段相关提案将现有的LTE频段进行合并。如LTE的B42(3.4-3.6 GHz)和B43(3.6-3.8 GHz)，它们的带宽总和为200MHz，而且是连续的，因此将它们合并，作为5G在sub 6G最大可连续带宽的一部分。  </p>
-<div align="center"><br>  <img src="/images/5G-NR-Visio/P9-C-Band.jpg" alt="C-Band"><br>  图9 不同区域的C Band<br></div>   
+<div align="center">  <img src="/images/5G-NR-Visio/P9-C-Band.jpg" alt="C-Band"><br>  图9 不同区域的C Band</div>   
+
 
 <p> &emsp;&emsp;这27个频段中有5个被许多运营商视为初期部署的优先频段。  </p>
 <blockquote>
@@ -860,10 +868,12 @@
 </ul>
 </blockquote>
 <p> &emsp;&emsp;为解决高频上行传播距离受限的问题，在FR1中引入了新的频带操作模式，即补充上行链路(Supplementary Uplink, SUL)，通过载波聚合或双连接来为3.5GHz的下行链路DL的提供对应低频上行链路UL。在某些部署场景中，Band3(对应NR的n80)的上行覆盖能力与3.5G下行覆盖能力相当，可以考虑将Band3作为上行与n78进行配对。但是有一点需要强调，由于3.5G频率大约为B3的两倍，会出现二次谐波，从而导致互调干扰。</p>
- <div align="center"><br>   <img src="/images/5G-NR-Visio/P10-Coverage-of-3.5G-and-700M.jpg" width="70%" alt="Coverage-of-3.5G-and-700M"><br>   图10 3.5G与700M覆盖能力对比<br> </div>   
+ <div align="center">   <img src="/images/5G-NR-Visio/P10-Coverage-of-3.5G-and-700M.jpg" width="70%" alt="Coverage-of-3.5G-and-700M">   图10 3.5G与700M覆盖能力对比 </div>   
+
 
 <h2 id="频段2-FR2"><a href="#频段2-FR2" class="headerlink" title="频段2(FR2)"></a>频段2(FR2)</h2><p> &emsp;&emsp;在频谱利用率为30bps/Hz的条件下，FR1的带宽无法满足5G后期吞吐量目标(50 Gbps)。因此，要考虑以前没有用于蜂窝系统的新频段，新频段可用频谱为现有的十倍以上，连续频谱可达好几个G。<br>  &emsp;&emsp;ITU世界无线电通信大会(WRC)每四年组织一次。下一次(WRC-19)将于2019年举行，计划在以下频段为移动宽带寻求新的频谱资源。  </p>
- <div align="center"><br>    表4：ITU WRC-19可能使用频段<br>  </div>    
+ <div align="center">    表4：ITU WRC-19可能使用频段  </div>    
+
 
 <table>
 <thead>
@@ -888,7 +898,8 @@
 </tbody>
 </table>
 <p> &emsp;&emsp;尽管如此，由于全球频段协调的复杂性，一些国家可能计划在其特有的非全球统一频段进行试验和部署。比如28GHz频段，美国，韩国和日本计划在该频段部署5G，但它并不在ITU计划的频段范围内。其他地区类似的还包括欧洲的5.925-8.5 GHz和10-10.6 GHz，非洲的7.075-10.5 GHz和15.35-17.3 GHz。<br> &emsp;&emsp;对于3GPP和RAN4协议的R15版本，涉及频率最高达52.6 GHz，更高频率将在下一个版本中进行研究。3GPP中FR2频段如表5所示：  </p>
-  <div align="center"><br>    表5：FR2 频段<br>  </div>  
+  <div align="center">    表5：FR2 频段  </div>  
+
 
 <table>
 <thead>
@@ -929,15 +940,18 @@
 <p> &emsp;&emsp;3GPP许可的频段还有待ITU最终批准。如EESS(Earth Exploration Satellite System,地球探测卫星系统)对于n258频段可能产生的影响提出了相关顾虑，为保证保护频带够宽，可能需要调整其范围。<br>  &emsp;&emsp;总之，低频和高频的结合对于5G至关重要。低频和高频可通过载波聚合或双连接相结合，低频段可用于覆盖和控制，而高频段可提供更高的容量和数据速率。  </p>
 <hr>
 <h1 id="LTE与NR互操作"><a href="#LTE与NR互操作" class="headerlink" title="LTE与NR互操作"></a>LTE与NR互操作</h1><p>  &emsp;&emsp;如前所述，5G初期部署主要方式如下：</p>
- <div align="center"><br>    <img src="/images/5G-NR-Visio/P11-5G-NR-Deployment.jpg" width="80%" alt="NR-Deployment"><br>    图11 5G NR部署方式<br> </div>   
+ <div align="center">    <img src="/images/5G-NR-Visio/P11-5G-NR-Deployment.jpg" width="80%" alt="NR-Deployment">    图11 5G NR部署方式 </div>  
+
 
 
 <p>&emsp;&emsp;许多运营商在部署初期都倾向于采用NSA部署方式，LTE+NR互通将对网络架构、服务和用户设备功能都有不同的影响。<br>&emsp;&emsp;对于Option 3的初始部署，以低时延应用为例，可能会受限于端到端时延。虽然R14和R15中引入了低时延特性，如短TTI和自包含帧结构，其性能还是受限于已部署的EPC架构和回传能力。为达到NSA部署的预期目标，需引入集成了移动边缘计算(Mobile edge Computing, MEC)的虚拟化EPC，并升级回传。  </p>
- <div align="center"><br>    <img src="/images/5G-NR-Visio/P12-latency-breakdown.jpg" width="80%" alt="LTE-Break-down"><br>    图12 LTE时延解析<br> </div>  
+ <div align="center">    <img src="/images/5G-NR-Visio/P12-latency-breakdown.jpg" width="80%" alt="LTE-Break-down">    图12 LTE时延解析 </div>  
+
 
 <p>&emsp;&emsp;随着新一代核心网(NGC)的部署，它集成了网络切片、网络功能虚拟化(Network Function Virtualization, NFV)和软件定义网络(Software Defined Network, SDN)等功能，可以解决更多的服务和垂直难题，从而摆脱传统EPC核心网的限制。这就是为什么NGC不仅局限于连接5G gNB，LTE也可以受益于新的核心网功能，与NGC相连的LTE称为eLTE(enhanced LTE)。<br>&emsp;&emsp;对UE而言，支持5G NR的新频段（特别是毫米波段），NSA选项所需的双连接支持以及LTE和NR所需的载波聚合功能，都将增加RF前端设计的复杂度，包括天线、低噪声放大器、滤波器、开关和功率放大器等。  </p>
 <p>&emsp;&emsp;由于5G包含多个频段，在不同频段上要并行同步操作，需要进行复杂的设计，从而确保最小的交调和互调失真，高效的电路和最小的损耗。LTE+NR的不同频段排列组合方式很多，3GPP RAN4正在定义哪些组合需要在R15中支持，最新版是根据RAN4 #83会议确定，如下表所示：    </p>
-  <div align="center"><br>    表6：LTE+NR组合方式(根据RAN4 #83)<br>  </div>  
+  <div align="center">    表6：LTE+NR组合方式(根据RAN4 #83)  </div>  
+
 
 <table>
 <thead>
@@ -1026,7 +1040,8 @@
 <p>&emsp;&emsp;目前相关研究和仿真还在进行，以得出最终结论。但也许出于复杂度和收益的均衡考虑，5G NR中的2×2 MIMO可能用于SA部署，而对于NSA，5G NR上行单流可能更有意义。  </p>
 <hr>
 <h1 id="NR物理层"><a href="#NR物理层" class="headerlink" title="NR物理层"></a>NR物理层</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>&emsp;&emsp;本节将介绍NR物理层的关键新特性，虽然NR不必与LTE后向兼容，但会将LTE性能作为参考或基准。<br>&emsp;&emsp;以3GPP的角度作为参考，物理层规范包括一个总体文档（TS 38.201）和其余六个文档（TS 38.202和38.211-38.215）组成。物理层规范和高层关系如图13所示：  </p>
- <div align="center"><br>    <img src="/images/5G-NR-Visio/P13-3GPP-Physical-Layer-Specs.jpg" width="100%" alt="3GPP-PHY"><br>    图13 物理层规范与高层关系<br> </div>  
+ <div align="center">    <img src="/images/5G-NR-Visio/P13-3GPP-Physical-Layer-Specs.jpg" width="100%" alt="3GPP-PHY">    图13 物理层规范与高层关系 </div>  
+
 
 <h2 id="波形和多址方式"><a href="#波形和多址方式" class="headerlink" title="波形和多址方式"></a>波形和多址方式</h2><p> &emsp;&emsp;3GPP提出了许多关于波形的选项，并通过一系列性能指标来对这些选项进行评估和比较。主要指标包括与MIMO的兼容性、频谱效率、低峰均功率比(Peak to Average Power Ratio, PAPR)、高精度同步以支持TDD系统和URLLC场景、可接受的复杂度以及低带外辐射。<br> &emsp;&emsp;3GPP R15后期通过了基于OFDM(含循环前缀CP，即CP-OFDM)的波形，用于5G NR的下行和上行。 基于DFT-S-OFDM的波形也将得到支持，与CP-OFDM波形互补，用于高达40GHz的eMBB上行链路。 CP-OFDM波形可用于单流和多流(即MIMO) 传输，而基于DFT-S-OFDM的波形仅限于链路预算受限情况的单流传输。<br> &emsp;&emsp;但是从长远来看，R15版本以后，正交多址(Orthogonal Multiple Access, OMA)方案在mMTC高密连接场景($10^6$连接每$km^2$)中会出现不足，因此提出了非正交多址(Non-Orthogonal Multiple Access, NOMA) 方案，本文的最后一部分将对其进行概述。    </p>
 <h2 id="Numerology"><a href="#Numerology" class="headerlink" title="Numerology"></a>Numerology</h2><p>&emsp;&emsp;OFDM是把信道划分成若干个并行正交子信道，将高速数据信号转换成并行的低速子数据流，调制到在每个子信道上进行传输。通过定义一组参数集来确定子载波如何划分，从而确定OFDM系统设计，这组参数集就叫做numerology。参数集numerology包括：子载波间隔、符号长度、循环前缀(Cyclic Prefix, CP)长度和传输时间间隔(Transmission Time Interval, TTI)。NR应用场景广泛，各场景都需要可扩展且灵活的物理层设计，因此需要支持不同的numerology配置。  </p>
@@ -1044,7 +1059,8 @@
 <li>对于毫米波，SSB可以使用120或240KHz，而数据传输可以使用60或120KHz。  </li>
 </ul>
 </blockquote>
-  <div align="center"><br>    表7：NR支持的OFDM Numerology<br>  </div>    
+  <div align="center">    表7：NR支持的OFDM Numerology    </div>    
+
 
 <table>
 <thead>
@@ -1101,19 +1117,24 @@
 </tbody>
 </table>
 <p> &emsp;&emsp;对于下行链路和上行链路，在TDM/FDM方式下都支持在相同的NR载波带宽内（从网络角度来看）复用不同的numerology配置。从UE的角度来看，在单个子帧内/跨越子帧复用不同numerology表现为TDM/FDM方式。<br> &emsp;&emsp;不同的numerology可以实现不同的性能，从而适用于不同的场景。例如，子载波间隔越小，小区范围越大，适用于较低频率部署场景。相反，子载波间隔越大，符号持续时间越短，适用于低时延传输场景。<br> &emsp;&emsp;下图对这些方面进行了总结，每个频率范围可能的numerology，以及这种配置的预期小区范围和时延性能。  </p>
- <div align="center"><br>    <img src="/images/5G-NR-Visio/P14-frequency-versus-cell-size.jpg" width="80%" alt="Versus-Frequency"><br>    图14 频率与小区范围及时延关系<br> </div>  
+ <div align="center">    <img src="/images/5G-NR-Visio/P14-frequency-versus-cell-size.jpg" width="80%" alt="Versus-Frequency">    图14 频率与小区范围及时延关系 </div>  
+
 
 <h2 id="帧结构"><a href="#帧结构" class="headerlink" title="帧结构"></a>帧结构</h2><p> &emsp;&emsp;无论使用哪种numerology配置，一个无线帧的长度固定为10ms，1个子帧的长度固定为1ms。numerology不同，则子帧的时隙数不同：子载波间隔越大，子帧包含时隙数越多。  </p>
-  <div align="center"><br>     <img src="/images/5G-NR-Visio/P15-frame-and-Slot.jpg" width="80%" alt="Frame-Structure"><br>     图15 帧结构<br>  </div>  
+  <div align="center">     <img src="/images/5G-NR-Visio/P15-frame-and-Slot.jpg" width="80%" alt="Frame-Structure">     图15 帧结构  </div> 
+
 
 <p>&emsp;&emsp;NR定义了两种时隙配置，配置0包含14个OFDM符号，可应用于所有numerology；配置1包含7个OFDM符号，仅适用于子载波间隔小于或等于60 KHz。<br> &emsp;&emsp;除了承载信标传输的时隙之外，任何时隙可以是全部下行链路、全部上行链路、或者部分下行链路和部分上行链路，从而可以实现自包含集成子帧（集成了调度、数据和确认信息）。<br> &emsp;&emsp;时隙聚合也是支持的，即数据传输调度可以跨越一个或多个时隙，并且通过物理信令完成时隙类型切换。  </p>
- <div align="center"><br>     <img src="/images/5G-NR-Visio/P16-Different-Subframe-structures.jpg" width="60%" alt="Different-Subframe"><br>     图16 不同子载波结构<br> </div>  
+ <div align="center">     <img src="/images/5G-NR-Visio/P16-Different-Subframe-structures.jpg" width="60%" alt="Different-Subframe">     图16 不同子载波结构 </div>  
+
 
 <p> &emsp;&emsp;为处理不同numerology配置和高带宽，5G NR的帧结构定义中引入了一些新的概念，尤其是高带宽方面。MTK提出UE宽带和窄带的复用，使得UE可以调节带宽来节省功耗。部分带宽(Bandwidth Part,BWP)<br> 就是给定numerology配置的RB中的一串连续的PRB。单个UE最多可以配置4个部分带宽，但是在给定时间内只有一个部分带宽是有效的。部分带宽就相当于LTE中的带宽，不同的是可以动态调整(根据UE的数据量)，上下行的BWP带宽可不相同。目的是节省终端功耗。<br>  &emsp;&emsp;如图17所示，载波资源块（Carrier resource blocks, CRB）定义在所有载波带宽内，编号从0到Max-1，而物理资源块(Physical Resource Blocks, PRB)定义在部分带宽内的。  </p>
- <div align="center"><br>     <img src="/images/5G-NR-Visio/P17-BW-Part.jpg" width="50%" alt="Carrier-BW"><br>     图17 部分带宽(Bandwidth part)概念<br> </div>  
+ <div align="center">     <img src="/images/5G-NR-Visio/P17-BW-Part.jpg" width="50%" alt="Carrier-BW">     图17 部分带宽(Bandwidth part)概念 </div>  
+
 
 <h2 id="物理信道带宽"><a href="#物理信道带宽" class="headerlink" title="物理信道带宽"></a>物理信道带宽</h2><p>  &emsp;&emsp;在sub 6G频段(FR1)，5G NR的最大信道带宽为100MHz，在毫米波频段(FR2)，5G NR的最大信道带宽达400MHz。与LTE相比，5GNR带宽效率利用率更高，达到99％（如使用15kHz子载波间隔时，275RB占用50MHz带宽中的49.5MHz），而LTE为90％（如100RB仅利用20MHz带宽中的18MHz）。与LTE的另一个不同之处在于，NR没有为上下行链路保留明确的DC子载波。<br>  &emsp;&emsp;无论使用何种numerology配置，资源块都由12个子载波组成，但是对于每种numerology配置，定义了资源块的最小和最大数量，在确定相应的子载波间隔后，信道的最小和最大带宽如表7所示。  </p>
- <div align="center"><br>    表8：不同numerology配置下最大和最小带宽<br> </div>  
+ <div align="center">    表8：不同numerology配置下最大和最小带宽 </div>  
+
 
 <table>
 <thead>
@@ -1170,7 +1191,8 @@
 </tbody>
 </table>
 <h2 id="同步参考信号"><a href="#同步参考信号" class="headerlink" title="同步参考信号"></a>同步参考信号</h2><p> &emsp;&emsp;在5G NR中，UE使用主同步信号(Primary Synchronization Signal, PSS)和辅助同步信号(Secondary Synchronization Signal ,SSS) 进行初始小区搜索以获得帧定时和小区ID，并找到用于解调的参考信号。PSS，SSS和NR-PBCH用相同的numerology配置，以时分复用的方式在SSB中传输。一个SSB由4个连续的OFDM符号组成，如图18所示。一个或多个SSB构成SS突发(Burst)，一个或多个SS突发组成SS 突发集(Burst Set)。SS突发集周期性传输。  </p>
-<div align="center"><br>     <img src="/images/5G-NR-Visio/P18-SSB.jpg" width="30%" alt="SS-Block"><br>     图18 SS Block<br> </div>  
+<div align="center">     <img src="/images/5G-NR-Visio/P18-SSB.jpg" width="30%" alt="SS-Block">     图18 SS Block </div>  
+
 
 <blockquote>
 <ul>
@@ -1235,7 +1257,8 @@
 <p> &emsp;&emsp;Turbo码的编码复杂度低，解码复杂度高，而LDPC码则相反。在eMBB场景中，码块大小可能大于10,000并且码率高达8/9，使用Trubo码对于解码侧所需的实现复杂度较高。LDPC码具有相对简单和实用的解码算法，解码是通过置信传播(belief propagation,BP)算法实现的，解码的准确性将在每次迭代中得到提高，迭代的次数根据应用的需求决定，可提供误码性能、延迟和复杂度之间的折衷。在延迟方面，LDPC码本质上是并行的，而Turbo码本质上是串行的，这使得LDPC能够比Turbo码更好地支持低延迟应用。与LDPC相比，Turbo码的误码率BER更高，并且LDPC奇偶校验矩阵可以扩展到低于LTE turbo码的速率，从而针对低速率高可靠性场景获得更高的编码增益。<br> &emsp;&emsp;Polar码是在2009年推出的，是第一种具有低编码和解码复杂度的可实现信道容量的编码。Polar码提供了很高的灵活性，在任何码长和码率下都具有非常好的性能，误块率不会随着SNR增大斜线下降。  </p>
 <h2 id="多天线技术及波束赋形"><a href="#多天线技术及波束赋形" class="headerlink" title="多天线技术及波束赋形"></a>多天线技术及波束赋形</h2><p> &emsp;&emsp;NR使用频率范围较大，不同的特性对于MIMO提出了不同的设计要求。<br>  &emsp;&emsp;低频更倾向于使用FDD模式，上下行链路传播特性不同，需要引入下行CSI-RS传输及上行报告。此外，对于较小的带宽，需要支持像MU-MIMO这样的容量增强方案。对于这些频段，计划是扩展R13和R14的FD-MIMO架构，以支持64、128、甚至256个天线阵元，并包括灵活的CSI采集和波束赋形。<br>&emsp;&emsp;高频更倾向于使用TDD模式，上下行链路传播特性类似，因此可以对上下行信道进行互易假设。对于毫米波，传播损耗较大，可以使用更多的天线阵元，增加波束形成增益。<br>&emsp;&emsp;由于天线元件数量较多，提出了混合波束赋形架构来权衡一端的系统性能和另一端的复杂度和成本。简单地说，不是给每个天线元件配置单独的射频链路，而是将多个阵列元件组合成子阵列模块。子阵列模块中的每个元件都有一个直接应用于RF域的相移，而数字波束赋形技术应用于发送每个子阵列模块信号。<br>&emsp;&emsp;LTE引入了多种传输模式(Transmission Mode, TM)来优化每个部署场景的MIMO性能。但是，这些传输模式之间的切换是半静态的，不能动态适应传播环境的变化。NR将采用动态适应的传输模式。  </p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>&emsp;&emsp;5G NR与LTE相比的物理层变化如下表所示。  </p>
- <div align="center"><br>    表8：LTE与NR(R15)区别<br> </div>  
+ <div align="center">    表8：LTE与NR(R15)区别 </div>  
+
 
 <table>
 <thead>
@@ -1359,7 +1382,8 @@
 </tbody>
 </table>
 <h1 id="5G用户面"><a href="#5G用户面" class="headerlink" title="5G用户面"></a>5G用户面</h1><p>&emsp;&emsp;5G NR用户面(User Plane, UP)协议栈基于LTE设计，但有差异。NR用户面协议栈如图20所示，适用于新的5G无线接入网，即NG-RAN（同时连接5G NR和LTE）。  </p>
-<div align="center"><br>     <img src="/images/5G-NR-Visio/P20-UP-Protocol-Stack.jpg" width="80%" alt="NR-UP"><br>     图20-NR用户面协议<br> </div>  
+<div align="center">     <img src="/images/5G-NR-Visio/P20-UP-Protocol-Stack.jpg" width="80%" alt="NR-UP">     图20-NR用户面协议 </div>  
+
 
 <p>&emsp;&emsp;与LTE相比，NR引入了一个新的层：SDAP(Service Data Adaptation Protocol)层。这个新层的功能归属于5G系统的新QoS体系（在5G核心网中）。当LTE连接到5G核心网时（即Option 5,7），SDAP也可应用于LTE。SDAP层完成以下功能：  </p>
 <blockquote>
@@ -1369,7 +1393,8 @@
 </ul>
 </blockquote>
 <p>&emsp;&emsp;NR新的QoS体系如图21所示。它以两种方式实现上行链路QoS映射：一、反射映射，即对于每个DRB，UE监视QFI并加入下行链路分组报头，反馈的上行分组包也使用相同的QoS策略；二、显式配置，在这种情况下，网络可以通过RRC直接为DRB上行链路指示QFI。<br>&emsp;&emsp;总体而言，引入新的SDAP层实现了第一个真正的上下行端到端QoS体系。  </p>
- <div align="center"><br>      <img src="/images/5G-NR-Visio/P21-QoS.jpg" width="80%" alt="5G-QoS"><br>      图21 5G系统QOS<br> </div>  
+ <div align="center">      <img src="/images/5G-NR-Visio/P21-QoS.jpg" width="80%" alt="5G-QoS">      图21 5G系统QOS </div>  
+
 
 <p>&emsp;&emsp;NR UP的其他层也对现有LTE系统作出了功能增强。 下面通过这些增强功能来了解NR新功能以及每种解决方案的目的。<br>&emsp;&emsp;从PDCP层开始。 PDCP包括以下功能：  </p>
 <blockquote>
@@ -1386,7 +1411,8 @@
 </ul>
 </blockquote>
 <p>&emsp;&emsp;NR在PDCP层引入的增强功能之一是针对接收设计的，目的是克服LTE PDCP无序解密的缺陷。在LTE中，低层的解密和排序时延会使得RLC层的顺序传输延迟增加。在NR中，不再在RLC上进行重排序，并且PDCP PDU可以无序传输。只有当接收到的PDU的SN与流不匹配时，PDCP才启动追踪传输和解密/执行完整性检查。如果完整性检查成功，则应将PDU存储在缓冲区中，直到从RLC接收到更小SN的PDU。之后，PDU将被重新排序，对应的SDU将顺序发送到上层。<br>&emsp;&emsp;另一项重要的增强功能是针对URLLC场景的，包括用于载波聚合的数据复制(data duplication)和基于PDCP分离承载的双连接。3GPP选择了它们而不是其他竞争选项，包括基于相同的MAC PDU（实现载波间的传输同步）和载波之间的MAC SDU的MAC复制（具备类似的优点，但在实现中更复杂）。基于双连接的PDCP复制通过在独立的MAC/调度器上构建，实现不同部署和回传场景的多样性。对于URLL高可靠传输，其误块率要求是非常高的（如$10^{-5}$残留误差）。PDCP复制解决方案有助于保障低BLER，以防分组包无法达到的情况（如：由于暂时中断/衰落，或由于意外的更改或错误的信道状态信息CSI）。  </p>
- <div align="center"><br>      <img src="/images/5G-NR-Visio/P22-PDCP-duplication.jpg" width="80%" alt="MAC-Duplication"><br>      图22 数据复制流程<br> </div>  
+ <div align="center">      <img src="/images/5G-NR-Visio/P22-PDCP-duplication.jpg" width="80%" alt="MAC-Duplication">      图22 数据复制流程 </div>  
+
 
 <p>&emsp;&emsp;再来看看RLC层的新功能。与LTE相同，NR的RLC层传输模式可配置成三种之一：透明模式(TM)、非确认模式(UM)和确认模式(AM)。RLC配置是针对每个逻辑信道，不依赖于numerology或TTI时长，并且ARQ可以在逻辑信道配置的任何numerology或TTI时长上操作。对于SRB0、寻呼和广播系统信息，使用TM模式；对于其他SRB使用AM模式；对于DRB，使用UM或AM模式；RLC层包括以下功能：  </p>
 <blockquote>
@@ -1402,7 +1428,8 @@
 </ul>
 </blockquote>
 <p>&emsp;&emsp;前面已经提到NR的RLC与LTE相比，没有提供分组排序，除此之外，还移除了RLC SDU的级联，目的是降低时延。L2数据流示意如图23所示，MCA层将来自RBx的两个RLC PDU和来自RBy的一个RLC PDU连接起来组成传输块。来自来自RBx的两个RLC PDU分别对应于一个IP分组（n和n+1），而来自RBy的RLC PDU是IP分组（m）的分段。  </p>
- <div align="center"><br>      <img src="/images/5G-NR-Visio/P23-Data-Flow.jpg" width="80%" alt="Data-Flow-Example"><br>      图23 数据流示意图<br> </div>  
+ <div align="center">      <img src="/images/5G-NR-Visio/P23-Data-Flow.jpg" width="80%" alt="Data-Flow-Example">      图23 数据流示意图 </div>  
+
 
 <p>&emsp;&emsp;再来看看MAC子层。MAC层功能包括：   </p>
 <blockquote>
@@ -1427,16 +1454,19 @@
 </ul>
 </blockquote>
 <p>&emsp;&emsp;所提议的MAC PDU的结构如图24所示：</p>
-<div align="center"><br>      <img src="/images/5G-NR-Visio/P24-structure-of-MPDU.jpg" width="70%" alt="Proposed-Structure-of-MACPDU"><br>      图24 MAC PDU结构<br></div>  
+<div align="center">      <img src="/images/5G-NR-Visio/P24-structure-of-MPDU.jpg" width="70%" alt="Proposed-Structure-of-MACPDU">      图24 MAC PDU结构</div>  
+
 
 <blockquote>
 <p> LCID：指示逻辑信道、控制消息类型或者填充域<br> L：指示SDU或者控制消息的长度  </p>
 </blockquote>
 <p>&emsp;&emsp;如图25所示，NR还支持基于码块组（Code Block Group,CBG）的传输，它具有单比特或多比特HARQ-ACK反馈。对于基于CBG的重传，还应支持HARQ-ACK复用。  </p>
-<div align="center"><br>      <img src="/images/5G-NR-Visio/P25-CBG-Transmission.jpg" width="70%" alt="CBG-Transmission"><br>      图25 CBG传输<br></div>  
+<div align="center">      <img src="/images/5G-NR-Visio/P25-CBG-Transmission.jpg" width="70%" alt="CBG-Transmission">      图25 CBG传输 </div>  
+
 
 <h1 id="5G控制面"><a href="#5G控制面" class="headerlink" title="5G控制面"></a>5G控制面</h1><p>&emsp;&emsp;NR控制面(Control Plane, CP)协议栈如图26所示。它适用于使用5G核心网的NR和LTE。  </p>
-<div align="center"><br>      <img src="/images/5G-NR-Visio/P26-CP-Protocol-Stack.jpg" width="70%" alt="NR-CP"><br>      图26 NR控制面协议栈<br></div>  
+<div align="center">      <img src="/images/5G-NR-Visio/P26-CP-Protocol-Stack.jpg" width="70%" alt="NR-CP">      图26 NR控制面协议栈</div>  
+
 
 <blockquote>
 <p> 注：NAS-非接入层，AMF-接入和移动性管理功能，SMF-会话管理功能  </p>
@@ -1450,10 +1480,12 @@
 <li>UE各状态之间的转换如图27所示。对于INACTIVE状态与CONNECTED/IDLE状态之间的转换，相关的研究仍在进行中。</li>
 </ul>
 </blockquote>
-<div align="center"><br>      <img src="/images/5G-NR-Visio/P27-RRC-States.jpg" width="60%" alt="NR-RRC-States"><br>      图27 NR RRC状态转换<br></div>  
+<div align="center">      <img src="/images/5G-NR-Visio/P27-RRC-States.jpg" width="60%" alt="NR-RRC-States">      图27 NR RRC状态转换</div>  
+
 
 <p>&emsp;&emsp;其他NR RRC功能包括点播广播，意思是gNB不需要一直广播所有的系统信息，而是利用UE中存储的系统信息，如图28所示。  </p>
-<div align="center"><br>      <img src="/images/5G-NR-Visio/P28-SIB.jpg" width="70%" alt="SIB-in-NR"><br>      图28 NR中的SIB<br></div>  
+<div align="center">      <img src="/images/5G-NR-Visio/P28-SIB.jpg" width="70%" alt="SIB-in-NR">      图28 NR中的SIB</div>  
+
 
 <p>&emsp;&emsp;接下来分析一下5G的非接入层（NAS）信号。<br>&emsp;&emsp;5G系统的关键特性之一是接入不确定，这意味着它既支持3GPP（如NR和LTE）接入，也支持非3GPP接入（如WLAN）。有一种适用于这两种访问类型的NAS协议。每个连接的UE都用的是单个NSA连接，虽然移动管理和会话管理功能在NGC中已经解耦（参见图26），但是注册管理和连接管理(RM/CM)以及会话管理的消息和流程还是用的同一个NSA连接。因此NAS协议包括NAS-MM和NAS-SM组件。<br>&emsp;&emsp;NAS-MM组件用于处理RM/CM流程并为NAS连接提供安全功能（完整性保护、加密）。NAS-MM可判断NAS消息是否应该通过AMF传送到其他网络功能实体（如SMF）。<br>&emsp;&emsp;RM状态模型与现在用于LTE/EPS的概念类似，具有两个RM状态（注销和注册）以及在两个状态之间转换。其中不同的是注册区域，可以是用于3GPP接入网络的跟踪区域(TAI)或用于非3GPP接入的非3GPP TAI（N3GPP-TAI）。如果UE同时在两者中注册，则通过给UE分配一个全球唯一临时标识，为每个接入类型保持特定的RM上下文。<br>&emsp;&emsp;CM状态也来自LTE，CM-IDLE和CM-CONNECTED没有变化。处于CM-CONNECTED模式的UE可以是RRC-INACTIVE状态。当发生以下情况时，处于这一状态的UE必须恢复连接：上行数据等待，发起NAS信令流程，响应NAS寻呼，通知网络已经离开RAN通知区域，或者周期时长到达。<br>&emsp;&emsp;NAS-SM协议支持用户面PDU会话的建立、修改和释放。它通过AMF以透明方式传输给SMF。SMF负责检查UE请求是否符合其定义格式，包括PDU会话类型，QoS信息和允许的SSC（Session and Service Continuity）模式。<br>&emsp;&emsp;SSC是5G引入的另一个新概念，它能够解决针对UE的不同应用和服务的各种连续性要求。SSC有三种模式：  </p>
 <blockquote>
@@ -1576,7 +1608,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Programme/Hexo/How-To-Use-Markdown/" rel="next" title="Markdown语法简介">
+              <a href="/programme/Hexo/How-To-Use-Markdown/" rel="next" title="Markdown语法简介">
                 <i class="fa fa-chevron-left"></i> Markdown语法简介
               </a>
             
@@ -1660,7 +1692,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">41</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1669,7 +1701,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1678,7 +1710,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">46</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1736,11 +1768,15 @@
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://www.zhangxinxu.com/wordpress/" title="前端大佬" target="_blank">前端大佬</a>
+                  <a href="http://www.zhangxinxu.com/wordpress/" title="张鑫旭大佬" target="_blank">张鑫旭大佬</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
                   <a href="https://www.w3cplus.com/" title="大漠大佬" target="_blank">大漠大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.php.cn/" title="前端学习" target="_blank">前端学习</a>
                 </li>
               
             </ul>

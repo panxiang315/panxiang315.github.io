@@ -116,7 +116,7 @@
 <meta property="og:description" content="内容：记录开会信息，已加密">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://panxiang315.github.io/images/meeting.jpg">
-<meta property="og:updated_time" content="2018-06-22T02:45:19.993Z">
+<meta property="og:updated_time" content="2018-07-11T11:35:28.764Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="会议纪要">
 <meta name="twitter:description" content="内容：记录开会信息，已加密">
@@ -427,7 +427,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,514字
+                  2,188字
                 </span>
               
 
@@ -443,7 +443,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  6分
+                  8分
                 </span>
               
             </div>
@@ -471,13 +471,13 @@
 
 <a id="more"></a>  
 <hr>
-<h2 id="2018-05-24"><a href="#2018-05-24" class="headerlink" title="2018-05-24"></a>2018-05-24</h2><p>时间:2018-05-24-PM<br>主题:NR测试终端进展<br>对方：Inter</p>
+<p>时间:2018-05-24-PM<br><strong>主题:NR测试终端进展</strong><br>对方：Inter</p>
 <p>实验室：郑州<br>SUL评估阶段，与CA对比，大部分运营商倾向于直接将LTE的上下行同时划出相同频谱给NR，以防止FDD频谱出现不对称的现象。而不倾向于使用SUL。<br>趋向于直接使用低频重耕LTE的1.8频谱，而不适用3.5频谱，因为在3.5需要使用Massive MIMO，成本有点高。等待信息部放宽对频谱重耕的限制。<br>MTP无法测试1.8及3.5的干扰，因为他们实际上是分开的。同时也无法进行上行的LTE和NR的联合功率控制。这个测试版本只能测试功能，无法测试性能。<br>只测量SSB，还没有使用CRS，厂家也这么倾向。<br>URLLC场景主要用于垂直行业。毫米波有大部分非授权频段，可能就没有运营商的份额了。<br>建议使用毫米波部署在类似智慧工厂的场景，使用URLLC。<br>SSB个数问题，现在是有1个和8个的配置，后期外场测试可能会增加其他1-8的数<br>双周期问题</p>
 <hr>
-<p>时间：2018-06-12 AM<br>主题：3D MIMO天线<br>对方：大唐</p>
+<p>时间：2018-06-12 AM<br><strong>主题：3D MIMO天线</strong><br>对方：大唐</p>
 <p>容量增长使得压力增大，需要解决方案<br>大唐在联通只有TDD的份额，所以如果这个TDD的3D MIMO效果好，可以提高大唐在联通的份额<br>需要考虑热点容量解决问题，不应该是用于解决覆盖问题<br>另外大唐的设备价格高，联通的用户习惯也不一致。<br>TDD的上行还是受限，上行需要FDD解决<br>功耗也有点大，1200W，正常的为300-400，约为3倍<br>另外还有传输问题，原有传输设备端口已经满了，可能需要单独拉传输<br>还有覆盖和容量之间的权衡，需要有参数进行调控，如果用户数大，不应该覆盖太广，这样影响用户体验<br>这种3D MIMO的一般就是用单扇区指向忙小区，BBU也是专用的，原有俩扇区BBU还得继续存在</p>
 <hr>
-<p>时间：2018-06-13 AM<br>主题：5G链路预算<br>对方：华为</p>
+<p>时间：2018-06-13 AM<br><strong>主题：5G链路预算</strong><br>对方：华为</p>
 <p>1、链路预算：需求分析-链路预算工程-输出结果<br>AAU：RRU+天线，基站侧的线缆损耗可视为0<br>传播模型：UMA模型-3GPP 差异主要体现在平均楼高和平均楼间距(街道宽度)<br>衰减余量：雨衰余量（毫米波频段需要考虑）干扰余量NR会比LTE小一点，因为是窄波束，非持续发送</p>
 <p>2、与LTE差异总结</p>
 <blockquote>
@@ -494,30 +494,57 @@
 <p>人体损耗，没有加入手持损耗<br>在LTE的时候，打电话3dB 用手机是1dB</p>
 <p>频率/LOS/NLOS<br>28GHz 15dB 8dB<br>3.5GHz 6dB 3dB</p>
 <hr>
-<p>时间：2018-06-13 AM<br>主题：室分产品<br>对方：华为</p>
+<p>时间：2018-06-13 AM<br><strong>主题：5G室分产品</strong><br>对方：华为</p>
 <p>类型：原有扩/新增<br>光电复合缆的可以级联<br>原为39xx系列 后为59xx系列</p>
 <p>时间：2018-06-13 AM<br>主题：CU/DU分离<br>对方：华为</p>
 <pre><code>合一部署      分离
 </code></pre><p>传输 NSA存在迂回流量 避免迂回流量<br>新业务 扩展困难    容易<br>建网成本  按现网，无额外成本   额外成本高，服务器和机房改造<br>可靠性  CT可靠性高       IT可靠性低，需要通过软件功能提高可靠性</p>
 <p>建议：初期合，后期分离，边缘DC规模建设</p>
 <hr>
-<p>时间：2018-06-13 PM<br>主题：终端<br>对方：华为</p>
+<p>时间：2018-06-13 PM<br><strong>主题：5G终端</strong><br>对方：华为</p>
 <p>先Option 3x NSA 之后直接 Option 2 SA 不过渡Option 7</p>
 <p>2T的占面积大，但是1T的工艺复杂，只有一家美国的能做，所以华为倾向使用2T 23dBm 而不是1T 26dBm</p>
 <p>Band3和 n78的谐波干扰，会造成20dB的灵敏度损耗。即使是拆开天线也有10dB。所以两种频段也最好是TD的</p>
 <hr>
-<p>时间：2018-06-14 AM<br>主题：超导滤波器<br>对方：上海联通及中科院物理研究所</p>
+<p>时间：2018-06-14 AM<br><strong>主题：超导滤波器</strong><br>对方：上海联通及中科院物理研究所</p>
 <p>320x320x320 插损3dB 不能加放大器，会抬升底噪<br>最好是跟RRU做到一起，体积翻倍</p>
 <hr>
-<p>时间：2018-06-19 AM<br>主题：机场方案<br>对方：联通北分</p>
+<p>时间：2018-06-19 AM<br><strong>主题：北京新机场方案</strong><br>对方：联通北分</p>
 <p>时间长度有限，30-35分钟，需要精简<br>车联网还需要一段时间，预计3年左右</p>
 <hr>
-<p>时间：2018-06-21 AM<br>主题：劈裂天线<br>对方：江苏亨鑫 浦浩、万传明  天津网优张忠平</p>
+<p>时间：2018-06-21 AM<br><strong>主题：劈裂天线扩容</strong><br>对方：江苏亨鑫 浦浩、万传明  天津网优张忠平</p>
 <p>问题：由于附近站点干扰，底噪抬升严重，因此虽然PRB利用率提高了很多，但是吞吐量仅提升了20%-25%</p>
 <p>因此，后期还需要解决的问题：<br>网优后的干扰系统内干扰抑制的问题<br>适用场景总结</p>
 <p>天津联通对于其他典型场景天线也有需求<br>比如室分无法部署时的楼面对打<br>帅哥提到了用于覆盖运动场的方波束天线</p>
 <p>室分系统建设问题，与移动存在干扰，不知道是不是POI的问题<br>室分干扰的话，是不是应该是电信跟移动的更严重一些</p>
 <hr>
+<p>时间：2018-07-03 AM<br><strong>主题：4G扩容门限</strong><br>对方：组内会议</p>
+<p>王全  广州  扩容</p>
+<p>到什么地步网络就会崩<br>CQI优化后，网络指标和用户体验关系的评估</p>
+<p>单载波的极限能力</p>
+<blockquote>
+<p> 1：小区忙时用户速率小于5Mbps的比例大于10%<br> 2:小区忙时PRB利用率大于75％的比例（秒数或分钟数）大于10％</p>
+</blockquote>
+<p>测试变量：业务类型和用户数<br>上升门限</p>
+<p>方法一：TM500实验网测试，写脚本添加终端连接，看用户上升与单用户流量的关系<br>方法二：现网高流量站点数据分析，分忙时和空闲状态下的网络指标<br>方法三：厂家仿真，得出理论峰值</p>
+<hr>
+<p>时间：2018-07-04 PM<br><strong>主题：扩容方案</strong><br>对方：联通广州分公司</p>
+<p>广州联通汇报<br>3000万用户，2I用户970万<br>全省流量利用率到了49%<br>5M的扩容门限为2.1G，与带宽成线性<br>广州深圳的财务占50%以上</p>
+<p>预测18年底平均DOU为12.6GB<br>收入和流量剪刀差变大</p>
+<p>网络保障用户感知的底线在那？<br>覆盖和容量投入的平衡点在哪<br>当前4G投入面向5G演进是否有风险<br>小站投资大概5万，加一个3G站大概3万</p>
+<p>市场及财务应参与进来<br>移网，固网，集客资源及收入对比</p>
+<p>4G流量提升并不会因为5G启用而停止，所以扩容并不是短期目标的事情<br>另一方面，存量用户开放可转冰后，扩容成本和扩容收益中的扩容收益应该以新的成本为准，在一块以下。</p>
+<p>会不会当机，会不会拒绝业务，会不会影响用户感知（不同的网络压力下的用户感知体验）</p>
+<hr>
+<p>时间：2018-07-10 AM<br><strong>主题：5G高铁覆盖方案</strong><br>对方：爱立信</p>
+<p>5G主流传播模型Uma，分为室外LOS和室内浅层NLOS两种情况<br>参考标准<br>3GPP 38.901</p>
+<p>无法使用波束赋形，因此也实现不了MU-MIMO，它们需要即时跟踪信道变化<br>只能使用4T4R+高带宽+高功率200W</p>
+<hr>
+<p>时间：2018-07-11 AM<br><strong>主题：5G标准设备</strong><br>对方：宜通世纪  张忠平</p>
+<p>LTE BBU RRC PDCP RLC MAC PHY<br>LTE RRU TXRU<br>天线</p>
+<p>NRCU RRC PDCP<br>NR DU RLC MAC 大部分PHY<br>AAU 部分PHY TX RU 天线</p>
+<p>核心网：NSSF NRF NEF 新增网元，4G EPC中无对应<br>以下为与4G EPC网元对应<br>AMF MME<br>SMF PGW-C<br>UPF PGW-U<br>UDM HSS<br>PCF PCRF<br>AUSF AUC</p>
+<p>64T64R 总量太高<br>韩国降为32T32R 容量仅降了30%<br>郊区可以用8T8R</p>
 
       
     </div>
@@ -656,17 +683,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -679,7 +697,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">41</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -688,7 +706,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -697,7 +715,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">46</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -755,11 +773,15 @@
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://www.zhangxinxu.com/wordpress/" title="前端大佬" target="_blank">前端大佬</a>
+                  <a href="http://www.zhangxinxu.com/wordpress/" title="张鑫旭大佬" target="_blank">张鑫旭大佬</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
                   <a href="https://www.w3cplus.com/" title="大漠大佬" target="_blank">大漠大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.php.cn/" title="前端学习" target="_blank">前端学习</a>
                 </li>
               
             </ul>
@@ -771,22 +793,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2018-05-24"><span class="nav-number">1.</span> <span class="nav-text">2018-05-24</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
