@@ -1,0 +1,940 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="迭代," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="pan's record" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="一个产品、一家公司、一个城市都是迭代的产物；你自己的人生也是迭代的产物。你现在处于哪个点并不重要，重要的是你选择如何迭代。从一个好的内核开始．做好一次次微小的迭代，就能成就你的产品、你的人生。">
+<meta name="keywords" content="迭代">
+<meta property="og:type" content="article">
+<meta property="og:title" content="系统迭代：微信红包的意外与刻意">
+<meta property="og:url" content="https://panxiang315.github.io/cognitive/reprint/iteration/index.html">
+<meta property="og:site_name" content="pan&#39;s record">
+<meta property="og:description" content="一个产品、一家公司、一个城市都是迭代的产物；你自己的人生也是迭代的产物。你现在处于哪个点并不重要，重要的是你选择如何迭代。从一个好的内核开始．做好一次次微小的迭代，就能成就你的产品、你的人生。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-27T11:32:55.546Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="系统迭代：微信红包的意外与刻意">
+<meta name="twitter:description" content="一个产品、一家公司、一个城市都是迭代的产物；你自己的人生也是迭代的产物。你现在处于哪个点并不重要，重要的是你选择如何迭代。从一个好的内核开始．做好一次次微小的迭代，就能成就你的产品、你的人生。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://panxiang315.github.io/cognitive/reprint/iteration/"/>
+
+
+
+
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+  <title> 系统迭代：微信红包的意外与刻意 | pan's record </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?41fc030db57d5570dd22f78997dc4a7e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+<!-- <a href="https://github.com/panxiang315/panxiang315.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;
+         " src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a> -->
+
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta custom-logo">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">pan's record</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <h1 class="site-subtitle" itemprop="description">background of my life</h1>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://panxiang315.github.io/cognitive/reprint/iteration/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Pan Xiang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="pan's record">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="pan's record" src="/images/avatar.jpg">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                系统迭代：微信红包的意外与刻意
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-27T19:31:26+08:00">
+                2018-07-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/cognitive/" itemprop="url" rel="index">
+                    <span itemprop="name">cognitive</span>
+                  </a>
+                </span>
+
+                
+                
+                  >
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/cognitive/reprint/" itemprop="url" rel="index">
+                    <span itemprop="name">reprint</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+
+          
+          
+
+          
+
+		  
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  3,812字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  13分
+                </span>
+              
+            </div>
+          
+
+          
+
+
+
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>一个产品、一家公司、一个城市都是迭代的产物；你自己的人生也是迭代的产物。<br>你现在处于哪个点并不重要，重要的是你选择如何迭代。<br>从一个好的内核开始．做好一次次微小的迭代，就能成就你的产品、你的人生。</p>
+<a id="more"></a>
+<hr>
+<p>&emsp;&emsp;微信确实是这个时代最伟大的产品之一，所以咱们用两讲的时间来说一说微信是怎么迭代过来的。即使是用两课的时间来讲，也只能讲一些非常皮毛的东西。<br>上一讲，我们说到微信在2.2版本之后就甩开了米聊，从3.6版本之后和陌陌走上了不同的道路。<br>这一讲我们从微信的4.0版本说起。迭代中，核心功能最重要微信的1.0版本，就是一个在熟人之间可以免费发文本信息和图片的工具。微信的2.0版本，增加了微信的语音功能和“查找附近陌生人”的功能。到这里，微信成为了陌生人语音社交的工具，但还是个工具。<br>微信3.0版本的时候推出了“扫一扫”、“服务号”，从这个点开始，微信开始连接世界。<br>4.0版本的时候，微信推出了“朋友圈”，也就是说微信从通讯工具开始进化，变成了社交平台。微信在推出“朋友圈”功能之前，做了两个前置工作：3.5版本加了扫描二维码；3.6版本加入了微信的公众号。这两个动作的价值在于，一个普通人的生活没有那么多可供朋友消费的内容，如果没有这两个前置功能，我们就直接打开朋友圈，会非常难看。<br>4.0版本时，你在朋友圈发照片，如果朋友评论，你是没有办法回复评论的。回复评论的功能，直到4.2版本才做出来。这说明什么呢？没有必要憋大招，没有必要把所有功能全都做好再放出来。不能回复朋友在朋友圈下的评论又怎么样<br>呢？如果我非常想回复他，大可以点对点跟他说。<br>所以产品的核心功能点有效比什么都重要，基于核心功能附加的其他功能点没有<br>那么重要，可以一步步来。接着就是微信的4.5版本，推出的就是今天的内容公众号，推动了一批媒体人创业，孕育了一大波网红。</p>
+<h1 id="微信红包的发布"><a href="#微信红包的发布" class="headerlink" title="微信红包的发布"></a>微信红包的发布</h1><p>微信的5.0版本，对微信来说有一个巨大跃升，就是加上了“绑定银行卡”。要知道在5.0版本之前，微信是不沾钱的。如果微信不加“绑定银行卡”的这个动作，没有把微信和钱连在一起，微信就是一个移动版的QQ空间，大家可以在这里晒照片、聊天、彼此点赞。但是微信绝不会成为今天的移动生活场景，甚至是移动商业帝国。<br>5.0版本的第一个挑战是什么呢？那时微信已经有了4.7亿用户了，大家平时用微信的社交功能已经够用了，为什么要升级到5.0版本，又为什么要把我的银行卡绑在微信上？<br>关于这一点，我会在微信的6.0的版本里谈。但是微信得先拥有绑银行卡的能力，这个能力点是5.0版本提升的。怎么让大家升级成5.0版本？这个时候微信做了一个非常漂亮的运营，而这个运营是通过产品来完成的。它推出了一个小产品，我想你还有印象，就是“打飞机”。<br>那个时候如果你刚升级了5.0的版本，一打开微信就直接出现一个“打飞机”游戏的界面，然后大家就都开始玩。身边的人听说了也会去升级版本，加入打飞机大战的战团，彼此PK。微信就在不知不觉间，完成了5亿用户的升级。<br>直到今天，我们经常看到一些App拉用户升级，还是会非常傻大黑粗地吃喝一下：“你的版本过低，建议升级”。甚至更讨厌的就是直接闪退，不升级不让用。<br>这就是产品的高低段位的差别，哪怕在你让用户选择版本这一个动作上，怎么能让用户舒舒服服地去更新，差别都是很大的。<br>接着就是刚才已经预告过的微信6.0版本。这个时候，微信面对的难题是：用户为什么要把自己的银行卡绑定在微信上？<br>而且还要在微信上发生钱的流通？这时候有一个重要事件就是微信红包。微信的支付团队是从财付通团队脱胎而来的。互联网圈都知道，大概有十年的时间，支付宝一直都是财付通头顶的一座大山。<br>2013年的第三方统计，移动支付市场，支付宝的市场占有率是76%，财付通只有3.3%,20多倍的差距，这是三层楼和76层楼的体量差别。就是在2013年这一年，诞生了微信红包，改变了支付战局。<br>微信红包是财付通下面的微信支付团队里一个小团队内部做的一个小项目，一群小孩利用自己的业余时间没有做任何的申报，用公司资源就做了。<br>当时微信支付的总经理吴毅在回忆微信红包发布的场景时说，他当时在自己的办公室里坐着，觉得外面的办公区特别吵，一帮人在那儿又喊又叫地折腾。他就推门出去说：“你们在干什么？怎么这么吵啊？上班呢！”<br>这些小孩就说，“我们以前说要做一个发红包的小应用，现在做出来了，特别好玩，要不你试一试？”<br>一个是点对点红包，一个是拼手气红包，当时还是作为一个插件安装在微信里的，大家开始测试，这时候就有人顺手把一个红包丢到了腾讯的一个大群里。<br>于是从根本上改变了支付宝和财付通战局的产品就这样发布了。在此之前，其实腾讯内部都不知道有这样一个产品。<br>接着，我们就看到微信红包从一个小插件，换到了输入框下面的重要位置。现在红包已经成为了微信使用率最高的功能，远远大于“查找附近的陌生人”、“摇一摇”，这些微信的早期里程碑产品。</p>
+<h1 id="圈层与圈层壁"><a href="#圈层与圈层壁" class="headerlink" title="圈层与圈层壁"></a>圈层与圈层壁</h1><p>有两个故事，我想把它拆出来，再讲一下。<br>第一个故事，我想通过这个故事讲一个概念词——圈层。我们都生活在某个圈层里，而且圈层之间是彼此不了解，也很难破壁的。<br>比如，我原来腾讯的同事，一个1985年的男生，他做了一个短期小额货款产品，大概每天有300多万人向他贷款。他基本上是通过大数据的方式去审核筛查，给100万多人放钱。<br>这些人要贷多少钱呢？基本上是贷200块到1000块钱之间，贷款的时间大概是两个星期到两个月。场景就是很多人离发工资还差两个星期，但是实在没有钱撑不下去了，需要借200块钱撑两个星期。<br>所以我当时的第一反应就是，我不能理解为什么200块钱还要货款？他说：“这就是圈层，是有这样的圈层存在的。你去关注一下这群找我贷款的人的关系链，你会发现，几乎是同一时间，这个人的整条关系链都在借钱。”<br>就是说这个人要借200块，而他身边几乎是人人都在借钱，没有人可以借200块钱给他。这件事情我当时听到是很震撼的。回到微信红包，也有一个故事，我非常震撼。<br>刚才说微信红包是在2013年的某一天偶然间发布的，然后就很自然、很流畅地被大家发来发去，进入了各个互联网公司，大家都开始使用。<br>2014年春节，微信红包就达到了它的第一个用户峰值，多少人呢？458万人。这之后的几个月时间里，微信红包的用户数就再也没有突破过这个数字。除夕肯定是红包的高发期，那一天使用微信红包的达到了458万人，之后的几个月，又从这个高峰值上掉下来了，而且再也没有达到过这个数字。<br>这叫什么？这就叫遇到了圈层壁垒。所以每次有人问我说互联网圈的核心活跃人数有多少？我就跟他说，有458万。因为这是微信红包按照它的自然能量达到的极限值。<br>像红包这么天然的东西，微信红包操作又是这么简单，但是在没有借助任何外部势能的情况下，将近7个月的时间，它就困在400万用户里无法突破。<br>实际上，互联网的尝鲜爱好者就这么多它的自然传播极限大概也就是这样了。<br>这个圈层壁是怎么被打破的呢？春晚。我想很多人还记得，20巧年微信和春晚合作。我们不得不承认，春节就是我们中国最高的文化势能之一。<br>微信是怎么做的呢？就是摇一摇抢红包，操作足够简单，当天微信红包新增一亿用户。<br>从400万用户到一亿用户，靠春节这样一个核心场景的触发完成。支付宝积累一亿用户用了多久呢？大概是8年，而微信支付是一天。<br>当然，能够一天从400万用户平滑升级到一亿用户，这也是依靠腾讯强大的系统能力。不是随便一个小公司，给你一亿用户你就能接得住。</p>
+<h1 id="支付宝红包有什么不同"><a href="#支付宝红包有什么不同" class="headerlink" title="支付宝红包有什么不同"></a>支付宝红包有什么不同</h1><p>刚才我们说的是微信红包，虽然支付宝红包前面讲过，但这里作为对照你再看看支付宝红包有什么不一样。<br>关于2015年的支付宝红包为什么失败有很多总结，比如社交场景不同。但我们从用户体验来讲：<br>微信红包简简单单，发的就是红包，点开就是钱，再没有其他的东西了，拿到就很爽。<br>支付宝红包上面则是放了一堆广告。我收发一个红包，还得给淘宝打广告，点红包没有瞄准，可能还点到广告上。这是什么呢？就是不爽。<br>关键问题是什么？是支付宝没有认真去总结问题，同样的错误，它在2016年又犯了一次。<br>20巧年微信红包通过和春晚合作，用户一举破了亿。2016年，阿里砸了2.69亿元拿下了猴年春晚的合作资格，干什么？就是推支付宝红包。<br>它是怎么做的呢？它当时还提了一个概念叫“集齐五福，分两亿现金”。你肯定也有印象，一堆人都集齐了四福，就差最后一张敬业福。我们来盘点数字，支付宝一共发出了82万张敬业福。而所有的用户里，集齐五福的有多少呢？79万。<br>这样一听没什么概念。我们再扔两个数据出来，参加这个活动的用户有多少呢？最少不可能少于2000万，而支付宝的总用户是多少呢？四亿用户。<br>我们在第一课就讲了，什么叫爽，就是被满足。被满足的感觉就是爽，不被满足就不爽。我满怀期待，努力了半天去集，集齐了四个，最后一个没集着，肯定<br>是不爽。<br>2016年支付宝红包的不爽率有多高？支付宝花了2.69亿去打广告，如果有2000万用户参与支付宝抢红包的话，不爽的人大于96％。如果说是它的四亿用户都去参与了抢红包，不爽率是99.8％。<br>总之，从此微信支付就一举改变了这种战局。<br>现在有不同的统计数据，但总体来讲都说微信支付和支付宝两家的体量是相接近<br>的。从我来讲当然是希望它们继续打，因为商家竞争，我们用户的体验才能变好。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>到这里，6.0版本之后的微信就是咱们今天熟悉的样子，它就成了我们今天移动生活的场景。<br>我们简单地讲了微信的六次大版本的迭代，它过去一共迭代了几百次。从最早是<br>一个通讯工具，到社交平台，到现在的移动生活场景，甚至是移动商业帝国。<br>它自己从一个“点”变成了一个“面”，最后形成了一个巨大的经济体，无数企业和个人，从生活到财富，光荣与梦想，都能够在微信里得到支撑，甚至在微信上完成闭环。<br>腾讯的强大是这家公司的系统能力，它能够孕育出一批小马化腾，不断在腾讯的土壤中产生像QQ、QQ空间、微信、王者荣耀这一类奇迹级的产品。<br>微信肯定已经成为了一个经济体，但它也只是腾讯公司的一个产品。<br>腾讯当然是这个数字时代的一个巨大经济体，腾讯同时也是深圳市的一个企业，只是深圳的350个上市公司之一。深圳有350个上市公司，这个城市不过只有37岁，比我们今天很多得到App的用户还要年轻。<br>罗马不是一天建成的。不管我们今天看到的是微信这个我们每天都要依赖的产品，还是腾讯这家公司，抑或是深圳这座城市，都是迭代的产物。我们自己的人生也是迭代的产物。从一个最好的内核开始，一个一个动作地持续迭代和一次一次微小的选择，就会成就你的产品以及你的人生。<br>微信不过就是7年，深圳市也不过就是37年。今天你在一个什么样的点位上没有那么重要，重要的是在未来的几年里，你会用什么样的方式持续迭代。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+  
+        <div class="post-tags">
+          
+            <a href="/tags/迭代/" rel="tag"><i class="fa fa-tag"></i> 迭代</a>
+          
+        </div>
+      
+
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>🐶 您的支持将鼓励我继续创作 🐶</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赞赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.jpg" alt="Pan Xiang WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zhifubao.jpg" alt="Pan Xiang Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+        
+     <div>
+      
+      <ul class="post-copyright">
+
+
+        <li class="post-copyright-link">
+          <strong>本文标题：</strong>
+          <a href="https://panxiang315.github.io/cognitive/reprint/iteration/" title="系统迭代：微信红包的意外与刻意">系统迭代：微信红包的意外与刻意</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文链接：</strong>
+          <a href="https://panxiang315.github.io/cognitive/reprint/iteration/" title="系统迭代：微信红包的意外与刻意">https://panxiang315.github.io/cognitive/reprint/iteration/</a>
+        </li>
+
+        <li class="post-copyright-date">
+            <strong>发布时间：</strong>2018年7月27日 - 19时07分
+        </li>
+
+
+      </ul>
+    
+  </div>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/cognitive/reprint/system-design/" rel="next" title="系统世界观：微信、米聊、陌陌">
+                <i class="fa fa-chevron-left"></i> 系统世界观：微信、米聊、陌陌
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/cognitive/reprint/leadership/" rel="prev" title="系统生死线：猎豹和它的关键任务">
+                系统生死线：猎豹和它的关键任务 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+
+  </div>
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Pan Xiang" />
+          <p class="site-author-name" itemprop="name">Pan Xiang</p>
+          <p class="site-description motion-element" itemprop="description">Learning, on the way</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">79</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/panxiang315" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/panxiangBupt" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://greychess.cn" title="好友博客" target="_blank">好友博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhangxinxu.com/wordpress/" title="张鑫旭大佬" target="_blank">张鑫旭大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.w3cplus.com/" title="大漠大佬" target="_blank">大漠大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.php.cn/" title="前端学习" target="_blank">前端学习</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#微信红包的发布"><span class="nav-number">1.</span> <span class="nav-text">微信红包的发布</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#圈层与圈层壁"><span class="nav-number">2.</span> <span class="nav-text">圈层与圈层壁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#支付宝红包有什么不同"><span class="nav-number">3.</span> <span class="nav-text">支付宝红包有什么不同</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fas fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Pan Xiang</span>
+</div>
+
+
+
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END -->
+  
+
+
+
+  
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+	<!-- 页面点击小红心 -->
+	<!-- <script type="text/javascript" src="/js/src/love.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

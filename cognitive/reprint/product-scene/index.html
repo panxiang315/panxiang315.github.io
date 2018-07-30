@@ -1,0 +1,943 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="场景," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="pan's record" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="万物互联，未来互联网到处都是入口，但有入口不等于有流量。只有能触发用户情绪的场景，才是流量入口。互联网商业核心比拼的就是三件事：产品的比拼、流量的争夺、转化率的优化。">
+<meta name="keywords" content="场景">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计产品时要包括产的场景">
+<meta property="og:url" content="https://panxiang315.github.io/cognitive/reprint/product-scene/index.html">
+<meta property="og:site_name" content="pan&#39;s record">
+<meta property="og:description" content="万物互联，未来互联网到处都是入口，但有入口不等于有流量。只有能触发用户情绪的场景，才是流量入口。互联网商业核心比拼的就是三件事：产品的比拼、流量的争夺、转化率的优化。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-27T08:30:03.250Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="设计产品时要包括产的场景">
+<meta name="twitter:description" content="万物互联，未来互联网到处都是入口，但有入口不等于有流量。只有能触发用户情绪的场景，才是流量入口。互联网商业核心比拼的就是三件事：产品的比拼、流量的争夺、转化率的优化。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://panxiang315.github.io/cognitive/reprint/product-scene/"/>
+
+
+
+
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+  <title> 设计产品时要包括产的场景 | pan's record </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?41fc030db57d5570dd22f78997dc4a7e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+<!-- <a href="https://github.com/panxiang315/panxiang315.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;
+         " src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a> -->
+
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta custom-logo">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">pan's record</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <h1 class="site-subtitle" itemprop="description">background of my life</h1>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://panxiang315.github.io/cognitive/reprint/product-scene/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Pan Xiang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="pan's record">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="pan's record" src="/images/avatar.jpg">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                设计产品时要包括产的场景
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-27T16:05:29+08:00">
+                2018-07-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/cognitive/" itemprop="url" rel="index">
+                    <span itemprop="name">cognitive</span>
+                  </a>
+                </span>
+
+                
+                
+                  >
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/cognitive/reprint/" itemprop="url" rel="index">
+                    <span itemprop="name">reprint</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+
+          
+          
+
+          
+
+		  
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  2,693字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  9分
+                </span>
+              
+            </div>
+          
+
+          
+
+
+
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>万物互联，未来互联网到处都是入口，但有入口不等于有流量。<br>只有能触发用户情绪的场景，才是流量入口。<br>互联网商业核心比拼的就是三件事：产品的比拼、流量的争夺、转化率的优化。</p>
+<a id="more"></a>
+<hr>
+<p>&emsp;&emsp;上节课提到了场景，所以这节课就把场景这件事细说一说。</p>
+<h1 id="用好场景，让美女脱颖而出"><a href="#用好场景，让美女脱颖而出" class="headerlink" title="用好场景，让美女脱颖而出"></a>用好场景，让美女脱颖而出</h1><p>&emsp;&emsp;场景在几年前还是个新概念，现在满大街都能听到这个词。为什么经常提到场景呢？因为场景本来就是产品的一部分。你脱离了场景谈产品，就好比你给了一个女孩一件很漂亮的晚礼服，东西很美，女生也很喜欢，但是无处安放。那这东西有什么用呢？<br>&emsp;&emsp;什么叫场景？咱们都知道杰奎琳是美国历史上最优雅的总统夫人，她有一句名言：“我知道我不管做什么事，都不如我把衣服穿得好更重要。”杰奎琳穿衣服有多讲究呢？她陪肯尼迪出国访问的时候，她会提前要对方接机仪仗队的着装方案以及接机的场景，为的是当她走下飞机的那一刻，她的着装在整个场景中既无比和谐，又能非常好地突出自己。<br>&emsp;&emsp;有一篇文章讲到了电影《绣春刀2》里的杨幂，用了一个词，我觉得特别有趣，说杨幂在这部电影里的作用叫“女性景观”。“女性景观”这个词很有意思。如果我们按照一个女生有多美来作一个比喻，有的女生就像路边的野草，完全不会留下任何印象。也会有一些美女是家庭盆景级，挺漂亮的，会有个印象。<br>&emsp;&emsp;但是有的美女，比如说像张艾嘉，茶道的张南揽，已经把自己修炼成了行走的艺术品。而杰奎琳真的是把自己做成了女性景观。什么叫女性景观？就是你会专门花钱买一本她的画册，就好像你会专门花钱买某个著名风景的明信片那样。有人会把她的海报印出来，有人把她的头像设置成壁纸，就像对待美丽的风景那样。她的美已经是一种景观级别。<br>&emsp;&emsp;那么，这种景观级别的美是天生的还是刻意为之的？就杰奎琳来讲，她是把她自己作为一个产品运营，也就是她对自己公众形象的运营。<br>&emsp;&emsp;杰奎琳为什么有这么多好照片？对于普通人来讲，高兴就拍张照。但是对于杰奎琳来讲，她的照片不是个人记忆，而是公众视觉，是公众记忆的一部分，是她自己的重要产品。你看到杰奎琳那些很棒的照片，是她精细化运营的结果，而照片中的场景就是产品的一部分，甚至是非常重要的一部分。<br>&emsp;&emsp;你想一想，如果脱离了出国访问的仪仗队背景，或者脱离了白宫中某一个特色角落的背景，只是一个美女，摆个姿势照个相，会有多少传播度呢？杰奎琳的做法是重视场景，有效地使用场景，然后在场景中成就自己的形象。</p>
+<h1 id="什么是场景"><a href="#什么是场景" class="headerlink" title="什么是场景"></a>什么是场景</h1><p>&emsp;&emsp;我们刚才一直在谈场景这个词，那场景到底是怎么定义？要把场景拆开，场和景。“场”是时间和空间的概念，一个场就是时间加空间。用户可以在这个空间里停留和消费，如果一个人不能在某个空间去停留、消费，这个场就是不存在的。“景”是什么意思？景就是情景和互动。当用户停留在这个空间的时间里，要有情景和互动让用户的情绪触发，并且裹挟用户的意见，这就是场景。<br>&emsp;&emsp;很多时候，你以为你是在消费产品，其实你是在消费场景。举一个高发的消费行为——吃饭。吃饭有多少场景？我们简单说一下。<br>&emsp;&emsp;比如说，早餐怎么吃？是自己对付一下，还是摆好盘、拍照晒朋友圈？这就是不同的场景。中午饭怎么吃？你自己带便当，一边看网剧一边吃，这是一个场景；几个同事一起叫便当，在会议室里边吃边聊，这是一个场景；几个同事一起出去吃，然后AA制结账，这是一个场景；中午请客户吃饭，这是一个场景；中午情侣约会也是一个场景。<br>&emsp;&emsp;所以脑补一下，你会发现在不同的场景下，发生的消费其实是完全不一样的。接着再说晚餐。回家吃是一个场景，在单位加班叫外卖是一个场景，朋友聚会是一个场景，恋人约会是一个场景，请客户吃饭是一个场景，求人办事要摆排场是另外一个场景。<br>&emsp;&emsp;其实我刚才说的场景拆得极其粗，往细里还有无数的细分场景。<br>&emsp;&emsp;所以开一家餐厅绝不是说你要输出的产品就是菜，或者加上菜的摆盘。开一家餐厅就是要运营一个场景。一个朋友跟我说，他打算做一个便当品牌，决定打败黄太吉。他的方法是只做一种便当——寿司，因为寿司既健康又美味，而且时尚。我就问他，你的便当的消费场景是什么呢？它的消费场景是一个人自己吃，还是几个同事一起吃？如果你没有把它的消费场景考虑进去，这个产品就是不合格的。</p>
+<h1 id="场景要能触发情绪"><a href="#场景要能触发情绪" class="headerlink" title="场景要能触发情绪"></a>场景要能触发情绪</h1><p>&emsp;&emsp;咱们之前讲过点线面体，新场景的出现其实也是一个“体”，比如碎片时间就是一个新场景。<br>&emsp;&emsp;在移动互联网不成熟之前，我们要乘地铁，会堵车，也要等人。碎片时间本来就充斤着我们的生活，但是因为移动互联网的成熟，使你有机会把这些碎片时间利用起来。比如“得到”，其实就是抓住了碎片时间和认知焦虑的两大红利，然后成长起来的一只独角兽。<br>&emsp;&emsp;其实罗辑思维有一个例子，就很好地体现了场景的力量。不知道你是否记得2015年罗辑思维卖书的事？罗辑思维打包卖书的套装，一套六本，你不知道都会有哪些书，一共8000套。一个淘宝店店主当时就觉得这个套装肯定有价值，因为只有8000套。所以他在开卖的第一时间就抢了10套，8000套书在一个小时之内就卖光了。这个时候罗辑思维的群里还有人问，怎么没有了？到哪里买？于是这个淘宝店店主赶紧把他买到的这10套书上架销售。他想现在的状况是大家想买而买不着，那怎么也得加点价吧。所以他标价450元，结果放了两天也没人来问。然后他就降到了原价400元，还是没有人问。打折以后依然无人问津，最后这套书在淘宝是零交易。<br>&emsp;&emsp;为什么同一套书，在罗辑思维的这个场景里，8000套书在一小时之内被一抢而空？而在淘宝店店主自己的小店里，打了对折，放了10天还是卖不出去？原因就是罗辑思维搭建了“场”加“景”，在这个时间和空间里，大家一起疯抢，对彼此进行了意见挟裹和挤压。如果你架构的场景不能影响别人的情绪，不能形成对别人情绪的触发，它就不是一个场景。<br>&emsp;&emsp;所以淘宝店店主把书放在货架上，冷冷清清往地一摆，这个是没有任何情绪触发的，只是一个“场”，不存在“景”，它不是一个场景。<br>&emsp;&emsp;所以，场景的核心是在空间加时间的点上触发别人的情绪。<br>&emsp;&emsp;在第一模块已经说了，其实人所有的理智和意识都是把人往回拉的，而所有的情绪是在推动人的行动。所以人会去做一个动作，会往前走，是被情绪推动的。比如电影《罗马假日》里，不知道你还记不记得一个桥段。公主和记者一起大闹派对，被警察追，然后他们跑赢了警察，气喘口刊于地并肩在一个街边坐下。当时真的是很美，岁月静好，月落无声。看这一幕的时候，我就在想，此情此景他怎能不吻她呢？果然下一个镜头派克就吻了赫本，这叫什么？这就叫场景和情绪触发。<br>&emsp;&emsp;只有能触发用户情绪的场景才是真正的流量入口。互联网商业其实就是三个核心词：产品、流量、转化率，也就是产品的比拼、流量的争夺、转化率的优化，这就是互联网商业竞争的全部。<br>&emsp;&emsp;在万物互联的未来，到处都是屏幕，到处都是网络连接的入口。入口不是场景，它就像是淘宝店家有一个店面，那是一个时间加空间，但不是场景。想要成为场景，它还要能够触发情绪。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>&emsp;&emsp;因此，我把场景作为咱们第二模块的最后一讲。你要规划一个产品，需要问自己七个问题：</p>
+<blockquote>
+<p> 第一，我的产品解决了什么问题？是痛痒点，还是爽点？<br> 第二，我在为谁解决这个问题？他得到即刻满足了吗？这是用户画像的问题。<br> 第三，有多少人需要解决这个问题呢？这是市场规模的问题。<br> 第四，目前人们是怎么解决这个问题的呢？这是竞争分析的问题。<br> 第五，我的竞争方案为什么能够在市场竞争中胜出？你不要简单地看单点的竞争力，而是要看点线面体，谁给你赋能。<br> 第六，用户会在什么样的场景触发情绪？需要马上去解决问题，这是场景问题。<br> 第七，当用户遇到问题的时候，他会想到哪个名字呢？我在第四模块会讲。</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+  
+        <div class="post-tags">
+          
+            <a href="/tags/场景/" rel="tag"><i class="fa fa-tag"></i> 场景</a>
+          
+        </div>
+      
+
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>🐶 您的支持将鼓励我继续创作 🐶</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赞赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.jpg" alt="Pan Xiang WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zhifubao.jpg" alt="Pan Xiang Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+        
+     <div>
+      
+      <ul class="post-copyright">
+
+
+        <li class="post-copyright-link">
+          <strong>本文标题：</strong>
+          <a href="https://panxiang315.github.io/cognitive/reprint/product-scene/" title="设计产品时要包括产的场景">设计产品时要包括产的场景</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文链接：</strong>
+          <a href="https://panxiang315.github.io/cognitive/reprint/product-scene/" title="设计产品时要包括产的场景">https://panxiang315.github.io/cognitive/reprint/product-scene/</a>
+        </li>
+
+        <li class="post-copyright-date">
+            <strong>发布时间：</strong>2018年7月27日 - 16时07分
+        </li>
+
+
+      </ul>
+    
+  </div>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/cognitive/reprint/personas/" rel="next" title="两套经典的用户画像">
+                <i class="fa fa-chevron-left"></i> 两套经典的用户画像
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/cognitive/reprint/certainty/" rel="prev" title="怎样用系统能力给人提供确定性">
+                怎样用系统能力给人提供确定性 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+
+  </div>
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Pan Xiang" />
+          <p class="site-author-name" itemprop="name">Pan Xiang</p>
+          <p class="site-description motion-element" itemprop="description">Learning, on the way</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">79</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/panxiang315" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/panxiangBupt" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://greychess.cn" title="好友博客" target="_blank">好友博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhangxinxu.com/wordpress/" title="张鑫旭大佬" target="_blank">张鑫旭大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.w3cplus.com/" title="大漠大佬" target="_blank">大漠大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.php.cn/" title="前端学习" target="_blank">前端学习</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#用好场景，让美女脱颖而出"><span class="nav-number">1.</span> <span class="nav-text">用好场景，让美女脱颖而出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是场景"><span class="nav-number">2.</span> <span class="nav-text">什么是场景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#场景要能触发情绪"><span class="nav-number">3.</span> <span class="nav-text">场景要能触发情绪</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fas fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Pan Xiang</span>
+</div>
+
+
+
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END -->
+  
+
+
+
+  
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+	<!-- 页面点击小红心 -->
+	<!-- <script type="text/javascript" src="/js/src/love.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

@@ -1,0 +1,951 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="系统能力," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="pan's record" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="用户不是需要一台打孔机，而是墙上有一个洞。不要想着你要做一个产品改变世界，而是想想你能为用户提供什么样的服务。">
+<meta name="keywords" content="系统能力">
+<meta property="og:type" content="article">
+<meta property="og:title" content="怎样用系统能力给人提供确定性">
+<meta property="og:url" content="https://panxiang315.github.io/cognitive/reprint/certainty/index.html">
+<meta property="og:site_name" content="pan&#39;s record">
+<meta property="og:description" content="用户不是需要一台打孔机，而是墙上有一个洞。不要想着你要做一个产品改变世界，而是想想你能为用户提供什么样的服务。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-27T10:21:11.552Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="怎样用系统能力给人提供确定性">
+<meta name="twitter:description" content="用户不是需要一台打孔机，而是墙上有一个洞。不要想着你要做一个产品改变世界，而是想想你能为用户提供什么样的服务。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://panxiang315.github.io/cognitive/reprint/certainty/"/>
+
+
+
+
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+  <title> 怎样用系统能力给人提供确定性 | pan's record </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?41fc030db57d5570dd22f78997dc4a7e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+<!-- <a href="https://github.com/panxiang315/panxiang315.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;
+         " src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a> -->
+
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta custom-logo">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">pan's record</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <h1 class="site-subtitle" itemprop="description">background of my life</h1>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://panxiang315.github.io/cognitive/reprint/certainty/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Pan Xiang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="pan's record">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="pan's record" src="/images/avatar.jpg">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                怎样用系统能力给人提供确定性
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-27T18:15:39+08:00">
+                2018-07-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/cognitive/" itemprop="url" rel="index">
+                    <span itemprop="name">cognitive</span>
+                  </a>
+                </span>
+
+                
+                
+                  >
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/cognitive/reprint/" itemprop="url" rel="index">
+                    <span itemprop="name">reprint</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+
+          
+          
+
+          
+
+		  
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  2,770字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  9分
+                </span>
+              
+            </div>
+          
+
+          
+
+
+
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>用户不是需要一台打孔机，而是墙上有一个洞。<br>不要想着你要做一个产品改变世界，而是想想你能为用户提供什么样的服务。</p>
+<a id="more"></a>
+<hr>
+<p>&emsp;&emsp;这一课将进入到第三模块——系统能力。什么是系统能力？我以前问过这个问题。给你泥土和水，你能做出一个苹果吗？几乎每个人都会茫然，但是苹果树可以。用泥土和水做出苹果就是苹果树的系统能力。<br>&emsp;&emsp;我们看到的所有结果，都是系统能力的产物。你可以回到《机会判断：点线面体的战略选择》一课里，思考为什么一个“点”没那么重要？因为任何一个“点”都附着在一条“线”上，每一个“点”其实都是一条“线”的截面。<br>&emsp;&emsp;这也是为什么结婚教练建议以结婚为目的的相亲，第一次见面正常平淡即可，没有必要专门地表现自己，因为每个人的自然呈现都是系统能力的结果。比如一个人好的身材，其实是长期自律的结果；一个人得体而有美感的着装，其实是长期的审美陶冶的产物；一个人的神情和谈吐，其实是学识和性情的产物。所以一个人很自然地展现的一切，是层层叠加、长期积累的系统能力的产物。<br>&emsp;&emsp;当你说你要做一个产品，你需要的是建设一套系统能力。就好像你想拥有好的身材，就必须得有控制饮食和保持运动的系统能力一样。</p>
+<h1 id="整体流程与确定性"><a href="#整体流程与确定性" class="headerlink" title="整体流程与确定性"></a>整体流程与确定性</h1><p>&emsp;&emsp;这一课有两个关键词：整体流程与确定性。<br>&emsp;&emsp;2011年，我加入腾讯的时候，被震惊到的地方就是，这家以产品著称的公司，在内部沟通时没有人提产品这个词，谁说产品谁外行。大家经常会用的词是什么呢？服务。<br>&emsp;&emsp;为什么？举个例子，比如说我们生产一个打孔机，用户要的是这个吗？其实用户不需要一台打孔机，用户需要的是墙上有一个洞。如果你定义自己在做的不是一个产品，而是一个服务的话，你的逻辑就会变成：我需要提供怎样一种服务让用户的墙上有一个洞？那至少有几种方案：</p>
+<blockquote>
+<p> 第一个就是做一个打孔机，然后卖给用户；<br> 第二个就是做一个打孔机借给用户，或者提供一个服务，用户需要的时候，我就上门去给他打孔。</p>
+</blockquote>
+<p>&emsp;&emsp;以用户得到这个孔为目的去提供服务，而不是想着我要做一个打孔机，然后卖出去，这就是产品和服务的区别。<br>&emsp;&emsp;如果大家总是在谈产品，会很容易以产品经理为中心，就想着要做一个产品来改变世界。但是如果出发点是提供一个服务，就会以用户获得和用户满足为中心来做设计。这两种方式的目的和实现途径完全不一样。<br>&emsp;&emsp;今天我们要谈的不是一个互联网的产品，而是一个ATM机，为什么呢？因为ATM机是一个最简单的产品或者服务。ATM机提供什么服务？取现金。那ATM机提供的确定性就是在验证你的ID后，问你需要多少钱，把现金给到你。<br>&emsp;&emsp;就像是罗辑思维提供的确定性，每天早晨6点多，罗胖都会给你60秒语音。60秒这个概念其实是马化腾提出来的，当时罗胖发了这条语音，他自己没有意识到，但马化腾马上就说这个60秒是个好概念。马化腾是对确定性和压力点都极其敏感也极其执着的人。<br>&emsp;&emsp;为什么确定性这么重要？我们都是有感觉的，人生如此不确定，所以当你看到有一个东西非常确定的时候，是让人留恋的。我们为什么会留恋自己的家？因为自己的家是一个确定性的存在。但如果两人天天吵架，动不动就会把离婚、分手挂在嘴边，这就会产生不确定感。不确定的东西是没有办法让你投入时间或者持续依赖的。<br>&emsp;&emsp;所以我刚才谈了两个很重要的词，<strong>确定性</strong>和<strong>依赖</strong>。在我们整个课程的最后一课，我会再讲一遍，希望你有空也多体会这两个词。</p>
+<h1 id="ATM机的确定性"><a href="#ATM机的确定性" class="headerlink" title="ATM机的确定性"></a>ATM机的确定性</h1><p>&emsp;&emsp;还是回到ATM机的例子上，ATM机提供的确定性就是验证旧之后给现金，围绕ATM机系统能力的设计和建设，所做的一切就是为了保证这个确定性。<br>&emsp;&emsp;所以如果问ATM机有什么特点？怎么设计？从答案你就可以分辨出，一个产品经理是不是上道了。如果让一个不上道的产品经理来说，他就会花过多的时间在ATM机的显性特性上。比如这个ATM机长什么样子，是长的还是宽的，界面是红的还是蓝的，是先出卡还是先出钞，等等。这个产品经理所有的观察和兴奋点，其实只是非常表面的一部分。<br>&emsp;&emsp;刚才说了，ATM机的核心服务是取钱。一台ATM机里要放20万的现金，如果一个银行提供100台ATM机的话，就意味着要把2000万的现金放到外面去。就是说当你在提供核心服务的时候，也分流了企业的核心资源。ATM机是红的还是蓝的，这不是服务的本质，我们是需要回到服务本质来看的。<br>&emsp;&emsp;基于这个服务本质我们需要有几个流程：</p>
+<blockquote>
+<p> 第一步，首先需要有一个战略判断，战略部门需要做出一个决策，为什么要提供这个服务？提供这个服务对于企业，对于用户的价值是什么？这个时候ATM机有两个价值点：第一个是放在营业网点的旁边，分流取钱的压力，我们看到所有银行的营业网点旁都会有ATM<br>机。第二个价值点是放在人流密集的地方，可以服务用户，增加企业的曝光，增强用户黏性，提高好感度。<br> 第二步，运营部门要对每一台ATM机有没有实现战略诉求来做价值评估。比如，钱放了很长时间都没有被取掉，那可能说明人流过少，这个点就应该拆撤；<br>这个营业网点旁取现压力过大，一台ATM机不足，那就应该增加一台。<br> 第三步，在运营部门对每个点的战略价值做完数据分析和价值评估之后，需要哪个点存在，我就要保证它的服务可用。为了保障服务可用，还要做哪些事呢？最首要的肯定是现金，一台取不出钱的ATM机就是个铁盒子，是毫无意义的，就像无数个App都做得很漂亮，但用户真正需要一个漂亮的界面吗？不需要。就像我们在《痛点、痒点、爽点都是产品机会》那一课说的，用户需要的是即时满足。我要取现马上给我钱，有源源不断的钱，这个才是最重要的事情。<br> 第四步，维护ATM机还要做很多其他事，比如说硬件管理。要保障ATM机不能间断电源，打印机要能打印凭条，还得有油墨、纸张，打印机的硬件不能坏掉。<br> 第五步，要有客服管理。比如机器突然吞卡了，出钞有问题了，用户要投诉，这得有人处理。</p>
+</blockquote>
+<p>&emsp;&emsp;所以ATM机是一个最简单的产品，因为它提供的确定性就是出钞。钱是最简单的产品，为什么呢？因为它没有用户区分，不管男女老幼，只要拿到钱，他就是满意的。<br>&emsp;&emsp;除了钱之外的任何一种商品，可都是有用户区隔的。男性需求、女性需求、老人需求、孩子需求可能都不太一样。所以，ATM机是不需要有用户区隔的，只需要能够保证确定性的供给，用户就会满意。<br>&emsp;&emsp;但即使是这样一个最简单的产品，你要能能够保证服务，提供完整的系统能力需要七个岗位：战略、运营、现金、密码、硬件、客服、技术。<br>&emsp;&emsp;如果说每次取钱ATM机可以收两块钱，一台ATM机总体回收成本大概是10年，这就是整体的服务成本。这也是为什么很多公司死了，而一些看上去页面很粗糙，做得不怎么好看的网站和App即依然有旺盛的生命力。因为稳定出钞，这个是最关键的。<br>&emsp;&emsp;持续地提供用户可以依赖的确定性，这个是关键。<br>&emsp;&emsp;如果你把过多的热情花在了诸如ATM机应该是什么形状的，是红的还是蓝的，可不可以再精美一点，这些显性特性的东西上，对于整体的业务效率和业务结果没什么影响。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>&emsp;&emsp;如果回到第二模块讲的点线面体，你从“面”看回“点”的价值，这时候你就会发现，今天的手机支付越来越普及，我们对现金已经没什么需求了。所以对于ATM机这个“点”，我们基于上述的考虑，ATM机已经走向没落了，所以基于它的技术开发和优化，可以整体降低投入了。<br>&emsp;&emsp;所以当你准备做一个产品的时候，你可以把ATM机这个最简单的产品拿出来对照一下：</p>
+<blockquote>
+<p> 第一，你的产品在“点线面体”的什么位置？<br> 第二，你提供的是一个什么样的确定性？<br> 第三，为了保证确定性的稳定提供，你需要的系统能力都要包括哪些环节？你有足够的资本和能力来支撑所有的环节吗？</p>
+</blockquote>
+<p>&emsp;&emsp;很多创业企业其实死在这里，你想提供取现服务，知道一台ATM机价格是20万，但是没有把它要用到的资金成本，以及它的七个岗位的运营成本和能力充分地计算在内。用我们的话来讲叫“老鼠尾巴”，就是你抓了一个很小的东西，你以为这就是全貌，但往前走一走，你才发现好大的一块还在后面，这是你完全不能够覆盖的，这样去做产品其实是很危险的。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+  
+        <div class="post-tags">
+          
+            <a href="/tags/系统能力/" rel="tag"><i class="fa fa-tag"></i> 系统能力</a>
+          
+        </div>
+      
+
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>🐶 您的支持将鼓励我继续创作 🐶</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赞赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.jpg" alt="Pan Xiang WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zhifubao.jpg" alt="Pan Xiang Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+        
+     <div>
+      
+      <ul class="post-copyright">
+
+
+        <li class="post-copyright-link">
+          <strong>本文标题：</strong>
+          <a href="https://panxiang315.github.io/cognitive/reprint/certainty/" title="怎样用系统能力给人提供确定性">怎样用系统能力给人提供确定性</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文链接：</strong>
+          <a href="https://panxiang315.github.io/cognitive/reprint/certainty/" title="怎样用系统能力给人提供确定性">https://panxiang315.github.io/cognitive/reprint/certainty/</a>
+        </li>
+
+        <li class="post-copyright-date">
+            <strong>发布时间：</strong>2018年7月27日 - 18时07分
+        </li>
+
+
+      </ul>
+    
+  </div>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/cognitive/reprint/product-scene/" rel="next" title="设计产品时要包括产的场景">
+                <i class="fa fa-chevron-left"></i> 设计产品时要包括产的场景
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/cognitive/reprint/efficiency/" rel="prev" title="案例：小米的效率革命">
+                案例：小米的效率革命 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+
+  </div>
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Pan Xiang" />
+          <p class="site-author-name" itemprop="name">Pan Xiang</p>
+          <p class="site-description motion-element" itemprop="description">Learning, on the way</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">79</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/panxiang315" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/panxiangBupt" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://greychess.cn" title="好友博客" target="_blank">好友博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhangxinxu.com/wordpress/" title="张鑫旭大佬" target="_blank">张鑫旭大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.w3cplus.com/" title="大漠大佬" target="_blank">大漠大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.php.cn/" title="前端学习" target="_blank">前端学习</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#整体流程与确定性"><span class="nav-number">1.</span> <span class="nav-text">整体流程与确定性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ATM机的确定性"><span class="nav-number">2.</span> <span class="nav-text">ATM机的确定性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fas fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Pan Xiang</span>
+</div>
+
+
+
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END -->
+  
+
+
+
+  
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+	<!-- 页面点击小红心 -->
+	<!-- <script type="text/javascript" src="/js/src/love.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

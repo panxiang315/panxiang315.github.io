@@ -1,0 +1,956 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="峰终定律," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="pan's record" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="&amp;emsp;&amp;emsp;人们对于产品服务的体验，根本记不住全程，只会被两个关键点影响：一个是体验峰值，可能是正面也可能是负面；一个是体验终值。所以要设计好用户的峰值、终值体验。&amp;emsp;&amp;emsp;当然，还有一个条，永远不要突破用户的底线。">
+<meta name="keywords" content="峰终定律">
+<meta property="og:type" content="article">
+<meta property="og:title" content="服务蓝图的核心要素：峰值、终值">
+<meta property="og:url" content="https://panxiang315.github.io/cognitive/reprint/blueprint/index.html">
+<meta property="og:site_name" content="pan&#39;s record">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;人们对于产品服务的体验，根本记不住全程，只会被两个关键点影响：一个是体验峰值，可能是正面也可能是负面；一个是体验终值。所以要设计好用户的峰值、终值体验。&amp;emsp;&amp;emsp;当然，还有一个条，永远不要突破用户的底线。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-28T02:21:32.183Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="服务蓝图的核心要素：峰值、终值">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;人们对于产品服务的体验，根本记不住全程，只会被两个关键点影响：一个是体验峰值，可能是正面也可能是负面；一个是体验终值。所以要设计好用户的峰值、终值体验。&amp;emsp;&amp;emsp;当然，还有一个条，永远不要突破用户的底线。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://panxiang315.github.io/cognitive/reprint/blueprint/"/>
+
+
+
+
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+  <title> 服务蓝图的核心要素：峰值、终值 | pan's record </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?41fc030db57d5570dd22f78997dc4a7e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+<!-- <a href="https://github.com/panxiang315/panxiang315.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;
+         " src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a> -->
+
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta custom-logo">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">pan's record</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <h1 class="site-subtitle" itemprop="description">background of my life</h1>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://panxiang315.github.io/cognitive/reprint/blueprint/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Pan Xiang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="pan's record">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="pan's record" src="/images/avatar.jpg">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                服务蓝图的核心要素：峰值、终值
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-28T09:50:12+08:00">
+                2018-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/cognitive/" itemprop="url" rel="index">
+                    <span itemprop="name">cognitive</span>
+                  </a>
+                </span>
+
+                
+                
+                  >
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/cognitive/reprint/" itemprop="url" rel="index">
+                    <span itemprop="name">reprint</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+
+          
+          
+
+          
+
+		  
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  2,805字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  9分
+                </span>
+              
+            </div>
+          
+
+          
+
+
+
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&emsp;&emsp;人们对于产品服务的体验，根本记不住全程，只会被两个关键点影响：一个是体验峰值，可能是正面也可能是负面；一个是体验终值。所以要设计好用户的峰值、终值体验。<br>&emsp;&emsp;当然，还有一个条，永远不要突破用户的底线。</p>
+<a id="more"></a>
+<hr>
+<p>&emsp;&emsp;第四模块的第一节课，我们谈了用户对产品的体验，其实是从五个层次来谈的，存在战略、能力圈、资源结构、角色框架和感知层。CEO最核心的工作就是定义战略和建设能力圈。<br>&emsp;&emsp;上一节课我们讲了用户体验地图。这节课我们讲和用户体验地图对应的另外一张图——服务设计蓝图，以及服务设计蓝图的两个核心概念——峰值和终值。用户体验地图的价值让你真切地站在用户视角，来看自己的产品是不是满足了用户的目标。服务设计蓝图是为了解决资源结构和角色框架的问题。</p>
+<h1 id="如何配置资源结构和角色框架"><a href="#如何配置资源结构和角色框架" class="headerlink" title="如何配置资源结构和角色框架"></a>如何配置资源结构和角色框架</h1><p>&emsp;&emsp;在上一课，我们说过健身应用里Keep的产品做得很好。健身这件事，用Keep和请私教都可以帮助用户达到目标，但是这两种方式的用户体验是不同的，成本当然也不一样。我很多朋友请私教的是因为人性的懒惰。私教可以通过打电话、发短信等方式，把他拉回健身房。很多动作的训练，如果不是教练监督，自己真的很难完成。教练的介入，对于控制情绪曲线，完成训练任务，有非常大的作用。<br>&emsp;&emsp;你作为商家，选择提供Keep这类服务还是私教这类服务，所对应要求你拥有的系统能力、需要设置的资源结构和角色框架都是千差万别的。<br>&emsp;&emsp;这节课我们要谈的服务设计蓝图，就是介绍如何配置资源结构，以及如何在每个用户触达点上来设置角色框架。<br>&emsp;&emsp;用户体验地图是讲“第一只羊”怎么在咱们设计的“草地”上玩得开心，具体在哪个点爽，哪个点不爽；服务蓝图则是站在服务提供者的立场，怎么在总体成本控制的范畴内，给这只羊核心体验，并且保证服务不崩溃。简单说，用户体验地图是以用户情绪为中心的，而服务蓝图则是以服务流程为中心的。<br>&emsp;&emsp;没有任何一家公司的服务，能够完成用户所有的期待。如果每一个点都达到甚至超过用户期待，甚至超过了你的资源配置，那你的资源配置一定是超级冗余，相应的成本一定会过高。</p>
+<h1 id="服务蓝图到底要干什么"><a href="#服务蓝图到底要干什么" class="headerlink" title="服务蓝图到底要干什么"></a>服务蓝图到底要干什么</h1><p>&emsp;&emsp;<strong>服务蓝图要做到：一眼、一条路、三个点。</strong></p>
+<blockquote>
+<p> 一眼是什么？就是产品要第一时间让用户“一眼”看到自己的目标。比如，Keep会问用户，你的目标是什么？减脂、增肌还是塑形？健身本身不是目标。<br> 一条路是什么？就是产品要有一个清晰的路径，让用户能够知道如何使用你的服务，用来达到或者接近自己的目标。用户无法走下去，就是服务流程的崩溃点。比如，我打开我朋友设计的一体App，看了一堆视频，却不知道该跟着哪个视频做多长时间可以缓解我的后背疼痛，最后我什么都没选，关掉了App，这就是一个服务崩溃点。<br> 三个点是什么？峰值，终值和忍耐底线。</p>
+<ul>
+<li>先说忍耐底线。比如，吃饭时每个桌子配一个服务员，用户体验当然非常棒，然而对于餐馆来说代价是成本过高。那么多少张桌子配一个服务员合适呢？这就需要找到用户的忍耐底线在哪里。PC时代用户等待一个页面打开的忍耐底线平均数是7秒，等了7秒还没打开，基本上99<br>％的用户就会离开。所以，对成本的控制是本分，但是不能挑战用户的忍耐底线。</li>
+<li>峰值和终值，是由2002诺贝尔奖得主、心理学家丹尼尔•卡尼曼提出的。他发现大家对体验的记忆由两个核心因素决定：第一个是体验最高峰的时候，无论是正向的最高峰还是负向的最高峰，一定是能记得住的。第二个是结束时的感觉。这就是峰终定律（Peak-End Rule)。</li>
+</ul>
+</blockquote>
+<p>&emsp;&emsp;体验一个事物或产品之后，所能记住的就只有在峰值与终值时的体验，而整个过程中每个点好与不好，时间长短，对记忆或者感受都没那么大影响。比如，大家都喜欢宜家，但宜家也有很多用户体验不好的地方。比如只买一件家具也需要按照路线图走完整个商场；比如宜家店员很少，因此要自己在货架上找货物并且搬下来等等。<br>&emsp;&emsp;但是，宜家对顾客的“峰终值”的设置非常好。峰值是产品试用，如果拆得再详细点，就是坐在宜家样板间的沙发上，或者躺在样板间的床上，体验宜家所营造的小空间。</p>
+<blockquote>
+<p> 样板间体验就是宜家服务蓝图的峰值设计。<br> 终值就是出口处1块钱的冰淇淋。</p>
+</blockquote>
+<p>&emsp;&emsp;所以我们可以发现身边有不少朋友开心地逛了一天宜家，最后什么也没有买，仅仅在3层喝了一杯会员免费的咖啡就回来了。大多数人的心情或者对宜家评价都是不错的，因为他体验了宜家的峰值。在迪士尼，峰值一定是某个刺激游戏。终值是累了一天，晚上坐在地上看花车游行和园区上空的烟火秀，大家一边休息，一边仰着头说：“好美啊”。所有的体验过程，肯定都会有各种小bug，但是峰值和终值好，你的回忆便是好的。<br>&emsp;&emsp;为什么要讲体验的峰值和终值？因为平庸的用户体验无法成就你。设计服务蓝图核心就是让你在资源有限的情况下，配置你的资源，在关节点上安排角色，保证整体服务路径不崩溃，尽量不压到用户的忍耐底线。然后尽量集中资源，打造体验的峰值，最后再做一个体验终值的美好小尾巴。</p>
+<h1 id="亚朵酒店的服务节点"><a href="#亚朵酒店的服务节点" class="headerlink" title="亚朵酒店的服务节点"></a>亚朵酒店的服务节点</h1><p>&emsp;&emsp;再讲一个例子，最近几年比较新锐的亚朵酒店。亚朵的定位是一个中高端的品牌。之前中国酒店都集中在经济连锁品牌或者五星酒店品牌的范畴，中端市场会有空白就是因为有难度。亚朵做了什么事情能在令人觉得有难度的中高端市场建立自己的品牌？<br>&emsp;&emsp;这里，我先讲亚朵如何设计服务蓝图和峰终体验的，在第五模块，我会再讲它的创新模式。亚朵酒店在设计服务蓝图的时候，是从客人第一次入住亚朵，到他再次入住亚朵的整个过程，中间有十二次端口，也就是亚朵服务的十二个节点。</p>
+<blockquote>
+<p> 第一个节点，预定<br> 第二个节点，走进大堂的第一面<br> 第三个节点，到房间的第一眼<br> 第四个节点，跟你联系，向酒店提供服务咨询的第一刻<br> 第五个节点，吃早餐的那一刻<br> 第六个节点，你在酒店等人或者等车，需要有个地方呆一下的那一刻<br> 第七个节点，你中午或者晚上想吃夜宵的那一刻<br> 第八个节点，你离店的那一刻<br> 第九个节点，离店之后，你点评的那一刻<br> 第十个节点，第二次想起亚朵的那一刻<br> 第十一个节点，你要跟朋友推广和介绍那一刻<br> 第十二个节点，还有你第二次再预订的那一刻</p>
+</blockquote>
+<p>&emsp;&emsp;亚朵的这十二个节点都不一样，资源配置与角色工作，都是基于这十二个节点。在亚朵入住的时候，有三项服务是为了加强第二个节点的体验强度。比如百分百奉茶，到了亚朵，先给你一杯茶；三分钟办理入住；有时候再做一个“免费升舱”，给用户惊喜。你在亚朵的终值体验是退房的时候，这时服务人员会给你一瓶矿泉水，如果是冬天就会给一瓶温热的矿泉水。亚朵给每个服务都起了个文绉绉的名字，比如临走时给你的这瓶水叫“别友甘泉”之类的。这会给当时用户有概念体验和印象留存，对用户来讲，这就够了。<br>&emsp;&emsp;刚才说了亚朵服务蓝图的十二个节点，在这十二个节点配置资源的时候，亚朵采取了“与其更好，不如不同”的策略。你入住酒店时，一推门第一眼看到的是大堂。一般四星酒店装修大堂会花非常多的钱，而亚朵并没有在大堂大理石等地方上多花钱，因为花再多钱也不如五星级酒店。亚朵更愿意做一个有温度可体验的小空间，它会在大堂设一个图书馆，可以在那里看书、喝咖啡，也可以把书拿回房间看。这就是“与其更好，不如不同”。<br>&emsp;&emsp;出差的人核心需求就是睡个好觉，床的体验好，对出差的人很关键。亚朵宁愿在床、床垫、枕头上花更多的钱，选更好的品质，降低地毯这类开支成本。这就是一个用户体验地图和服务蓝图的对接过程。在用户有预设的地方，不要太让用户失望。在用户没有预设的地方，给他惊喜，制造峰值。<br>&emsp;&emsp;所以，亚朵每个房间的平均成本控制得很好，而且做到口碑不错。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>&emsp;&emsp;我们有了用户视角的用户体验地图概念之后，需要对应做服务蓝图，来安排我们的资源，以及配置每个接触点的角色，用来完成服务。但是企业的资源是有限的，你不可能在所有点都达到用户预期。<br>&emsp;&emsp;所以，你需要做的是，在服务蓝图上配置你的资源来制造用户体验，使用户拥有一个美好的峰值和令人回味的终值，并且全程不突破用户的底线。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+  
+        <div class="post-tags">
+          
+            <a href="/tags/峰终定律/" rel="tag"><i class="fa fa-tag"></i> 峰终定律</a>
+          
+        </div>
+      
+
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>🐶 您的支持将鼓励我继续创作 🐶</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赞赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.jpg" alt="Pan Xiang WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zhifubao.jpg" alt="Pan Xiang Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+        
+     <div>
+      
+      <ul class="post-copyright">
+
+
+        <li class="post-copyright-link">
+          <strong>本文标题：</strong>
+          <a href="https://panxiang315.github.io/cognitive/reprint/blueprint/" title="服务蓝图的核心要素：峰值、终值">服务蓝图的核心要素：峰值、终值</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文链接：</strong>
+          <a href="https://panxiang315.github.io/cognitive/reprint/blueprint/" title="服务蓝图的核心要素：峰值、终值">https://panxiang315.github.io/cognitive/reprint/blueprint/</a>
+        </li>
+
+        <li class="post-copyright-date">
+            <strong>发布时间：</strong>2018年7月28日 - 09时07分
+        </li>
+
+
+      </ul>
+    
+  </div>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/cognitive/reprint/experience-map/" rel="next" title="怎样绘制用户体验的地图">
+                <i class="fa fa-chevron-left"></i> 怎样绘制用户体验的地图
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/cognitive/reprint/inspire-system/" rel="prev" title="上瘾机制：用户激励系统">
+                上瘾机制：用户激励系统 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+
+  </div>
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Pan Xiang" />
+          <p class="site-author-name" itemprop="name">Pan Xiang</p>
+          <p class="site-description motion-element" itemprop="description">Learning, on the way</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">79</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/panxiang315" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/panxiangBupt" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://greychess.cn" title="好友博客" target="_blank">好友博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhangxinxu.com/wordpress/" title="张鑫旭大佬" target="_blank">张鑫旭大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.w3cplus.com/" title="大漠大佬" target="_blank">大漠大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.php.cn/" title="前端学习" target="_blank">前端学习</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如何配置资源结构和角色框架"><span class="nav-number">1.</span> <span class="nav-text">如何配置资源结构和角色框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务蓝图到底要干什么"><span class="nav-number">2.</span> <span class="nav-text">服务蓝图到底要干什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#亚朵酒店的服务节点"><span class="nav-number">3.</span> <span class="nav-text">亚朵酒店的服务节点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fas fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Pan Xiang</span>
+</div>
+
+
+
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END -->
+  
+
+
+
+  
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+	<!-- 页面点击小红心 -->
+	<!-- <script type="text/javascript" src="/js/src/love.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

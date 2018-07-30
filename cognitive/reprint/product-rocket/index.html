@@ -1,0 +1,948 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="三级火箭," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="pan's record" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="商业模式的三级火箭：第一级火箭，搭建高频的头部流量；第二级火箭，沉淀用户的商业场景；第三级火箭，完成商业闭环。但有一个问题值得思考，你是追求无限上升的快感？还是想在人类的天空上放一颗星星？">
+<meta name="keywords" content="三级火箭">
+<meta property="og:type" content="article">
+<meta property="og:title" content="三级火箭：深度讲解互联网降维打击">
+<meta property="og:url" content="https://panxiang315.github.io/cognitive/reprint/product-rocket/index.html">
+<meta property="og:site_name" content="pan&#39;s record">
+<meta property="og:description" content="商业模式的三级火箭：第一级火箭，搭建高频的头部流量；第二级火箭，沉淀用户的商业场景；第三级火箭，完成商业闭环。但有一个问题值得思考，你是追求无限上升的快感？还是想在人类的天空上放一颗星星？">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-30T04:32:26.836Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="三级火箭：深度讲解互联网降维打击">
+<meta name="twitter:description" content="商业模式的三级火箭：第一级火箭，搭建高频的头部流量；第二级火箭，沉淀用户的商业场景；第三级火箭，完成商业闭环。但有一个问题值得思考，你是追求无限上升的快感？还是想在人类的天空上放一颗星星？">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://panxiang315.github.io/cognitive/reprint/product-rocket/"/>
+
+
+
+
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+  <title> 三级火箭：深度讲解互联网降维打击 | pan's record </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?41fc030db57d5570dd22f78997dc4a7e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+<!-- <a href="https://github.com/panxiang315/panxiang315.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;
+         " src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a> -->
+
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta custom-logo">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">pan's record</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <h1 class="site-subtitle" itemprop="description">background of my life</h1>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://panxiang315.github.io/cognitive/reprint/product-rocket/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Pan Xiang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="pan's record">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="pan's record" src="/images/avatar.jpg">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                三级火箭：深度讲解互联网降维打击
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-30T09:52:12+08:00">
+                2018-07-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/cognitive/" itemprop="url" rel="index">
+                    <span itemprop="name">cognitive</span>
+                  </a>
+                </span>
+
+                
+                
+                  >
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/cognitive/reprint/" itemprop="url" rel="index">
+                    <span itemprop="name">reprint</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+
+          
+          
+
+          
+
+		  
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  3,382字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  11分
+                </span>
+              
+            </div>
+          
+
+          
+
+
+
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>商业模式的三级火箭：<br>第一级火箭，搭建高频的头部流量；<br>第二级火箭，沉淀用户的商业场景；<br>第三级火箭，完成商业闭环。<br>但有一个问题值得思考，你是追求无限上升的快感？<br>还是想在人类的天空上放一颗星星？</p>
+<a id="more"></a>
+<hr>
+<p>&emsp;&emsp;三级火箭是互联网圈一个特别容易被提起的概念词。我们在《机会判断：点线面体的战略选择》那节课讲了360的三级火箭。<br>&emsp;&emsp;360的第一级火箭是免费杀毒工具，利用这级火箭打破了持续10年的杀毒软件市场三国鼎立的局面，成为用户量最大的安全工具。360的第二级火箭是从免费杀毒工具变为安全网络平台，进而推出360安全浏览器和360安全网址导航。360的第三级火箭就是它最终承载的商业闭环，从安全浏览器和网址导航的广告收入，获得企业的经营利润。</p>
+<h1 id="搜狗的三级火箭"><a href="#搜狗的三级火箭" class="headerlink" title="搜狗的三级火箭"></a>搜狗的三级火箭</h1><p>&emsp;&emsp;2017年上市的搜狗，也是三级火箭模式的受益者。<br>&emsp;&emsp;2003年，张朝阳委任王小川开发搜狗搜索引擎，制衡百度，现在来看搜狗的起步相比较而言是较早的。搜狗开始的时候，Google、百度都还没有上市，Google是2004年上市的，百度是2005年上市的。<br>&emsp;&emsp;百度在做自有品牌的搜索之前，一直运营着两大业务。第一是为门户网站做搜索服务提供商。2000年，新浪就是中国的互联网，新浪的搜索是百度在背后提供服务。百度的第二个业务是做机房，也就是服务器托管服务。百度的强，不仅强在搜索技术优于当时的对手，它对流量的理解也远远优于其他对手，包括在中国开展业务的Google。百度有机房在手，哪台服务器上流量高，这个服务器上跑什么业务，百度再清楚不过了。蔡文胜说过，百度早期最重要的一笔交易就是收购了hao123网址大全，这笔交易为百度奠定了核心流量和利润。<br>&emsp;&emsp;互联网商业就是产品、流量、转化率三个词。2003年，搜狗的产品技术不如百度，对流量的理解更不如百度，做不起来是必然的事。但王小川是天才少年，并且韧劲儿十足，居然没有放弃。2005年，他做了搜狗输入法。我们说一个搜狗的秘史——搜狗输入法是如何快速达到市场占有率70％以上的份额的。360免费杀毒的动力是来自于传统杀毒软件都是收费的，而且价格不菲。输入法一直都是免费的，那么搜狗应该怎么做？搜狗输入法的流量获取依然很有中国的风格。当时“番茄花园”、“雨林木风”这类盗版系统非常受欢迎，搜狗就请他们帮助做了内置。就是这样一个简单的渠道，一年的时间搜狗输入法达到了70％的市场占有率。<br>&emsp;&emsp;十几年后，搜狗上市了，曾经做盗版系统的天才少年都陨落了。如果搜狗输入法是搜狗的第一节火箭，那么这些产品就是它的燃料。搜狗的二级、三级火箭和360是一样的利用一个大流量工具，推浏览器和搜索再用这两个模式的商业变现。<br>&emsp;&emsp;今天搜狗的模式又有了变化，为什么？大家的网络场景已经变成了手机。iphone有内置输入法，安卓也有输入法。如果这时依旧用输入法再做头部流量，显然不够健壮。这时我们发现，王小川在股东选择上的智慧。回到“点线面体”的第二讲，谁是最有能力给你赋能的那个“面”。搜狗是互联网的万人迷，一堆老大都想做搜狗的股东。王小川做了什么？王小川拒绝了周鸿伟，清退了阿里，这并不是容易做到的事。拥抱了腾讯作为股东，并且两次让腾讯增加对搜狗的持股。<br>&emsp;&emsp;这就形成了今天搜狗搜索的新三级火箭。</p>
+<blockquote>
+<p> 第一级火箭：头部流量。今天搜狗在移动搜索方面80％一90％的流量来自腾讯，其中从QQ浏览器导入的流量占到70％。<br> 第二级火箭，内置搜索。用户在微信内、QQ内等不同的场景里的诉求，在浏览器之外通过庞大的使用场景去释放更多搜索的需求。搜狗内部称之为智慧战略。<br> 第三级火箭，商业变现。</p>
+</blockquote>
+<p>&emsp;&emsp;理解互联网公司的三级火箭总结一下，三级火箭是什么意思？</p>
+<blockquote>
+<p> 第一级，头部流量。<br> 第二级，沉淀某类用户的商业场景。<br> 第三级，完成商业闭环。</p>
+</blockquote>
+<p>&emsp;&emsp;举两个例子，第一个先讲一下罗辑思维。第一级火箭是罗振宇坚持了多年的免费脱口秀。现在做知识付费的平台很多，只有得到App是有头部流量的。第二级火箭，就是沉淀用户的商业场景得到App。第三级火箭，你今天付费听我讲课，这就是第三级火箭。<br>&emsp;&emsp;小米公司也是如此。一级火箭是手机。手机对于vivo、OPPO是利润中心，对于小米是头部流量。所以为什么业界很多人批评小米价格低、利润薄，搞得行业都不好做，其实是因为对产品的战略定位不一样。二级火箭是它的一系列零售场景，小米商城、米家、小米之家、小米小店。我和雷军说，等你开了1000家小米之家，100万个小米小店，那真是插根扁担都能开花。三级火箭是一个高利润的产品。现在雷总还是不愿意说出来，但最后一定是一个利润非常高的项目，能扛住整个小米的财报。<br>&emsp;&emsp;为什么要把三级火箭当一节课来讲？我们上节课讲了新要素、新物种。你以为亚朵在做酒店，其实亚朵在做社群共创的实景电商。你以为你在和雷军比手机，其实他只是拿手机做头部流量。你要赚利润的东西，并非是他人要赚钱的地方。面对这样的竞争者，传统的生意套路会失效。<br>&emsp;&emsp;什么人能玩三级火箭？玩三级火箭，如果去掉三个字，就是玩火。要玩三级火箭，有几个必要条件。<br>&emsp;&emsp;第一，第一级火箭一定要高频应用。三级递推一定是高频推低频，没有低频推高频的。比如招商银行App用户量很大，但是它能做第一级火箭吗？它太低频了，只能推更低频的产品，比如出国、理财等。但陌陌是个高频应用，陌陌推直播，直播变现，这就是陌陌的三级火箭。斗鱼是个非常火的直播平台，它能推短视频吗？不行，短视频比直播高频，它难以作为一个高频应用的一级火箭，但是如果它做游戏分发，也许可以。因为大家下游戏，一两个月才下一个，比看游戏直播低频。总原则就是一级比一级低频。<br>&emsp;&emsp;第二，通过第一级火箭获得大量用户之后，要快速展开一个够沉淀用户的商业场景。比如，共享单车看上去是一个非常好的头部流量，用户量大，又足够高频。但是在这样一个头部流量很大的基础上，如何顺滑地建设出能够沉淀用户的商业场景？这是共享单车的运营企业需要面临的考题。<br>&emsp;&emsp;第三，操盘三级火箭的人，一定是个势能积累到一定程度的人。为什么？首先，他要有强大的融资能力。一级火箭是不赚钱的，你需要用免费来支撑一个庞大的用户服务系统，还要保障用户满意，这是一笔很大的钱。没有势能的人，很难募到这个规模的钱。其次，当一级火箭铺开头部流量，他需要快速张开，短时间聚拢资源的能力是要有一定的势能积累才能做到的。得到App快速扩展了这么多的好老师，这并不是随便可以做到的事。<br>&emsp;&emsp;第四，操盘三级火箭的人，一定是个狠人。因为你的一级火箭就是抢流量的，就是把别人河里的水都抢到自己的水渠里，成就自己的河流生态。你想想，这得多少人恨你。所以，干三级火箭，不是偶然干成的，而是一开始就想着颠覆现有的行业，干掉现有的企业。所以如果不是狠人，不是积蓄已久的人，不是有高频应用场景的人，不是承受指责的人，三级火箭还是没法轻易玩。</p>
+<h1 id="三级火箭的原理"><a href="#三级火箭的原理" class="headerlink" title="三级火箭的原理"></a>三级火箭的原理</h1><p>&emsp;&emsp;我们一直在说三级火箭，火箭为什么是三级的？<br>&emsp;&emsp;因为火箭和汽车、飞机目的不一样，所以动力原理不一样。汽车、飞机一节燃料就够了，但只有一节燃料，火箭没办法突破大气层。火箭是靠自己把自己推起来，这就跟咱们这些没有靠山的创业者一样。你凭什么有势能，其中一点就是靠割让自己的利益。别人挣钱，我不挣钱，我获得的用户多一点，我才拥有了势能。<br>&emsp;&emsp;火箭如果只有一节，里面又装燃料，又装要发射的卫星，会怎样？结论是，按照传统模式，火箭是飞不起来的，它无法突破大气。二战时，德国研制的火箭，不能突破到外大气层，飞不到地球同步轨道，只能在大气层里飞。解决方案就是做一个动态系统，喷射燃料，抛出火箭壳，降低负载。如果火箭只有二节，飞一块丢掉一块，第二块再飞上去，需要多重呢？以1吨重的卫星为例，需要149吨燃料，三级需要77吨，四级65吨。火箭级数越多，需要的燃料越少。但每增加一级，不可控程度越高。就好像咱们做商业，模型过于复杂，变现链条过长，就容易玩脱了。如果只做二级火箭，149吨才能推1吨，三级只需要77吨。如果三级火箭能够省一半的重量，危险程度也提升一倍。然而到了四级火箭，燃料重量可以省10吨，危险程度却变成了四倍。<br>&emsp;&emsp;所以，三级火箭是一个成本和可控性平衡后的选择。</p>
+<h1 id="在人类的天空放上星星"><a href="#在人类的天空放上星星" class="headerlink" title="在人类的天空放上星星"></a>在人类的天空放上星星</h1><p>&emsp;&emsp;我还想说两件事：第一件事，火箭是自己把自己推起来的，它的一级就是一个巨大的燃料堆，目的是给自己制造势能。但火箭的目的不是飞得越高越好，而是为了放卫星，是为了把一颗星星放到星空上。<br>&emsp;&emsp;无数有权力、有钱的人，都拥有巨大的势能，就好像拥有一级火箭。但很多人只是享受无限上升的乐趣，完全没有概念要把一颗星星放到人类文明的天顶上，所以当他们势能耗散，也会被快速遗忘。我想说说我崇敬的一个人，就是诺贝尔。诺贝尔奖发了100多年，其实没多少钱。中关村有很多比诺贝尔奖基金更有钱的基金、企业，但中关村的那些故事早就消失了，或者10年后20年后就消失了。<br>&emsp;&emsp;分析一下诺贝尔奖，他一生的财富、心愿是一级火箭；忠实执行的管理机构是二级火箭；而一次次发放的奖金，往人类的天顶上安放的星星，这才是真正有价值的三级火箭。终我们的一生，追逐金钱、创建人脉、获得权力、积蓄势能，一切其实成就了你的势能，打造了你的一级火箭。但是你的一生是无限享受上升的乐趣，还是有一颗星星想放到人类的天顶上，这是一个问题。<br>&emsp;&emsp;另外，需要说的是，关于三级火箭的事是张云帆给我讲的。张云帆是完美世界控股集团董事、纵横文学CEO。他给我讲了他对三级火箭模式的完整理解，我觉得非常棒。我就问他能不能把他的三级火箭模式，放到得到APP里来讲，他同意了。感谢张云帆。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>&emsp;&emsp;这节课就到这里，总结一下，商业模式的三级火箭：第一级，搭建高频头部流量；第二级，沉淀用户的商业场景；第三级，完成商业闭环。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+  
+        <div class="post-tags">
+          
+            <a href="/tags/三级火箭/" rel="tag"><i class="fa fa-tag"></i> 三级火箭</a>
+          
+        </div>
+      
+
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>🐶 您的支持将鼓励我继续创作 🐶</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赞赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.jpg" alt="Pan Xiang WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zhifubao.jpg" alt="Pan Xiang Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+        
+     <div>
+      
+      <ul class="post-copyright">
+
+
+        <li class="post-copyright-link">
+          <strong>本文标题：</strong>
+          <a href="https://panxiang315.github.io/cognitive/reprint/product-rocket/" title="三级火箭：深度讲解互联网降维打击">三级火箭：深度讲解互联网降维打击</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文链接：</strong>
+          <a href="https://panxiang315.github.io/cognitive/reprint/product-rocket/" title="三级火箭：深度讲解互联网降维打击">https://panxiang315.github.io/cognitive/reprint/product-rocket/</a>
+        </li>
+
+        <li class="post-copyright-date">
+            <strong>发布时间：</strong>2018年7月30日 - 09时07分
+        </li>
+
+
+      </ul>
+    
+  </div>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/cognitive/reprint/new-element/" rel="next" title="怎样从新要素到新物种">
+                <i class="fa fa-chevron-left"></i> 怎样从新要素到新物种
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/cognitive/reprint/value-net/" rel="prev" title="颠覆式创新：成败价值网">
+                颠覆式创新：成败价值网 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+
+  </div>
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Pan Xiang" />
+          <p class="site-author-name" itemprop="name">Pan Xiang</p>
+          <p class="site-description motion-element" itemprop="description">Learning, on the way</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">79</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/panxiang315" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/panxiangBupt" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://greychess.cn" title="好友博客" target="_blank">好友博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhangxinxu.com/wordpress/" title="张鑫旭大佬" target="_blank">张鑫旭大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.w3cplus.com/" title="大漠大佬" target="_blank">大漠大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.php.cn/" title="前端学习" target="_blank">前端学习</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搜狗的三级火箭"><span class="nav-number">1.</span> <span class="nav-text">搜狗的三级火箭</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三级火箭的原理"><span class="nav-number">2.</span> <span class="nav-text">三级火箭的原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在人类的天空放上星星"><span class="nav-number">3.</span> <span class="nav-text">在人类的天空放上星星</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fas fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Pan Xiang</span>
+</div>
+
+
+
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END -->
+  
+
+
+
+  
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+	<!-- 页面点击小红心 -->
+	<!-- <script type="text/javascript" src="/js/src/love.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

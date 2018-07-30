@@ -1,0 +1,943 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="迭代," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="pan's record" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="判断产品经理水平的依据；第一个产品版本能不能设计得功能简单、直指人心。产品复杂是因为产品经理的不自信，只能从附加功能中找心理安慰。产品设计应该找到内核，小步快迭代，而不是憋大招。">
+<meta name="keywords" content="迭代">
+<meta property="og:type" content="article">
+<meta property="og:title" content="系统世界观：微信、米聊、陌陌">
+<meta property="og:url" content="https://panxiang315.github.io/cognitive/reprint/system-design/index.html">
+<meta property="og:site_name" content="pan&#39;s record">
+<meta property="og:description" content="判断产品经理水平的依据；第一个产品版本能不能设计得功能简单、直指人心。产品复杂是因为产品经理的不自信，只能从附加功能中找心理安慰。产品设计应该找到内核，小步快迭代，而不是憋大招。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-27T11:15:22.934Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="系统世界观：微信、米聊、陌陌">
+<meta name="twitter:description" content="判断产品经理水平的依据；第一个产品版本能不能设计得功能简单、直指人心。产品复杂是因为产品经理的不自信，只能从附加功能中找心理安慰。产品设计应该找到内核，小步快迭代，而不是憋大招。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://panxiang315.github.io/cognitive/reprint/system-design/"/>
+
+
+
+
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+  <title> 系统世界观：微信、米聊、陌陌 | pan's record </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?41fc030db57d5570dd22f78997dc4a7e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+<!-- <a href="https://github.com/panxiang315/panxiang315.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;
+         " src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a> -->
+
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta custom-logo">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">pan's record</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <h1 class="site-subtitle" itemprop="description">background of my life</h1>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://panxiang315.github.io/cognitive/reprint/system-design/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Pan Xiang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="pan's record">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="pan's record" src="/images/avatar.jpg">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                系统世界观：微信、米聊、陌陌
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-27T19:05:05+08:00">
+                2018-07-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/cognitive/" itemprop="url" rel="index">
+                    <span itemprop="name">cognitive</span>
+                  </a>
+                </span>
+
+                
+                
+                  >
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/cognitive/reprint/" itemprop="url" rel="index">
+                    <span itemprop="name">reprint</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+
+          
+          
+
+          
+
+		  
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  2,421字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  8分
+                </span>
+              
+            </div>
+          
+
+          
+
+
+
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>判断产品经理水平的依据；第一个产品版本能不能设计得功能简单、直指人心。<br>产品复杂是因为产品经理的不自信，只能从附加功能中找心理安慰。<br>产品设计应该找到内核，小步快迭代，而不是憋大招。</p>
+<a id="more"></a>
+<hr>
+<p>&emsp;&emsp;第三个模块的第三节课，我们来谈迭代。迭代是什么意思？迭代就是小步快跑，把最内核的部分先放出来，不断优化、小范围试错。我有个说法：让互联网产品在互联网上生长。</p>
+<h1 id="产品设计要直指人心"><a href="#产品设计要直指人心" class="headerlink" title="产品设计要直指人心"></a>产品设计要直指人心</h1><p>&emsp;&emsp;为什么要把迭代作为专门的一节课来讲？简单粗暴的回答就是：版本规划能力是产品经理的重要能力。当然这是一个角色化的要求，但是为什么要这样做角色要求呢？因为我经常看到有的产品经理出产品规划，第一版产品就无比复杂。<br>&emsp;&emsp;我常常听某个产品经理，非常有激情地介绍自己规划的产品，无比复杂。这是一开始就要做整个互联网吗？<br>&emsp;&emsp;判断一个产品经理是否厉害，很重要的一条就是判断他设计的产品第一个版本有多简单、直接、切中要点，能不能直指人心。为什么很多产品经理要把产品的第一个版本设计得那么复杂？因为他们不自信。<br>&emsp;&emsp;他们对“我只要做强哪个点，用户就必然买账”没把握，而希望在一些附加的功能点上，寻找心理依靠。这种产品天生没劲，怎么可能意外爆发。<br>&emsp;&emsp;系统能力让微信赢了米聊在这节课，我讲一个案例——微信的迭代过程。今天，咱们都已经非常依赖微信了，使用微信聊天、支付、玩游戏、订电影票，觉得一切都是如此天经地义。但实际上，它也是从非常简陋的版本，一个非常小的内核开始，一点一点迭代，成为了今天的样子。<br>&emsp;&emsp;微信是腾讯在2011年1月发布的一款产品，比小米公司的米聊晚两个月。微信的1.0版本基本和米聊一样，应用场景定义为熟人间的通讯工具。简单说，就是可以免费发短信和照片，代替收费短信和彩信。为什么说它的定义是熟人间的通讯工具呢？因为微信刚上线时只有四个主要功能：</p>
+<blockquote>
+<p> 1、导入通讯录；<br> 2、发送信息；<br> 3、发送图片<br> 4、设置头像和微信名。</p>
+</blockquote>
+<p>&emsp;&emsp;备注和黑名单功能是在微信的1.2版本才加入的。微信的1.0和1.1版本时，加好友是不需要备注的，因为我不会加陌生人，这里只有我特别熟的朋友。<br>&emsp;&emsp;微信2.0版本时，微信用户有400万，而米聊有1000万。所以在微信1.0的时代，不管是功能上还是用户数量上，微信一直在追赶米聊。米聊有开发人员在论坛上说：这是我们米聊新上的功能，截个图，放在论坛立帖为证，微信几天之后就会抄我们。果然，一周之后，微信就抄了这个新功能——语音通讯功能。<br>&emsp;&emsp;但是，微信2.0的时候很快就追上了米聊，并从此将米聊远远甩在后面。为什么？抛开前端体验，就系统能力而言，微信的运维能力比米聊强太多。张小龙在做微信之前，做了十年的腾讯邮箱，那是全国最大的邮箱服务平台。它有一个很强的功能是超大附件，要有强大的服务器功能保证，超大数据定点传输中负载均衡，系统不崩溃。微信的背后有数十万台服务器支撑微信的数据流量。这样的系统能力建设，对于腾讯这样的公司是天然的。而创业初期的小米，根本不可能囤积那么多的设备去提升米聊的性能。<br>&emsp;&emsp;所以两个前端体验基本一致的产品，你用微信，永远都会觉得很快，而米聊有时会慢、会卡，偶尔会系统崩溃。两个产品的区别在这里就开始拉开了。<br>&emsp;&emsp;回到ATM机的例子，比起系统能力，前端那个铁盒子没那么重要。</p>
+<h1 id="微信、陌陌、米聊的不同路径"><a href="#微信、陌陌、米聊的不同路径" class="headerlink" title="微信、陌陌、米聊的不同路径"></a>微信、陌陌、米聊的不同路径</h1><p>&emsp;&emsp;微信赢米聊，仅仅是靠系统能力吗？绝不仅如此。迭代中，重要的是次序，前一个动作是后一个动作的预动作。<br>&emsp;&emsp;微信2.1版本里添加了一个新的功能，叫做“好友验证”。2.1版本之前，都没有好友验证。随后2.2版本推出一个核心功能，叫做“查看附近的人”。戏剧化的是，微信发布“查看附近的人”功能的同一天，另外一款和它一模一样的产品在苹果的AppStore上线了，这款产品叫陌陌。<br>&emsp;&emsp;陌陌和微信在同一天开始，基于位置的陌生人语音社交。米聊就此止步于熟人社交，直到很长时间之后才打破这点，但那时大势已去。微信和米聊刚开始的产品中观设计是一样的，为什么几次迭代之后，走上了不同的道路？我个人揣测，因为张小龙、唐岩是湖南人，雷军是湖北人，三个人非常不同。雷军少年得志，非常年轻就成为了中关村的大佬。他的世界一直非常拥挤，他的时间极端宝贵。他个人的需求就是提升与熟人间的沟通效率，没有需求认识一个陌生人。张小龙和唐岩是曾体验过孤独与弱势的人，所以他们有与陌生人建立连接的需求，并且对和陌生人交往过程中，压力点的体验非常清楚。<br>&emsp;&emsp;区别是什么，注意一些细小的点，比如“表情包”。人为什么要在交流的时候使用表情？其实是因为用户很多时候找不到合适的词汇。QQ最早就在表情包上下功夫，帮助想表达却老是觉得词不达意的宅男宅女，用一种更轻的思考方式传递自己的想法、感觉、情感。长于沟通、长于说服的雷军、马云，出品的通讯工具，从来不在表情包上下功夫，因为老板没有被辞不达意困扰过。这是什么？这叫微观体感不同。在米聊上，你发了一个信息会有信息状态，如果对方读了就会从“已发送”改为“已读”。而微信没有这个设置，为什么？腾讯的高层为了这个点，讨论了好几天，最后还是觉得，这一点点功能会给对方心理压力太大，还是决定不放。<br>&emsp;&emsp;我之前说过，马化腾对压力和确定性的体会极深。但雷军一直是大佬，对给人压力这件事，没有那么在意。增加了“查看附近的人”功能以后，微信的用户从400万达到了2000万，与仍然专注熟人社交的米聊拉开了差距。随后的迭代里，微信3.0推出“摇一摇”功能。3.0之后，微信用户上亿，米聊的峰值永远停留在了3000万。<br>&emsp;&emsp;在这里，我再补一句场景概念。我在《设计产品时要包括产品的场景》那节课说：“在万物互联的未来，到处都是屏幕，到处都是网络连接的入口。入口不是场景，能触发情绪才是。”<br>&emsp;&emsp;米聊的例子，就印证了入口不是场景，不一定产生流量。小米手机年销售几千万台，几年下来应该累计了几亿小米手机的用户吧，而每一台手机上都内置了米聊，但米聊用户非常少。这就叫“有入口，没场景”。<br>&emsp;&emsp;米聊就说到这里，我们接着说和微信的“查看附近的人”同一天上线的陌陌。米聊的系统能力弱于微信，陌陌难道好吗？当然不。运维能力不足、代码效率差的问题，陌陌在初期其实也遇到了。唐岩告诉我，曾经陌陌流量过大，导致宕机3天，服务器瘫痪。但是3天之后，服务器一旦再次运转，那些饥渴的用户瞬间回到这里，并没有流失。为什么？对于寻求某种满足的人，陌陌提供确定性满足。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>&emsp;&emsp;是去连接广阔的陌生人，还是提升与熟人沟通的效率，这是微信与米聊的区别。<br>&emsp;&emsp;微信的3.5版本，与陌陌也拉开了差距。3.5版本的微信先做了功能前置，加了“扫描二维码”;3.6版本的微信加了“微信公众号”。从3.6版本开始，微信与陌陌开始走向不同的道路。陌陌继续连接陌生人，而微信选择去连接线下更多的内容与商业，去连接广阔的物理世界。3.6版本的微信，赢了米聊与陌陌，但依然是一个通讯工具。但微信没有止步于此，它继续迭代和蜕变。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+  
+        <div class="post-tags">
+          
+            <a href="/tags/迭代/" rel="tag"><i class="fa fa-tag"></i> 迭代</a>
+          
+        </div>
+      
+
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>🐶 您的支持将鼓励我继续创作 🐶</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赞赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.jpg" alt="Pan Xiang WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zhifubao.jpg" alt="Pan Xiang Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+        
+     <div>
+      
+      <ul class="post-copyright">
+
+
+        <li class="post-copyright-link">
+          <strong>本文标题：</strong>
+          <a href="https://panxiang315.github.io/cognitive/reprint/system-design/" title="系统世界观：微信、米聊、陌陌">系统世界观：微信、米聊、陌陌</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文链接：</strong>
+          <a href="https://panxiang315.github.io/cognitive/reprint/system-design/" title="系统世界观：微信、米聊、陌陌">https://panxiang315.github.io/cognitive/reprint/system-design/</a>
+        </li>
+
+        <li class="post-copyright-date">
+            <strong>发布时间：</strong>2018年7月27日 - 19时07分
+        </li>
+
+
+      </ul>
+    
+  </div>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/cognitive/reprint/efficiency/" rel="next" title="案例：小米的效率革命">
+                <i class="fa fa-chevron-left"></i> 案例：小米的效率革命
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/cognitive/reprint/iteration/" rel="prev" title="系统迭代：微信红包的意外与刻意">
+                系统迭代：微信红包的意外与刻意 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+
+  </div>
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Pan Xiang" />
+          <p class="site-author-name" itemprop="name">Pan Xiang</p>
+          <p class="site-description motion-element" itemprop="description">Learning, on the way</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">79</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/panxiang315" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/panxiangBupt" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://greychess.cn" title="好友博客" target="_blank">好友博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhangxinxu.com/wordpress/" title="张鑫旭大佬" target="_blank">张鑫旭大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.w3cplus.com/" title="大漠大佬" target="_blank">大漠大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.php.cn/" title="前端学习" target="_blank">前端学习</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#产品设计要直指人心"><span class="nav-number">1.</span> <span class="nav-text">产品设计要直指人心</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#微信、陌陌、米聊的不同路径"><span class="nav-number">2.</span> <span class="nav-text">微信、陌陌、米聊的不同路径</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fas fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Pan Xiang</span>
+</div>
+
+
+
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END -->
+  
+
+
+
+  
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+	<!-- 页面点击小红心 -->
+	<!-- <script type="text/javascript" src="/js/src/love.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>
