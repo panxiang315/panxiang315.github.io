@@ -116,7 +116,7 @@
 <meta property="og:description" content="内容：记录开会信息，已加密">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://panxiang315.github.io/images/meeting.jpg">
-<meta property="og:updated_time" content="2018-07-19T01:33:14.934Z">
+<meta property="og:updated_time" content="2018-10-15T08:23:45.834Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="会议纪要">
 <meta name="twitter:description" content="内容：记录开会信息，已加密">
@@ -427,7 +427,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,379字
+                  3,387字
                 </span>
               
 
@@ -443,7 +443,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  9分
+                  13分
                 </span>
               
             </div>
@@ -556,6 +556,58 @@
 <p>有可以录制网络实际时延抖动的仪表，之后再拿到实验室里用。<br>这个在无线侧主要是CU和DU分离的时候跟时延测试有关</p>
 <hr>
 <p>时间：2018-07-19 AM<br><strong>主题：扩容方案</strong><br>对方：中兴</p>
+<p>TM500<br>one user 8 2<em>2 NR   2 2</em>2 LTE<br>two user 4 2<em>2 NR   1 2</em>2 LTE（提高利用率）</p>
+<p>2<em>2  端口，变成4</em>4则减半 4 4*4</p>
+<p>SMA接口（RRU到天线，在测试中是RRU到测试设备）</p>
+<p>6月NSA冻结，基本可以同步出设备<br>郑州 内场测试 7-8月<br>9月份SA测试</p>
+<p>人体损耗：5G 3 LET1dB</p>
+<p>室内，室外面积：3:7 城区典型比</p>
+<p>多用户MIMO应考虑SINR，根据香农公式，为log增长。所以在SINR小的时候，使用多用户MIMO功率下降导致SINR下降的负面和使用MIMO的正面会抵消，没有必要使用多用户MIMO</p>
+<p>联通在TDD上主要是用于扩容，而移动用8T8R与2T2R对比是覆盖，容量其实没什么区别。所以考虑8T8R意义不大，因为这个更贵</p>
+<p>基带和AAS之间eCPRI</p>
+<p>TM9</p>
+<p>3DMIMO里，8振子一列，两个一组，一组上下7度，整体4组上下20度</p>
+<p>PSC 主同步码</p>
+<p>URLLC<br>SSB<br>CPE<br>OTA</p>
+<p>自包含 上下行干扰 帧结构的决定<br>guard period<br>爱立信建议2ms，（也可以2.5ms）<br>mobility based on SSB or CSI-RS 爱立信倾向SSB<br>5ms扫完 SSB标成控制信道 CSI标成业务信道 CSI可能会掉话<br>数字波束赋形  模拟波束赋形</p>
+<p>前传端口类型 CPRI eCPRI</p>
+<p>1：信道矩阵，拆开测试<br>2：OTA测试</p>
+<p>满足20ms时延，可长达1000km<br>实验中5ms时延，为350km</p>
+<p>F1接口</p>
+<p>边缘云下沉 以满足低时延，下沉距离无线侧约20~30km<br>如果无需低时延，则可以放在核心侧</p>
+<p>LTE以后也要标准为隔离CU和DU<br>所以，在DU侧的LTE，WiFi，NR的联合工作</p>
+<p>可以根据用户的业务，切换所在网络，如4K视频使用5G传输，聊天使用4G传输</p>
+<p>ran 切割具体定义<br>按业务切割还是按频率切割，目前只做的按业务切割</p>
+<p>inter-DU CA 由CU控制<br>Auto-scarling 云自动调整范围<br>High-availability</p>
+<p>CU+MEC共平台<br>UPF</p>
+<hr>
+<p>时间：2018-09-12 PM<br><strong>主题：湖北5G启动会</strong><br>对方：湖北联通</p>
+<p>组长 苗守野 副总经理<br>工作组成员 许常德 刘为森 陈鸿翔<br>主任 许常德</p>
+<p>版本更新后，之前测试结果需重测</p>
+<p>武汉分公司工作组</p>
+<p>组长 陈鸿翔 副总经理</p>
+<p>NSA江夏汤逊湖区域<br>站距583米 35个站 11.7平方公里<br>密集市区+一般市区</p>
+<p>SA开发区沌口区域<br>站距513米 25个站</p>
+<p>中国信科<br>王新民<br>测试：无线朱涛 核心网刘春<br>无线网络：工程实施 王斌 网络优化 叶帆 无线技术 武光宇 无线规划 何张琪</p>
+<hr>
+<p>时间：2018-09-13 PM<br><strong>主题：上海5G启动会</strong></p>
+<p>PMO<br>SE</p>
+<p>CU由 AirFrame 刀片服务器组成<br>现阶段单CU配置10个DU（对标原有BBU）<br>功耗满配4325W<br>CU占0.6*1.07 前1.5后0.8-1</p>
+<p>AAU 47kg 1400W</p>
+<p>PSS8 PeOTN </p>
+<p>进博会</p>
+<p>工业博览会</p>
+<hr>
+<p>时间：2018-09-21 AM<br><strong>主题：中兴5G交流</strong><br>对方：西安中兴</p>
+<p>速率下行要求：LTE 1Gbps+NR 2Gbps = 3Gbps</p>
+<p>终端上行目前都没有256QAM的</p>
+<p>波束与帧结构<br>广播波束GOB，一般是无限的 业务波束EBB<br>中兴帧结构：2.5ms双周期 2ms单未继续更新<br>与LTE无法共存，强行共存只能选择5ms周期</p>
+<p>BBU<br>2U 满配15<em>100M 64TR 单基带板3</em>100M<br>功耗 S111 315W<br>CU DU分离之后，相当于一个DU，只需要软件变更</p>
+<p>目前光口都是10G的，主控板如果两个合并，容量是25G，这样的话，光模块口的容量后期需要扩容。<br>传输目前考虑前期流量没有那么大，这样后期逐步升级。<br>明年底会出现共基带板和共主控板设备</p>
+<p>CU 3U机框<br>处理能力120Gbps</p>
+<hr>
+<p>时间：2018-10-15 PM<br><strong>主题：武汉5G测试启动</strong><br>对方：武汉联通</p>
+<p>终端问题，与高通的IODT尚未开始<br>与展锐终端联调也有问题</p>
 
       
     </div>
@@ -702,7 +754,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">71</span>
+                <span class="site-state-item-count">79</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -711,7 +763,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -720,7 +772,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">81</span>
+                <span class="site-state-item-count">90</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -812,8 +864,8 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  &copy;  2018 - 
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fas fa-star"></i>
   </span>
